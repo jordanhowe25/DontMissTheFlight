@@ -10,6 +10,7 @@
 </head>
 <body ondragstart="return false;" ondrop="return false;">
         <img id="btn-reset" src="./images/back_btn.png"><img>
+
         <div id="start-screen-window" class="pop-up-window">
             <div class="start-game-block instructions-block">
                 <h3>Objective:</h3>
@@ -26,6 +27,7 @@
                 </ul>
             </div>
         </div>
+
         <div id="end-screen-window" class="pop-up-window">
             <div class="end-game-block instructions-block">
                 <p class="end-game-text">YOU DID IT!!!<br><br>YOU REACHED THE AIRPORT IN TIME!<br><br>CONGRATULATIONS!!!</p>
@@ -38,6 +40,22 @@
                 </ul>
             </div>
         </div>
+
+        <div id="game-scene">
+            <div class="canvas-container">
+                <div class="timer" id="time001"> 5:00 </div>
+                <canvas id="canvas"></canvas>
+            </div>
+            <div class="dashboard-container">
+                <!--<img id="btn-move-left" src="./images/arrow-left.png" alt="Move Left"></img>-->
+                <div class="score-block">
+                    <div class="score-header"><h2>Total Questions Correct</h2></div>
+                    <div class="score">0</div>
+                </div>
+                <!--<img id="btn-move-right" src="./images/arrow-right.png" alt="Move Right"></img>-->
+            </div>
+        </div>
+        
 
     <!-- audio for game (we most likely will not have audio)
 
