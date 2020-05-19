@@ -1,69 +1,68 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=ed">
-  <title>Don't Miss the Flight</title>
-  <link rel="stylesheet" href="./styles/styles.css">
-  <script src="./scripts/preload.js"></script> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=ed">
+    <title>Don't Miss the Flight</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./scripts/preload.js"></script>
 </head>
 <body ondragstart="return false;" ondrop="return false;">
-        <img id="btn-reset" src="./images/back_btn.png"><img>
+    <img id="btn-reset" src="./images/back_btn.png"><img>
 
-        <div id="start-screen-window" class="pop-up-window">
-            <div class="start-game-block instructions-block">
-                <h3>Objective:</h3>
-                <p class="instruction-text">
+    <div id="start-screen-window" class="pop-up-window">
+        <div class="start-game-block instructions-block">
+            <h3>Objective:</h3>
+            <p class="instruction-text">
                 Oh no! You are running late for your flight.  See if you can reach the airport in time.<br><br><br>
-                </p>
-                <h3>How to play:</h3>
-                <p class="instruction-text">Your vehicle will automatically advance on the world map.  You must answer questions when prompted in order to move on.  If you run out of time, you lose.</p>
-            </div>
-            <div class="btn-container">
-                <ul class="menu-buttons">
-                    <li><img id="start-button" src="./images/button_start-game.png" alt="Start Game"></img></li>
-                    <li><img id="quit-game" src="./images/button_quit-game.png" alt="Quit Game"></img></li>
-                </ul>
-            </div>
+            </p>
+            <h3>How to play:</h3>
+            <p class="instruction-text">Your vehicle will automatically advance on the world map.  You must answer questions when prompted in order to move on.  If you run out of time, you lose.</p>
         </div>
+        <div class="btn-container">
+            <ul class="menu-buttons">
+                <li><img id="start-button" src="./images/button_start-game.png" alt="Start Game"></img></li>
+                <li><img id="quit-game" src="./images/button_quit-game.png" alt="Quit Game"></img></li>
+            </ul>
+        </div>
+    </div>
 
-        <div id="end-screen-window" class="pop-up-window">
-            <div class="end-game-block instructions-block">
-                <p class="end-game-text">YOU DID IT!!!<br><br>YOU REACHED THE AIRPORT IN TIME!<br><br>CONGRATULATIONS!!!</p>
-            </div>
-            <div class="end-score">0</div>
-            <div class="btn-container">
-                <ul class="menu-buttons">
-                    <li><img id="btn-replay" src="./images/button_start-game.png" alt="Play again?"></img></li>
-                    <li><img id="btn-quit" src="./images/button_quit-game.png" alt="Quit Game"></img></li>
-                </ul>
-            </div>
+    <div id="end-screen-window" class="pop-up-window">
+        <div class="end-game-block instructions-block">
+            <p class="end-game-text">YOU DID IT!!!<br><br>YOU REACHED THE AIRPORT IN TIME!<br><br>CONGRATULATIONS!!!</p>
         </div>
+        <div class="end-score">0</div>
+        <div class="btn-container">
+            <ul class="menu-buttons">
+                <li><img id="btn-replay" src="./images/button_start-game.png" alt="Play again?"></img></li>
+                <li><img id="btn-quit" src="./images/button_quit-game.png" alt="Quit Game"></img></li>
+            </ul>
+        </div>
+    </div>
 
-        <div id="map-scene">
-            <div class="canvas-container">
-                <div class="timer" id="time001"> 5:00 </div>
-                <canvas id="canvas"></canvas>
-            </div>
-            <div class="dashboard-container">
-                <!--<img id="btn-move-left" src="./images/arrow-left.png" alt="Move Left"></img>-->
-                <div class="score-block">
-                    <div class="score-header"><h2>Total Questions Correct</h2></div>
-                    <div class="score">0</div>
-                </div>
-                <!--<img id="btn-move-right" src="./images/arrow-right.png" alt="Move Right"></img>-->
-            </div>
+    <div id="game-scene">
+        <div class="canvas-container">
+            <div class="timer" id="time001"> 5:00 </div>
+            <canvas id="canvas"></canvas>
         </div>
-        
+        <div class="dashboard-container">
+            <!--<img id="btn-move-left" src="./images/arrow-left.png" alt="Move Left"></img>-->
+            <div class="score-block">
+                <div class="score-header"><h2>Total Questions Correct</h2></div>
+                <div class="score">0</div>
+            </div>
+            <!--<img id="btn-move-right" src="./images/arrow-right.png" alt="Move Right"></img>-->
+        </div>
+    </div>
+
 
     <!-- audio for game (we most likely will not have audio)
-
     <audio autoplay loop>
         <source src="./audio/Space Cats Magic Fly.mp3" type="audio">
       Your browser does not support the audio element.
       </audio> -->
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="./scripts/controls.js"></script>
 </body>
