@@ -9,16 +9,32 @@
   <script src="./scripts/preload.js"></script> 
 </head>
 <body ondragstart="return false;" ondrop="return false;">
+        <img id="btn-reset" src="./images/back_btn.png"><img>
+        <div id="start-screen-window" class="pop-up-window">
+            <div class="start-game-block instructions-block">
+                <h3>Objective:</h3>
+                <p class="instruction-text">
+                Oh no! You are running late for your flight.  See if you can reach the airport in time.<br><br><br>
+                </p>
+                <h3>How to play:</h3>
+                <p class="instruction-text">Touch and hold the 'LEFT' and 'RIGHT' arrows to move the truck.  You will automatically catch the falling luggage if it lands on your truck.</p>
+            </div>
+            <div class="btn-container">
+                <ul class="menu-buttons">
+                    <li><img id="start-button" src="./images/button_start-game.png" alt="Start Game"></img></li>
+                    <li><img id="quit-game" src="./images/button_quit-game.png" alt="Quit Game"></img></li>
+                </ul>
+            </div>
+        </div>
 
 
+    <!-- audio for game
 
-  <!-- audio for game 
-  
-  <audio autoplay loop>
-      <source src="./audio/Space Cats Magic Fly.mp3" type="audio">
-    Your browser does not support the audio element.
-    </audio> -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="./scripts/controls.js"></script>
+    <audio autoplay loop>
+        <source src="./audio/Space Cats Magic Fly.mp3" type="audio">
+      Your browser does not support the audio element.
+      </audio> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./scripts/controls.js"></script>
 </body>
 </html>
