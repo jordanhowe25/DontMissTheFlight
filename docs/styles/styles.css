@@ -4,21 +4,19 @@ body {
     background-image: linear-gradient(45deg, #293c6b 30%, #2d4175 30%, #2d4175 50%, #293c6b 50%, #293c6b 80%, #2d4175 80%, #2d4175 100%);
     background-size: 70.71px 70.71px;
 }
+
 .timer {
-    border: 1px solid #293c6b;
+    height: 180px;
+    width: 340px;
+    border: 1px solid #12a646;
     text-align: center;
-    width: 7%;
-    height: 5%;
-    left: 46%;
-    position: absolute;
+    position: relative;
     color: #293c6b;
-    background: aliceblue;
+    background: grey;
     font-weight: bold;
     font-size: 2em;
     margin: 1px auto;
-    top: 3px;
 }
-
 
 .canvas-container {
     background-image: url('../images/background-Airport.png');
@@ -28,6 +26,8 @@ body {
     width: 1480px;
     margin: 0 auto;
     position: absolute;
+    top: 3%;
+    left: 1%;
     overflow: hidden;
     display: block;
     border: grey solid 5px;
@@ -39,29 +39,38 @@ body {
     text-align: center;
     overflow: hidden;
     position: relative;
-    display: block;
+    display: flex;
+    left: 1%;
     top: 73%;
-    left: 2%;
-     
-}
-
-.score-block {
-    width: 175px;
-    display: inline-block;
-	align-items: center;
-    justify-content: center;
-    position: relative;
-    float: left;
-    background: aliceblue;
-    margin: 40px 125px;
+    background: red;
     border: grey solid 5px;
-    color: #293c6b;
-    padding-bottom: 15px;
 }
 
-.score {
+.hints-block{
+    height: 180px;
+    width: 340px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    background: grey;
+}
+
+/*
+    .timer-block{
+    height: 180px;
+    width: 340px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    background: grey;
+}
+*/
+
+.hints {
     font-size: 3em;
-    color: #293c6b;
+    color: #000000;
     font-weight: bold;
 }
 
@@ -110,19 +119,18 @@ h3 {
     border: #293c6b solid 5px;
     border-radius: 25px;
     padding: 5px;
-    margin: 10% auto auto auto;
-    
-    
+    margin: 10% auto auto auto;   
 }
 
 
 #game-scene {
     top: 5%;
     position: absolute;
-    height: 100%;
-    width: 100%;
+    height: 780px;
+    width: 1520px;
     left: 17%;
     display: none;
+    background: red;
     
 }
 
@@ -149,6 +157,14 @@ h3 {
     display: block;
     margin: 0 auto;
     width: 300px;
+}
+
+.main-btn-container {
+    display: block;
+    background: #14e05c;
+    margin: 0 auto;
+    width: 1480px;
+    height: 180px;
 }
 
 .menu-buttons li {
