@@ -3,7 +3,6 @@ body {
     width: 1920px;
 }
 
-/* ------ Containers ------ */
 #container-game-area {
     margin: 5% auto;
     background-color: blueviolet;
@@ -11,35 +10,7 @@ body {
     height: 780px;   
 }
 
-#container-hints {
-    width: 340px;
-    height: 180px;
-    float: left;
-    background-color: darkmagenta;
-    margin: 20px 20px;
-}
-
-#container-buttons {
-    width: 760px;
-    height: 180px;
-    float: left;
-    background-color: red;
-    margin: 20px 0;
-}
-
-#container-timer {
-    width: 340px;
-    height: 180px;
-    float: left;
-    background-color: black;
-    margin: 20px 20px;
-}
-
-/* ------ End of Containers ------ */
-
-/* ------ Inside Canvas Container ------ */
-
-.canvas {
+.canvases {
     width: 1480px;
     height: 540px;
     background-color: cyan;
@@ -55,7 +26,7 @@ body {
 #difficulty-select {
     display: none;
     position: relative;
-    background-color: chartreuse;
+    background-color: red;
 }
 
 #instructions {
@@ -94,5 +65,26 @@ body {
     background-color: silver;
 }
 
-/* ------ End of Inside Canvas Container ------ */
+#container-hints {
+    width: 340px;
+    height: 180px;
+    float: left;
+    background-color: darkmagenta;
+    margin: 20px 20px;
+}
 
+#container-buttons {
+    width: 760px;
+    height: 180px;
+    float: left;
+    background-color: red;
+    margin: 20px 0;
+}
+
+#container-timer {
+    width: 340px;
+    height: 180px;
+    float: left;
+    background-color: black;
+    margin: 20px 20px;
+}
