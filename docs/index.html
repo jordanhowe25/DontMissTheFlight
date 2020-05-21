@@ -5,19 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=ed">
   <title>Don't Miss the Flight</title>
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./styles/styles.css">
   <script src="./scripts/preload.js"></script> 
 </head>
 <body ondragstart="return false;" ondrop="return false;">
+  <div id="container-game-area">
+    <div id = container-canvases>
+      <div id="title-screen" class="canvases">
+        <p>TITLE SCREEN</p>
+      </div>
+      <div id="difficulty-select" class="canvases">
+        <p>DIFFICULTY SELECT</p>
+      </div>
+      <div id="instructions" class="canvases">
 
+      </div>
+      <canvas id="world-view" class="canvases"></canvas>
+      <canvas id="cut-scene" class="canvases"></canvas>
+      <canvas id="trivia-card" class="canvases"></canvas>
+      <div  id="end-game-win" class="canvases">
 
+      </div>
+      <div id="end-game-lose" class="canvases">
 
-  <!-- audio for game 
-  
-  <audio autoplay loop>
-      <source src="./audio/Space Cats Magic Fly.mp3" type="audio">
-    Your browser does not support the audio element.
-    </audio> -->
+      </div>
+    <div id="container-hints">
+      <!--TODO:  CSS for container-hints-->
+    </div>
+    <div id="container-buttons">
+      <!--TODO:  CSS for button groups-->
+      <div id="button-group-main-menu">
+
+      </div>
+      <div id="button-group-difficulty-select">
+
+      </div>
+      <!--TODO:  The rest of the button groups needed-->
+    </div>
+    <div id="container-timer">
+      <!--TODO:  CSS for container-timer-->
+
+    </div>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./scripts/controls.js"></script>
 </body>

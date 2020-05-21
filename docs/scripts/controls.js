@@ -10,6 +10,11 @@ const bindToTouch = (selector, handler) => {
     game.start()
   });
 
+function testToggle() {
+  $('#title-screen').toggle();
+  $('#difficulty-select').toggle();
+}
+
 
   
   

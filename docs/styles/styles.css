@@ -1,0 +1,98 @@
+body {
+    background-color: chartreuse;
+    width: 1920px;
+}
+
+/* ------ Containers ------ */
+#container-game-area {
+    margin: 5% auto;
+    background-color: blueviolet;
+    width: 1520px;
+    height: 780px;   
+}
+
+#container-hints {
+    width: 340px;
+    height: 180px;
+    float: left;
+    background-color: darkmagenta;
+    margin: 20px 20px;
+}
+
+#container-buttons {
+    width: 760px;
+    height: 180px;
+    float: left;
+    background-color: red;
+    margin: 20px 0;
+}
+
+#container-timer {
+    width: 340px;
+    height: 180px;
+    float: left;
+    background-color: black;
+    margin: 20px 20px;
+}
+
+/* ------ End of Containers ------ */
+
+/* ------ Inside Canvas Container ------ */
+
+.canvas {
+    width: 1480px;
+    height: 540px;
+    background-color: cyan;
+    margin: 0 auto;
+}
+
+#title-screen {
+    display: block;
+    position: relative;
+    background-color: blanchedalmond;
+}
+
+#difficulty-select {
+    display: none;
+    position: relative;
+    background-color: chartreuse;
+}
+
+#instructions {
+    display: none;
+    position: relative;
+    background-color: darkmagenta;
+}
+
+#world-view {
+    display: none;
+    position: relative;
+    background-color: dimgrey;
+}
+
+#cut-scene {
+    display: none;
+    position: relative;
+    background-color: hotpink;
+}
+
+#trivia-card {
+    display: none;
+    position: relative;
+    background-color: mediumspringgreen;
+}
+
+#end-game-win {
+    display: none;
+    position: relative;
+    background-color: orangered;
+}
+
+#end-game-lose {
+    display: none;
+    position: relative;
+    background-color: silver;
+}
+
+/* ------ End of Inside Canvas Container ------ */
+
