@@ -1,0 +1,211 @@
+body {
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(45deg, #293c6b 30%, #2d4175 30%, #2d4175 50%, #293c6b 50%, #293c6b 80%, #2d4175 80%, #2d4175 100%);
+    background-size: 70.71px 70.71px;
+}
+
+.timer {
+    height: 180px;
+    width: 340px;
+    border: 1px solid #12a646;
+    text-align: center;
+    position: relative;
+    color: #293c6b;
+    background: grey;
+    font-weight: bold;
+    font-size: 2em;
+    margin: 1px auto;
+}
+
+.canvas-container {
+    background-image: url('../images/background-Airport.png');
+    background-size: cover;
+    background-position: center;
+    height: 540px;
+    width: 1480px;
+    margin: 0 auto;
+    position: absolute;
+    top: 3%;
+    left: 1%;
+    overflow: hidden;
+    display: block;
+    border: grey solid 5px;
+}
+
+.dashboard-container {
+    height: 180px;
+    width: 1480px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    left: 1%;
+    top: 73%;
+    background: red;
+    border: grey solid 5px;
+}
+
+.hints-block{
+    height: 180px;
+    width: 340px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    background: grey;
+}
+
+/*
+    .timer-block{
+    height: 180px;
+    width: 340px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    background: grey;
+}
+*/
+
+.hints {
+    font-size: 3em;
+    color: #000000;
+    font-weight: bold;
+}
+
+.pop-up-window {
+	position: absolute;
+    width: 1400px;
+    height: 700px;
+    z-index: 999;
+    background-image: url('../images/game-logo.png');
+    left: 17%;
+    border: grey solid 5px;
+    color: #293c6b;
+    
+}
+
+h3 {
+    font-size: 2em;
+}
+
+.instruction-text {
+    font-size: 20px;
+    line-height: 1.5em;
+}
+
+.end-game-text {
+    font-size: 30px;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+.end-score {
+    font-size: 3em;
+    color: #293c6b;
+    font-weight: bold;
+    position: absolute;
+    width: 1400px;
+    bottom: 48%;
+    text-align: center;
+}
+
+.instructions-block {
+    display: block;
+    width: 33%;
+    height: 75%;
+    background: aliceblue;
+    border: #293c6b solid 5px;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 10% auto auto auto;   
+}
+
+
+#game-scene {
+    top: 5%;
+    position: absolute;
+    height: 780px;
+    width: 1520px;
+    left: 17%;
+    display: none;
+    background: red;
+    
+}
+
+/******************* Buttons *********************/
+#btn-reset {
+    position: absolute;
+    top: 5%;
+    left: 4%;
+}
+
+#btn-start-game {
+    margin-top: 20px;
+    background:    #ffffff;
+    border:        1px solid #021240;
+    border-radius: 11px;
+    padding:       20px 45px;
+    color:         #293c6b;
+    display:       inline-block;
+    font:          normal bold 25px/1 "Komika", cursive;
+    text-align:    center;
+}
+
+.btn-container {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+}
+
+.main-btn-container {
+    display: block;
+    background: #14e05c;
+    margin: 0 auto;
+    width: 1480px;
+    height: 180px;
+}
+
+.menu-buttons li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+#btn-quit {
+	margin-right: 20px;
+}
+
+
+/*
+#btn-move-right {
+    display: inline-block;
+    width: 33%;
+    height: 100%;
+	float: left;
+	
+} 
+    */
+
+
+/*
+#btn-move-left {
+    display: inline-block;
+    width: 33%;
+    height: 100%;
+    float: left;
+	
+}
+    */
+
+/******************* Start window *********************/
+#start-screen-window {
+    display: block;
+    top: 5%;
+}
+
+/******************* End window *********************/
+#end-screen-window {
+    display: none;
+    top: 5%;
+}
