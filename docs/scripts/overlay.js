@@ -31,4 +31,37 @@ function displayWorld(){
     $('#number-of-hints').fadeToggle(1000);
     $('#timer').fadeToggle(1000);
 }
+
+function hideWorld(displayFunction) {
+    //displayFunction possibe choices:  displayCutScene, displayEndGameWin, displayEndGameLose
+    $('#world-view').fadeToggle(1000, displayFunction);
+    $('#button-group-world-view').fadeToggle(1000);
+}
+
+function displayCutScene(){
+    $('#cut-scene').fadeToggle(1000);
+    $('#button-group-cut-scene').fadeToggle(1000);
+}
+
+function hideCutScene(){
+    $('#cut-scene').fadeToggle(1000, displayTriviaCard);
+    $('#button-group-cut-scene').fadeToggle(1000);
+}
+
+function displayTriviaCard(){
+    $('#trivia-card').fadeToggle(1000);
+    $('#button-group-trivia-card').fadeToggle(1000);
+}
+
+function toggleHint(){
+    $('#hint').fadeToggle(1000);
+}
+
+function displayEndGameWin(){
+    $('#end-game-win').fadeToggle(1000);
+}
+
+function displayEndGameLose(){
+    $('#end-game-lose').fadeToggle(1000);
+}
     

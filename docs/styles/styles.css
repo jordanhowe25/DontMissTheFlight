@@ -121,6 +121,10 @@ body {
     display: none;
 }
 
+#button-group-cut-scene {
+    display: none;
+}
+
 #number-of-hints {
     display: none;
 }
