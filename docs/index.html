@@ -18,10 +18,10 @@
         <p>DIFFICULTY SELECT</p>
       </div>
       <div id="instructions" class="canvases">
-
+        <p id="instructions-text">THESE ARE THE INSTRUCTIONS PER DIFFICULTY LEVEL</p> 
       </div>
-      <canvas id="world-view" class="canvases"></canvas>
-      <canvas id="cut-scene" class="canvases"></canvas>
+      <canvas id="world-view" class="canvases">THIS IS THE WORLD VIEW</canvas>
+      <canvas id="cut-scene" class="canvases">THIS IS A CUT-SCENE</canvas>
       <div id="trivia-card" class="canvases">
         <p id="question">Question goes here.</p>
         <p id="hint">Add a icon for the hint that will always be displayed, if clicked then display the hint here.  Logic will need to be added to make this unclickable if they have no hints left.</p>
@@ -40,7 +40,9 @@
         </ul>
       </div>
     <div id="container-hints">
-      <!--TODO:  CSS for container-hints-->
+      <div id="number-of-hints">
+        <p>Number of hints goes here</p>
+      </div>
     </div>
     <div id="container-buttons">
       <!--TODO:  CSS for button groups-->
@@ -58,13 +60,16 @@
           <li>ADVANCED</li>
         </ul>
       </div>
+      <div id="button-group-instructions">
+        <button id="btn-instruction-confirm">OK</button>
+      </div>
       <!--TODO:  The rest of the button groups needed-->
       <div id="button-group-trivia-card">
         <ul>
-          <li id="answer_a"></li>
-          <li id="answer_b"></li>
-          <li id="answer_c"></li>
-          <li id="answer_d"></li>
+          <li id="answer_a">answer a</li>
+          <li id="answer_b">answer b</li>
+          <li id="answer_c">answer c</li>
+          <li id="answer_d">answer d</li>
         </ul>
       </div>
       <div id="button-group-world-view">
@@ -79,5 +84,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./scripts/controls.js"></script>
   <script src="./scripts/game.js"></script>
+  <script src="./scripts/overlay.js"></script>
 </body>
 </html>

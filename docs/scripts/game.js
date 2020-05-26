@@ -1,6 +1,6 @@
 class Game {
     constructor({
-        canvasElementID
+        
     }){
         this._time = 300;
         this._difficulty = "Beginner";
@@ -54,4 +54,5 @@ class Game {
                 break;
         }
     }
+
 }
