@@ -21,48 +21,56 @@ body {
     display: block;
     position: relative;
     background-color: blanchedalmond;
+    display: block;
 }
 
 #difficulty-select {
     display: none;
     position: relative;
     background-color: red;
+    display: none;
 }
 
 #instructions {
     display: none;
     position: relative;
     background-color: darkmagenta;
+    display: none;
 }
 
 #world-view {
     display: none;
     position: relative;
     background-color: dimgrey;
+    display: none;
 }
 
 #cut-scene {
     display: none;
     position: relative;
     background-color: hotpink;
+    display: none;
 }
 
 #trivia-card {
     display: none;
     position: relative;
     background-color: mediumspringgreen;
+    display: none;
 }
 
 #end-game-win {
     display: none;
     position: relative;
     background-color: orangered;
+    display: none;
 }
 
 #end-game-lose {
     display: none;
     position: relative;
     background-color: silver;
+    display: none;
 }
 
 #container-hints {
@@ -71,6 +79,7 @@ body {
     float: left;
     background-color: darkmagenta;
     margin: 20px 20px;
+    display: block;
 }
 
 #container-buttons {
@@ -87,4 +96,36 @@ body {
     float: left;
     background-color: black;
     margin: 20px 20px;
+    display: block;
+}
+
+#prompt-validate-selection{
+    display: none;
+}
+
+#button-group-main-menu {
+    display: block;
+}
+
+#button-group-difficulty-select {
+    display: none;
+}
+#button-group-instructions{
+    display: none;
+}
+#button-group-world-view {
+    display: none;
+}
+
+#button-group-trivia-card {
+    display: none;
+}
+
+#number-of-hints {
+    display: none;
+}
+
+#timer {
+    color: red;
+    display: none;
 }
