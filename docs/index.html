@@ -22,12 +22,22 @@
       </div>
       <canvas id="world-view" class="canvases"></canvas>
       <canvas id="cut-scene" class="canvases"></canvas>
-      <canvas id="trivia-card" class="canvases"></canvas>
+      <div id="trivia-card" class="canvases">
+        <p id="question">Question goes here.</p>
+        <p id="hint">Add a icon for the hint that will always be displayed, if clicked then display the hint here.  Logic will need to be added to make this unclickable if they have no hints left.</p>
+      </div>
       <div  id="end-game-win" class="canvases">
 
       </div>
       <div id="end-game-lose" class="canvases">
 
+      </div>
+      <div id="prompt-validate-selection" class="pop-up">
+        <p>ARE YOU SURE?</p>
+        <ul>
+          <li>YES</li>
+          <li>NO</li>
+        </ul>
       </div>
     <div id="container-hints">
       <!--TODO:  CSS for container-hints-->
@@ -35,19 +45,39 @@
     <div id="container-buttons">
       <!--TODO:  CSS for button groups-->
       <div id="button-group-main-menu">
-
+        <ul>
+          <li>START GAME</li>
+          <li>QUIT GAME</li>
+        </ul>
       </div>
       <div id="button-group-difficulty-select">
-
+        <ul>
+          <li>EARLY LEARNER</li>
+          <li>BEGINNER</li>
+          <li>INTERMEDIATE</li>
+          <li>ADVANCED</li>
+        </ul>
       </div>
       <!--TODO:  The rest of the button groups needed-->
+      <div id="button-group-trivia-card">
+        <ul>
+          <li id="answer_a"></li>
+          <li id="answer_b"></li>
+          <li id="answer_c"></li>
+          <li id="answer_d"></li>
+        </ul>
+      </div>
+      <div id="button-group-world-view">
+        <button id="start-trip"></button>
+        <button id="continue-trip"></button>
+      </div>
     </div>
     <div id="container-timer">
-      <!--TODO:  CSS for container-timer-->
-
+      <div id="timer">TIME GOES HERE</div>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./scripts/controls.js"></script>
+  <script src="./scripts/game.js"></script>
 </body>
 </html>
