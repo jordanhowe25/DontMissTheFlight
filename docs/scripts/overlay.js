@@ -26,6 +26,7 @@ function hideInstructions(){
 }
 
 function displayWorld(){
+    $('#container-canvas').fadeToggle(1000);
     $('#world-view').fadeToggle(1000);
     $('#button-group-world-view').fadeToggle(1000);
     $('#number-of-hints').fadeToggle(1000);
@@ -45,11 +46,17 @@ function displayCutScene(){
 
 function hideCutScene(){
     $('#cut-scene').fadeToggle(1000, displayTriviaCard);
+    $('#container-canvas').fadeToggle(1000);
     $('#button-group-cut-scene').fadeToggle(1000);
 }
 
 function displayTriviaCard(){
     $('#trivia-card').fadeToggle(1000);
+    $('#button-group-trivia-card').fadeToggle(1000);
+}
+
+function hideTriviaCard(){
+    $('#trivia-card').fadeToggle(1000, displayWorld);
     $('#button-group-trivia-card').fadeToggle(1000);
 }
 
