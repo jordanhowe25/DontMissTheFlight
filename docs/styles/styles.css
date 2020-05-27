@@ -10,11 +10,20 @@ body {
     height: 780px;   
 }
 
-.canvases {
+.scenes {
     width: 1480px;
     height: 540px;
     background-color: cyan;
     margin: 0 auto;
+    display: none;
+}
+
+#container-canvas {
+    width: 1480px;
+    height: 540px;
+    background-color: cyan;
+    margin: 0 auto;
+    display: none;
 }
 
 #title-screen {
@@ -43,6 +52,8 @@ body {
     position: relative;
     background-color: dimgrey;
     display: none;
+    width: 1480px;
+    height: 540px;
 }
 
 #cut-scene {
@@ -50,6 +61,8 @@ body {
     position: relative;
     background-color: hotpink;
     display: none;
+    width: 1480px;
+    height: 540px;
 }
 
 #trivia-card {
