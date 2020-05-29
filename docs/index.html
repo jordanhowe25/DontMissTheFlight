@@ -1,69 +1,105 @@
 ﻿﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=ed">
-    <title>Don't Miss the Flight</title>
-    <link rel="stylesheet" href="./styles/styles.css">
-    <script src="./scripts/preload.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=ed">
+  <title>Don't Miss the Flight</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <script src="./scripts/preload.js"></script> 
 </head>
 <body ondragstart="return false;" ondrop="return false;">
-    <img id="btn-reset" src="./images/back_btn.png"><img>
+  <div id="container-game-area">
+    <div id = container-scenes>
+      <div id="title-screen" class="scenes">
+        <p>TITLE SCREEN</p>
+      </div>
+      <div id="difficulty-select" class="scenes">
+        <p>DIFFICULTY SELECT</p>
+      </div>
+      <div id="instructions" class="scenes">
+        <p id="instructions-text">THESE ARE THE INSTRUCTIONS PER DIFFICULTY LEVEL</p> 
+      </div>
+      <div id="container-canvas" class="scenes">
+        <canvas id="world-view"></canvas>
+        <canvas id="cut-scene"></canvas>
+      </div>
+      <div id="trivia-card" class="scenes">
+        <p id="question">Question goes here.</p>
+        <p id="hint">Add a icon for the hint that will always be displayed, if clicked then display the hint here.  Logic will need to be added to make this unclickable if they have no hints left.</p>
+      </div>
+      <div  id="end-game-win" class="scenes">
 
-    <div id="start-screen-window" class="pop-up-window">
-        <div class="start-game-block instructions-block">
-            <h3>Objective:</h3>
-            <p class="instruction-text">
-                Oh no! You are running late for your flight.  See if you can reach the airport in time.<br><br><br>
-            </p>
-            <h3>How to play:</h3>
-            <p class="instruction-text">Your vehicle will automatically advance on the world map.  You must answer questions when prompted in order to move on.  If you run out of time, you lose.</p>
-        </div>
-        <div class="btn-container">
-            <ul class="menu-buttons">
-                <li><img id="start-button" src="./images/button_start-game.png" alt="Start Game"></img></li>
-                <li><img id="quit-game" src="./images/button_quit-game.png" alt="Quit Game"></img></li>
-            </ul>
-        </div>
+      </div>
+      <div id="end-game-lose" class="scenes">
+
+      </div>
+      <div id="prompt-validate-selection" class="pop-up">
+        <p>ARE YOU SURE?</p>
+        <ul>
+          <li>YES</li>
+          <li>NO</li>
+        </ul>
+      </div>
+    <div id="container-hints">
+      <div id="number-of-hints">
+        <p>Number of hints goes here</p>
+      </div>
     </div>
-
-    <div id="end-screen-window" class="pop-up-window">
-        <div class="end-game-block instructions-block">
-            <p class="end-game-text">YOU DID IT!!!<br><br>YOU REACHED THE AIRPORT IN TIME!<br><br>CONGRATULATIONS!!!</p>
-        </div>
-        <div class="end-score">0</div>
-        <div class="btn-container">
-            <ul class="menu-buttons">
-                <li><img id="btn-replay" src="./images/button_start-game.png" alt="Play again?"></img></li>
-                <li><img id="btn-quit" src="./images/button_quit-game.png" alt="Quit Game"></img></li>
-            </ul>
-        </div>
+    <div id="container-buttons">
+      <div id="button-group-main-menu">
+        <ul>
+          <li><button id="btn-start-game">START GAME</button></li>
+          <li><button id="btn-quit-game">QUIT GAME</button></li>
+        </ul>
+      </div>
+      <div id="button-group-difficulty-select">
+        <ul>
+          <li><button id='btn-early-learner'>EARLY LEARNER</button></li>
+          <li><button id='btn-beginner'>BEGINNER</button>BEGINNER</li>
+          <li><button id='btn-intermediate'>INTERMEDIATE</button></li>
+          <li><button id='btn-advanced'>ADVANCED</button></li>
+        </ul>
+      </div>
+      <div id="button-group-instructions">
+        <button id="btn-instruction-confirm">OK</button>
+      </div>
+      <div id="button-group-trivia-card">
+        <ul>
+          <li id="answer_a">
+            <input type="radio" id="radio-answer_a" name="trivia-answers" value="a">
+            <label for="a">A) <span id="a-answer">answer text added here</span></label>
+          </li>
+          <li id="answer_b">
+            <input type="radio" id="radio-answer_b" name="trivia-answers" value="b">
+            <label for="b">B) <span id="b-answer">answer text added here</span></label>
+          </li>
+          <li id="answer_c">
+            <input type="radio" id="radio-answer_c" name="trivia-answers" value="c">
+            <label for="c">C) <span id="c-answer">answer text added here</span></label>
+          </li>
+          <li id="answer_d">
+            <input type="radio" id="radio-answer_d" name="trivia-answers" value="d">
+            <label for="d">D) <span id="d-answer">answer text added here</span></label>
+          </li>
+        </ul>
+        <button id="btn-submit-answer">SUBMIT ANSWER</button>
+      </div>
+      <div id="button-group-world-view">
+        <button id="btn-start-trip">START TRIP</button>
+        <button id="btn-continue-trip">CONTINUE TRIP</button>
+      </div>
+      <div id="button-group-cut-scene">
+        <button id="btn-cutscene">(Cutscene)CONTINUE</button>
+      </div>
     </div>
-
-    <div id="game-scene">
-        <div class="canvas-container">
-           <canvas id="canvas"></canvas>         
-        </div>
-        <div class="dashboard-container">
-    <!--<img id="btn-move-left" src="./images/arrow-left.png" alt="Move Left"></img>-->
-            <div class="hints-block">
-                <div class="hints-header"><h2>Total Hints Remaining</h2></div>
-                <div class="hints">3</div>
-            </div>
-            <div class="main-btn-container"></div>
-            <div class="timer" id="time001"> 5:00 </div>
-        </div>
+    <div id="container-timer">
+      <div id="timer">TIME GOES HERE</div>
     </div>
-
-
-    <!-- audio for game (we most likely will not have audio)
-    <audio autoplay loop>
-        <source src="./audio/Space Cats Magic Fly.mp3" type="audio">
-      Your browser does not support the audio element.
-      </audio> -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./scripts/controls.js"></script>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./scripts/controls.js"></script>
+  <script src="./scripts/game.js"></script>
+  <script src="./scripts/overlay.js"></script>
 </body>
 </html>
