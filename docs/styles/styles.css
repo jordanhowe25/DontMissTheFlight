@@ -49,7 +49,7 @@ body {
 #world-view {
     display: none;
     position: relative;
-    background-image: url("../images/sample_city_background.jpg");
+    background-image: url("../images/world-view-background.png");
     display: none;
     width: 1480px;
     height: 540px;
