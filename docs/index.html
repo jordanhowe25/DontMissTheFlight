@@ -9,97 +9,97 @@
   <script src="./scripts/preload.js"></script> 
 </head>
 <body ondragstart="return false;" ondrop="return false;">
-  <div id="container-game-area">
+<img id="btn-back" src="./images/back_btn.png" alt="Back Button"><img>
+<div id="container-game-area">
     <div id = container-scenes>
-      <div id="title-screen" class="scenes">
-        <p>TITLE SCREEN</p>
-      </div>
-      <div id="difficulty-select" class="scenes">
-        <p>DIFFICULTY SELECT</p>
-      </div>
-      <div id="instructions" class="scenes">
-        <p id="instructions-text">THESE ARE THE INSTRUCTIONS PER DIFFICULTY LEVEL</p> 
-      </div>
-      <div id="container-canvas" class="scenes">
-        <canvas id="world-view"></canvas>
-        <canvas id="cut-scene"></canvas>
-      </div>
-      <div id="trivia-card" class="scenes">
-        <p id="question">Question goes here.</p>
-        <p id="hint">Add a icon for the hint that will always be displayed, if clicked then display the hint here.  Logic will need to be added to make this unclickable if they have no hints left.</p>
-      </div>
-      <div  id="end-game-win" class="scenes">
+        <div id="title-screen" class="scenes">
+        </div>
+        <div id="difficulty-select" class="scenes">
+            <p>DIFFICULTY SELECT</p>
+        </div>
+        <div id="instructions" class="scenes">
+            <p id="instructions-text">THESE ARE THE INSTRUCTIONS PER DIFFICULTY LEVEL</p> 
+        </div>
+        <div id="container-canvas" class="scenes">
+            <canvas id="world-view"></canvas>
+            <div id="cut-scene"></div>
+        </div>
+        <div id="trivia-card" class="scenes">
+            <p id="question">Question goes here.</p>
+            <p id="hint">Add a icon for the hint that will always be displayed, if clicked then display the hint here.  Logic will need to be added to make this unclickable if they have no hints left.</p>
+        </div>
+        <div  id="end-game-win" class="scenes">
 
-      </div>
-      <div id="end-game-lose" class="scenes">
+        </div>
+        <div id="end-game-lose" class="scenes">
 
-      </div>
-      <div id="prompt-validate-selection" class="pop-up">
-        <p>ARE YOU SURE?</p>
+        </div>
+        <div id="prompt-validate-selection" class="pop-up">
+            <p>ARE YOU SURE?</p>
         <ul>
-          <li>YES</li>
-          <li>NO</li>
+            <li>YES</li>
+            <li>NO</li>
         </ul>
-      </div>
+        </div>
     <div id="container-hints">
-      <div id="number-of-hints">
-        <p>Number of hints goes here</p>
-      </div>
+        <div id="number-of-hints">
+            <p>Number of hints goes here</p>
+        </div>
     </div>
     <div id="container-buttons">
-      <div id="button-group-main-menu">
+        <div id="button-group-main-menu">
         <ul>
-          <li><button id="btn-start-game">START GAME</button></li>
-          <li><button id="btn-quit-game">QUIT GAME</button></li>
+            <li><button id="btn-start-game">START GAME</button></li>
+            <li><button id="btn-quit-game">QUIT GAME</button></li>
         </ul>
-      </div>
-      <div id="button-group-difficulty-select">
+        </div>
+        <div id="button-group-difficulty-select">
         <ul>
-          <li><button id='btn-early-learner'>EARLY LEARNER</button></li>
-          <li><button id='btn-beginner'>BEGINNER</button>BEGINNER</li>
-          <li><button id='btn-intermediate'>INTERMEDIATE</button></li>
-          <li><button id='btn-advanced'>ADVANCED</button></li>
+            <li><button id='btn-early-learner'>EARLY LEARNER</button></li>
+            <li><button id='btn-beginner'>BEGINNER</button>BEGINNER</li>
+            <li><button id='btn-intermediate'>INTERMEDIATE</button></li>
+            <li><button id='btn-advanced'>ADVANCED</button></li>
         </ul>
-      </div>
-      <div id="button-group-instructions">
+        </div>
+        <div id="button-group-instructions">
         <button id="btn-instruction-confirm">OK</button>
-      </div>
-      <div id="button-group-trivia-card">
+        </div>
+        <div id="button-group-trivia-card">
         <ul>
-          <li id="answer_a">
-            <input type="radio" id="radio-answer_a" name="trivia-answers" value="a">
-            <label for="a">A) <span id="a-answer">answer text added here</span></label>
-          </li>
-          <li id="answer_b">
-            <input type="radio" id="radio-answer_b" name="trivia-answers" value="b">
-            <label for="b">B) <span id="b-answer">answer text added here</span></label>
-          </li>
-          <li id="answer_c">
-            <input type="radio" id="radio-answer_c" name="trivia-answers" value="c">
-            <label for="c">C) <span id="c-answer">answer text added here</span></label>
-          </li>
-          <li id="answer_d">
-            <input type="radio" id="radio-answer_d" name="trivia-answers" value="d">
-            <label for="d">D) <span id="d-answer">answer text added here</span></label>
-          </li>
+            <li id="answer_a">
+                <input type="radio" id="radio-answer_a" name="trivia-answers" value="a">
+                <label for="a">A) <span id="a-answer">answer text added here</span></label>
+            </li>
+            <li id="answer_b">
+                <input type="radio" id="radio-answer_b" name="trivia-answers" value="b">
+                <label for="b">B) <span id="b-answer">answer text added here</span></label>
+            </li>
+            <li id="answer_c">
+                <input type="radio" id="radio-answer_c" name="trivia-answers" value="c">
+                <label for="c">C) <span id="c-answer">answer text added here</span></label>
+            </li>
+            <li id="answer_d">
+                <input type="radio" id="radio-answer_d" name="trivia-answers" value="d">
+                <label for="d">D) <span id="d-answer">answer text added here</span></label>
+            </li>
         </ul>
-        <button id="btn-submit-answer">SUBMIT ANSWER</button>
-      </div>
-      <div id="button-group-world-view">
-        <button id="btn-start-trip">START TRIP</button>
-        <button id="btn-continue-trip">CONTINUE TRIP</button>
-      </div>
-      <div id="button-group-cut-scene">
-        <button id="btn-cutscene">(Cutscene)CONTINUE</button>
-      </div>
+            <button id="btn-submit-answer">SUBMIT ANSWER</button>
+        </div>
+        <div id="button-group-world-view">
+            <button id="btn-start-trip">START TRIP</button>
+            <button id="btn-continue-trip">CONTINUE TRIP</button>
+        </div>
+            <div id="button-group-cut-scene">
+            <button id="btn-cutscene">(Cutscene)CONTINUE</button>
+        </div>
     </div>
     <div id="container-timer">
-      <div id="timer">TIME GOES HERE</div>
+        <div id="timer"><p>TIME GOES HERE</p></div>
     </div>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="./scripts/controls.js"></script>
-  <script src="./scripts/game.js"></script>
-  <script src="./scripts/overlay.js"></script>
-</body>
-</html>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./scripts/controls.js"></script>
+    <script src="./scripts/game.js"></script>
+    <script src="./scripts/overlay.js"></script>
+    </body>
+    </html>
