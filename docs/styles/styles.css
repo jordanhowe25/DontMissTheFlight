@@ -13,7 +13,6 @@ body {
 .scenes {
     width: 1480px;
     height: 540px;
-    background-color: cyan;
     margin: 0 auto;
     display: none;
 }
@@ -21,7 +20,6 @@ body {
 #container-canvas {
     width: 1480px;
     height: 540px;
-    background-color: cyan;
     margin: 0 auto;
     display: none;
 }
@@ -29,8 +27,9 @@ body {
 #title-screen {
     display: block;
     position: relative;
-    background-color: blanchedalmond;
+    background-image: url('../images/title-screen.png');
     display: block;
+    background-size: contain;
 }
 
 #difficulty-select {
@@ -50,7 +49,7 @@ body {
 #world-view {
     display: none;
     position: relative;
-    background-color: dimgrey;
+    background-image: url("../images/world-view-background.png");
     display: none;
     width: 1480px;
     height: 540px;
@@ -145,4 +144,11 @@ body {
 #timer {
     color: red;
     display: none;
+}
+
+#btn-back {
+    position: absolute;
+    top: 5%;
+    left: 4%;
+    width: 125px;
 }
