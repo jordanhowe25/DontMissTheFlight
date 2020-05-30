@@ -2,14 +2,22 @@
     [
         // put image assets here
         // left one for example:  './images/airplane-left.png',
-	//TODO:  Add image assets to this array as they are added in the game
+    //TODO:  Add image assets to this array as they are added in the game
+    
+   
         
     ].forEach(src => {
         const img = new Image();
         img.src = src;
+        
         return img;  
     })
 })();
+
+    
+
+
+
 
 //Self calling timeout function, starts when page is game is first loaded.  Listens for activity, adjust timer if needed.  
 (() => {

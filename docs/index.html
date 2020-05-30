@@ -1,24 +1,27 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=ed">
-  <title>Don't Miss the Flight</title>
-  <link rel="stylesheet" href="./styles/styles.css">
-  <script src="./scripts/preload.js"></script> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=ed">
+    <title>Don't Miss the Flight</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./scripts/preload.js"></script>
+    <script src="./scripts/player.js"></script>
+
 </head>
 <body ondragstart="return false;" ondrop="return false;">
   <div id="container-game-area">
+    
     <div id = container-canvases>
       <div id="title-screen" class="canvases">
-        <p>TITLE SCREEN</p>
+       <!-- <p>TITLE SCREEN</p>-->
       </div>
       <div id="difficulty-select" class="canvases">
         <p>DIFFICULTY SELECT</p>
       </div>
       <div id="instructions" class="canvases">
-
+        
       </div>
       <canvas id="world-view" class="canvases"></canvas>
       <canvas id="cut-scene" class="canvases"></canvas>
@@ -41,6 +44,7 @@
       </div>
     <div id="container-hints">
       <!--TODO:  CSS for container-hints-->
+      
     </div>
     <div id="container-buttons">
       <!--TODO:  CSS for button groups-->
@@ -76,8 +80,14 @@
       <div id="timer">TIME GOES HERE</div>
     </div>
   </div>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./scripts/controls.js"></script>
   <script src="./scripts/game.js"></script>
+      <script>
+          $(document).ready(function () {
+              gameView.gameCarTest();
+          })
+      </script>
 </body>
 </html>

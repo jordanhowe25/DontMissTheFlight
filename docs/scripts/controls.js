@@ -3,22 +3,55 @@
 const bindToTouch = (selector, handler) => {
     $(selector).on('click touch', handler);
   };
-    
-  bindToTouch('#start-button', () => {
-    $('#start-screen-window').hide();
-    $('#game-scene').show();
-    game.start()
-  });
 
-  //To test this yourself, open the console when you have the game up and enter:  testToggleStart('#title-screen');
-function testToggleStart(elementID) {
-  $(elementID).fadeToggle(2500, testToggleEnd);
-  
-}
+//Main menu buttons
+bindToTouch('#btn-start-game', () => {
+  hideTitle();
+});
 
-function testToggleEnd() {
-  $('#difficulty-select').fadeToggle(1000);
-}
+bindToTouch('#btn-quit-game', () => {
+  window.location.href = 'http://www.flywithbutchohare.com';
+});
 
-  
-  
+//Difficulty selection buttons
+bindToTouch('#btn-early-learner', () => {
+  hideDifficulty();
+});
+
+bindToTouch('#btn-beginner', () => {
+  hideDifficulty();
+});
+
+bindToTouch('#btn-intermediate', () => {
+  hideDifficulty();
+});
+
+bindToTouch('#btn-advanced', () => {
+  hideDifficulty();
+});
+
+//Instructions buttons
+bindToTouch('#btn-instruction-confirm', () => {
+  //TODO:  start game function goes here, set game variables based on difficulty selected
+  hideInstructions();
+});
+
+//World-view buttons
+bindToTouch('#btn-start-trip', () => {
+  //TODO:  This button will be displayed if the player is just starting, otherwise continue-trip button will be displayed.
+  hideWorld(displayCutScene);
+});
+
+bindToTouch('#btn-continue-trip', () => {
+  hideWorld(displayCutScene);
+});
+
+//Cut scene button
+bindToTouch('#btn-cutscene', () => {
+  hideCutScene();
+});
+
+//Trivia Card
+bindToTouch('#btn-submit-answer', () => {
+  hideTriviaCard();
+});
