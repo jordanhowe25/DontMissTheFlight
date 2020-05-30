@@ -1,5 +1,3 @@
-/* globals Truck Luggage Plane */
-
 class Game {
     constructor({
       canvasElementId,
@@ -27,6 +25,9 @@ class Game {
     
     get time(){ return this._time; }
     set time(value){ this._time = value; }
+
+    get player(){ return this._player; }
+    set player(value) { this._player = value; }
   
     createCanvas(elementId){ 
         const canvas = document.getElementById(elementId);
@@ -82,9 +83,16 @@ class Game {
     stopCountdown() {
       clearInterval(this.timer);
     }
+
+    spawnPlayer() {
+            this.player = new Player({
+            game: this
+        });
+    }
   
     start() {
-
+        this.spawnPlayer();
+        console.log("start has begun");
     }
   
     stop() {
