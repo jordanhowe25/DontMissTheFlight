@@ -68,7 +68,6 @@ class Player {
         this.y = y;
 
         //draw on canvas
-        console.log(this);
         this.canvas.drawImage(
             this.image,
             x,

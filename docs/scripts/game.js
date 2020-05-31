@@ -93,88 +93,20 @@ class Game {
     }
 
     spawnObstacles() {
-        this.obstacle.push(
-            new Obstacle({
-                id: 1,
-                x: 200,
-                y: 115,
-                game: this
-            })
-        );
-        this.obstacle.push(
-            new Obstacle({
-                id: 2,
-                x: 300,
-                y: 115,
-                game: this,
-            })
-        );
-        this.obstacle.push(
-            new Obstacle({
-                id: 3,
-                x: 400,
-                y: 115,
-                game: this,
-            })
-        );
-        this.obstacle.push(
-            new Obstacle({
-                id: 4,
-                x: 500,
-                y: 115,
-                game: this,
-            })
-        );
-        this.obstacle.push(
-            new Obstacle({
-                id: 5,
-                x: 600,
-                y: 115,
-                game: this,
-            })
-        );
-        this.obstacle.push(
-            new Obstacle({
-                id: 6,
-                x: 700,
-                y: 115,
-                game: this,
-            })
-        );
-        this.obstacle.push(
-            new Obstacle({
-                id: 7,
-                x: 800,
-                y: 115,
-                game: this,
-            })
-        );
-        this.obstacle.push(
-            new Obstacle({
-                id: 8,
-                x: 900,
-                y: 115,
-                game: this,
-            })
-        );
-        this.obstacle.push(
-            new Obstacle({
-                id: 9,
-                x: 1000,
-                y: 115,
-                game: this,
-            })
-        );
-        this.obstacle.push(
-            new Obstacle({
-                id: 10,
-                x: 1100,
-                y: 115,
-                game: this,
-            })
-        );
-
-
+        var coordsX = [200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100];
+        var coordsY = [115, 115, 115, 115, 115, 115, 115, 115, 115, 115,];
+        var counter = 0
+        for (let n = 0; n < 10; n++ ){
+            this.obstacle.push(
+                new Obstacle({
+                    id: counter,
+                    x: coordsX[counter],
+                    y: coordsY[counter],
+                    game: this
+                })
+            );
+            counter ++;
+        }
     }
   
     start() {

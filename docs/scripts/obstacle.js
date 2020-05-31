@@ -7,15 +7,15 @@ class Obstacle {
         width = 44,
         images = [
             './images/o1.png',
-            './images/o1.png',
-            './images/o1.png',
-            './images/o1.png',
-            './images/o1.png',
-            './images/o1.png',
-            './images/o1.png',
-            './images/o1.png',
-            './images/o1.png',
-            './images/o1.png',
+            './images/o2.png',
+            './images/o3.png',
+            './images/o4.png',
+            './images/o5.png',
+            './images/o6.png',
+            './images/o7.png',
+            './images/o8.png',
+            './images/o9.png',
+            './images/o10.png',
             './images/o_done.png'
         ],
         game,
@@ -48,6 +48,8 @@ class Obstacle {
     get images() { return this._images; }
     get image() { return this._image; }
     set image(src) { this._image = src; }
+    get id() { return this._id; }
+    set id(id) { this._id = id;}
 
     // class methods
     loadImages(images) {
@@ -61,8 +63,7 @@ class Obstacle {
     }
 
     loadImage() {
-        //TODO:  This will have to be redefined eventually
-        this.image = this.images[0];
+        this.image = this.images[this.id];
     }
 
     draw(x = this.x, y = this.y) {
