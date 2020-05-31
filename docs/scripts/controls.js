@@ -46,7 +46,6 @@ bindToTouch('#btn-advanced', () => {
 //Instructions buttons
 bindToTouch('#btn-instruction-confirm', () => {
   hideInstructions();
-  game.start();
 });
 
 //World-view buttons

@@ -2,32 +2,34 @@ class Game {
     constructor({
       canvasElementId,
     }){
-      this._canvasElementId = canvasElementId;
-      this._difficulty = "Early Learner"  
-      this._time = 300;
-    
-      this.createCanvas(canvasElementId);
+        this._canvasElementId = canvasElementId;
+        this._difficulty = "Early Learner"  
+        this._time = 300;
+        this._obstacle = [];   
+        this.createCanvas(canvasElementId);
     }
   
-    get canvas(){ return this._canvas; }
-    set canvas(value){ this._canvas = value; }
-  
-    get canvasWidth(){ return 1480; }
-    get canvasHeight(){ return 540; }
-  
-    get canvasElementId(){ return this._canvasElementId; }
-  
-    get score(){ return this._score; }
-    set score(value){ this._score = value; }
-  
-    get timer() { return this._timer; }
-    set timer(value) { this._timer = value; }
+        get canvas(){ return this._canvas; }
+        set canvas(value){ this._canvas = value; }
     
-    get time(){ return this._time; }
-    set time(value){ this._time = value; }
+        get canvasWidth(){ return 1480; }
+        get canvasHeight(){ return 540; }
+    
+        get canvasElementId(){ return this._canvasElementId; }
+    
+        get score(){ return this._score; }
+        set score(value){ this._score = value; }
+    
+        get timer() { return this._timer; }
+        set timer(value) { this._timer = value; }
+        
+        get time(){ return this._time; }
+        set time(value){ this._time = value; }
 
-    get player(){ return this._player; }
-    set player(value) { this._player = value; }
+        get player(){ return this._player; }
+        set player(value) { this._player = value; }
+
+        get obstacle() {return this._obstacle; }
   
     createCanvas(elementId){ 
         const canvas = document.getElementById(elementId);
@@ -89,10 +91,97 @@ class Game {
             game: this
         });
     }
+
+    spawnObstacles() {
+        this.obstacle.push(
+            new Obstacle({
+                id: 1,
+                x: 200,
+                y: 115,
+                game: this
+            })
+        );
+        this.obstacle.push(
+            new Obstacle({
+                id: 2,
+                x: 300,
+                y: 115,
+                game: this,
+            })
+        );
+        this.obstacle.push(
+            new Obstacle({
+                id: 3,
+                x: 400,
+                y: 115,
+                game: this,
+            })
+        );
+        this.obstacle.push(
+            new Obstacle({
+                id: 4,
+                x: 500,
+                y: 115,
+                game: this,
+            })
+        );
+        this.obstacle.push(
+            new Obstacle({
+                id: 5,
+                x: 600,
+                y: 115,
+                game: this,
+            })
+        );
+        this.obstacle.push(
+            new Obstacle({
+                id: 6,
+                x: 700,
+                y: 115,
+                game: this,
+            })
+        );
+        this.obstacle.push(
+            new Obstacle({
+                id: 7,
+                x: 800,
+                y: 115,
+                game: this,
+            })
+        );
+        this.obstacle.push(
+            new Obstacle({
+                id: 8,
+                x: 900,
+                y: 115,
+                game: this,
+            })
+        );
+        this.obstacle.push(
+            new Obstacle({
+                id: 9,
+                x: 1000,
+                y: 115,
+                game: this,
+            })
+        );
+        this.obstacle.push(
+            new Obstacle({
+                id: 10,
+                x: 1100,
+                y: 115,
+                game: this,
+            })
+        );
+
+
+    }
   
     start() {
-        this.spawnPlayer();
         console.log("start has begun");
+        this.spawnPlayer();
+        this.spawnObstacles();
+        
     }
   
     stop() {
@@ -119,4 +208,6 @@ class Game {
   const game = new Game({
     canvasElementId: 'world-view',
   });
+
+  game.start();
   
