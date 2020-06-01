@@ -30,7 +30,7 @@ class Obstacle {
         //images to use
         this._images = this.loadImages(images);
 
-        // loadImage images
+        // loadImage images..
         this.loadImage();
 
         //draw to canvas at initial position
