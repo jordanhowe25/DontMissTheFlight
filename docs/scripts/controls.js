@@ -45,7 +45,6 @@ bindToTouch('#btn-advanced', () => {
 
 //Instructions buttons
 bindToTouch('#btn-instruction-confirm', () => {
-  //TODO:  start game function goes here, set game variables based on difficulty selected
   hideInstructions();
 });
 

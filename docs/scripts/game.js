@@ -1,32 +1,35 @@
-/* globals Truck Luggage Plane */
-
 class Game {
     constructor({
       canvasElementId,
     }){
-      this._canvasElementId = canvasElementId;
-      this._difficulty = "Early Learner"  
-      this._time = 300;
-    
-      this.createCanvas(canvasElementId);
+        this._canvasElementId = canvasElementId;
+        this._difficulty = "Early Learner"  
+        this._time = 300;
+        this._obstacle = [];   
+        this.createCanvas(canvasElementId);
     }
   
-    get canvas(){ return this._canvas; }
-    set canvas(value){ this._canvas = value; }
-  
-    get canvasWidth(){ return 1480; }
-    get canvasHeight(){ return 540; }
-  
-    get canvasElementId(){ return this._canvasElementId; }
-  
-    get score(){ return this._score; }
-    set score(value){ this._score = value; }
-  
-    get timer() { return this._timer; }
-    set timer(value) { this._timer = value; }
+        get canvas(){ return this._canvas; }
+        set canvas(value){ this._canvas = value; }
     
-    get time(){ return this._time; }
-    set time(value){ this._time = value; }
+        get canvasWidth(){ return 1480; }
+        get canvasHeight(){ return 540; }
+    
+        get canvasElementId(){ return this._canvasElementId; }
+    
+        get score(){ return this._score; }
+        set score(value){ this._score = value; }
+    
+        get timer() { return this._timer; }
+        set timer(value) { this._timer = value; }
+        
+        get time(){ return this._time; }
+        set time(value){ this._time = value; }
+
+        get player(){ return this._player; }
+        set player(value) { this._player = value; }
+
+        get obstacle() {return this._obstacle; }
   
     createCanvas(elementId){ 
         const canvas = document.getElementById(elementId);
@@ -82,9 +85,35 @@ class Game {
     stopCountdown() {
       clearInterval(this.timer);
     }
+
+    spawnPlayer() {
+            this.player = new Player({
+            game: this
+        });
+    }
+
+    spawnObstacles() {
+        var coordsX = [200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100];
+        var coordsY = [115, 115, 115, 115, 115, 115, 115, 115, 115, 115,];
+        var counter = 0
+        for (let n = 0; n < 10; n++ ){
+            this.obstacle.push(
+                new Obstacle({
+                    id: counter,
+                    x: coordsX[counter],
+                    y: coordsY[counter],
+                    game: this
+                })
+            );
+            counter ++;
+        }
+    }
   
     start() {
-
+        console.log("start has begun");
+        this.spawnPlayer();
+        this.spawnObstacles();
+        
     }
   
     stop() {
@@ -111,4 +140,6 @@ class Game {
   const game = new Game({
     canvasElementId: 'world-view',
   });
+
+  game.start();
   
