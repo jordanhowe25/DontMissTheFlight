@@ -7,6 +7,7 @@ class Game {
         this._time = 300;
         this._obstacle = [];   
         this.createCanvas(canvasElementId);
+        this._triviaCard = [];
     }
   
         get canvas(){ return this._canvas; }
@@ -30,6 +31,8 @@ class Game {
         set player(value) { this._player = value; }
 
         get obstacle() {return this._obstacle; }
+
+        get triviaCard() {return this._triviaCard; }
   
     createCanvas(elementId){ 
         const canvas = document.getElementById(elementId);
@@ -94,7 +97,7 @@ class Game {
 
     spawnObstacles() {
         var coordsX = [200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100];
-        var coordsY = [115, 115, 115, 115, 115, 115, 115, 115, 115, 115,];
+        var coordsY = [115, 115, 115, 300, 115, 115, 115, 115, 115, 115,];
         var counter = 0
         for (let n = 0; n < 10; n++ ){
             this.obstacle.push(
@@ -113,6 +116,20 @@ class Game {
         console.log("start has begun");
         this.spawnPlayer();
         this.spawnObstacles();
+        this.triviaCard.push(
+            new TriviaCard({
+                id: 0,
+                question,
+                answerA: "answer A",
+                answerB: "answer B",
+                answerC: "answer C",
+                answerD: "answer D",
+                correctAnswer: "answer A",
+                hint: "This is a hint",
+                image: "",
+                game: this,
+            })
+        ) 
         
     }
   
