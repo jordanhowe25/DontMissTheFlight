@@ -1,6 +1,6 @@
 class Player {
     constructor({
-        x = 25,
+        x = 50,
         y = 115,
         height = 48,
         width = 100,
@@ -100,4 +100,8 @@ class Player {
     stopAnimation() {
         cancelAnimationFrame(this.animationInterval);
     }
+
+    
+
+
 };
