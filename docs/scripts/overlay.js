@@ -31,6 +31,7 @@ function displayWorld(){
     $('#button-group-world-view').fadeToggle(1000);
     $('#number-of-hints').fadeToggle(1000);
     $('#timer').fadeToggle(1000);
+    
 }
 
 function hideWorld(displayFunction) {
