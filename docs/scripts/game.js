@@ -96,8 +96,8 @@ class Game {
     }
 
     spawnObstacles() {
-        var coordsX = [200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100];
-        var coordsY = [115, 115, 115, 300, 115, 115, 115, 115, 115, 115,];
+        var coordsX = [285, 285, 450, 600, 600, 750, 915, 915, 915, 1168];
+        var coordsY = [115, 355, 355, 355, 115, 115, 115, 235, 355, 355,];
         var counter = 0
         for (let n = 0; n < 10; n++ ){
             this.obstacle.push(
