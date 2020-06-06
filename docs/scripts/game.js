@@ -1,3 +1,4 @@
+var currentObstacle = 0;
 class Game {
     constructor({
       canvasElementId,
@@ -8,6 +9,7 @@ class Game {
         this._obstacle = [];   
         this.createCanvas(canvasElementId);
         this._triviaCard = [];
+        
     }
   
         get canvas(){ return this._canvas; }
@@ -33,6 +35,7 @@ class Game {
         get obstacle() {return this._obstacle; }
 
         get triviaCard() {return this._triviaCard; }
+
   
     createCanvas(elementId){ 
         const canvas = document.getElementById(elementId);
@@ -66,6 +69,21 @@ class Game {
                 this._time = 600;
                 break;
         }
+    }
+
+    getTriviaCards() {
+        var ajax = new XMLHttpRequest();
+        ajax.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var selection = JSON.parse(this.responseText);
+                for (var a = 0; a < selection.length; a++) {
+                    question = selection[a].question.toUpperCase();
+                }
+            }
+        }
+        // Send a request to PHP for a new question
+        ajax.open("GET", "../scripts/getTriviaCards.php", false);
+        ajax.send();
     }
         
     startCountdown()
@@ -111,6 +129,7 @@ class Game {
             counter ++;
         }
     }
+
   
     start() {
         console.log("start has begun");
@@ -136,6 +155,9 @@ class Game {
     stop() {
       
     }
+
+   
+
   
     // return true if two bounding boxes collided
     static didCollide(obj1, obj2){
