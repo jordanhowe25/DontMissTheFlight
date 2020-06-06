@@ -1,6 +1,6 @@
 class Player {
     constructor({
-        x = 25,
+        x = 50,
         y = 115,
         height = 48,
         width = 100,
@@ -86,18 +86,52 @@ class Player {
         );
     }
     //Much more will need to be added below this comment.  To the move function and additional functions might be needed.
-    move() {
+    update(speedX, speedY) {
         this.clear();
         this.draw();
-        this.x += this.speed;
+        this.x += speedX;
+        this.y += speedY;
     }
 
     startAnimation() {
+        const targetPosX = game.obstacle[currentObstacle].x;
+        const targetPosY = game.obstacle[currentObstacle].y;
+
+        var deltaX = (this.x - targetPosX);
+        var deltaY = (this.y - targetPosY);
+
+        if (deltaX < 30) {
+            var speedX = this.speed;
+            var speedY = 0;
+        } else if (deltaY < 0) {
+            var speedY = this.speed;
+            var speedX = 0;
+        } else if  (deltaY > 0) {
+            var speedY = this.speed * -1;
+            var speedX = 0;
+        }
+
+        
         this.animationInterval = requestAnimationFrame(() => this.startAnimation(this.animationInterval));
-        this.move();
+        if (!Game.didCollide(this, game.obstacle[currentObstacle])) {
+            this.update(speedX, speedY);
+        } else {
+            this.stopAnimation();
+        }
     }
 
     stopAnimation() {
         cancelAnimationFrame(this.animationInterval);
     }
+
+    getBoundingBox() {
+        return {
+          topLeft: {x: this.x, y: this.y},
+          bottomRight: {x: this.x + this.width, y: this.y + this.height},
+        }
+    }
+
+    
+
+
 };
