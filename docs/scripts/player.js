@@ -4,9 +4,16 @@ class Player {
         y = 115,
         height = 48,
         width = 100,
+        vHeight = 100,
+        vWidth = 48,
         images = [
-            //More images will need to be added for the direction of the car.  Just go to paint, rotate image, make png transparent, then save image.  Add here.
-            './images/player-car.png'
+            //images of the players car in horizontal orientation.
+            './images/player-right.png'
+        ],
+        vImages = [
+            //images of the players car in vertical orientation.
+            './images/player-up.png',
+            './images/player-down.png'
         ],
         speed = 1,
         game,
@@ -17,15 +24,18 @@ class Player {
         this._height = height;
         this._width = width;
         this._speed = speed;
+        this._vHeight = vHeight;
+        this._vWidth = vWidth;
 
         //parent game
         this._game = game;
 
         //images to use
-        this._images = this.loadImages(images);
+        this._images = this.loadImages(images, this.height, this.width);
+        this._vImages = this.loadImages(vImages, this.vHeight, this.vWidth);
 
         //loadImage images
-        this.loadImage();
+        this.loadImage(this.images[0]);
 
         //draw to canvas at initial position
         this.draw();
@@ -40,33 +50,34 @@ class Player {
     get speed() { return this._speed; }
     set speed(speed) { this._speed = speed; }
     get height() { return this._height; }
+    set height(value) { this._height = value; }
     get width() { return this._width; }
+    set width(value) { this._width = value; }
+    get vHeight() { return this._vHeight; }
+    get vWidth() { return this._vWidth; }
     get canvas() { return this.game.canvas; }
     get images() { return this._images; }
+    get vImages() { return this._vImages; }
     get image() { return this._image; }
     set image(src) { this._image = src; }
     get animationInterval() { return this._animationInterval; }
     set animationInterval(interval) { this._animationInterval = interval }
 
-    loadImages(images) {
+    loadImages(images, height, width) {
         return images.map(src => {
           const img = new Image();
-          img.height = this.height;
-          img.width = this.width;
+          img.height = height;
+          img.width = width;
           img.src = src;
           return img;
         });
     }
 
-    loadImage() {
-        this.image = this.images[0];
+    loadImage(image) {
+        this.image = image
     }
 
     draw(x = this.x, y = this.y) {
-        //update position data
-        this.x = x;
-        this.y = y;
-
         //draw on canvas
         this.canvas.drawImage(
             this.image,
@@ -93,6 +104,28 @@ class Player {
         this.y += speedY;
     }
 
+    verticalOrientation(vImage){
+        this.clear();
+        this.width = this.vWidth;
+        this.height = this.vHeight;
+        this.loadImage(vImage);
+        this.x = game.obstacle[currentObstacle].x;
+        this.y = game.obstacle[currentObstacle].y;
+        this.draw();
+        currentObstacle ++;
+    }
+
+    horizontalOrientation(image = this.images[0]){
+        this.clear();
+        this.width = 100;
+        this.height = 48;
+        this.loadImage(image);
+        this.x = game.obstacle[currentObstacle].x;
+        this.y = game.obstacle[currentObstacle].y;
+        this.draw();
+        currentObstacle ++;
+    }
+
     startAnimation() {
         const targetPosX = game.obstacle[currentObstacle].x;
         const targetPosY = game.obstacle[currentObstacle].y;
@@ -100,7 +133,7 @@ class Player {
         var deltaX = (this.x - targetPosX);
         var deltaY = (this.y - targetPosY);
 
-        if (deltaX < 30) {
+        if (deltaX < 0) {
             var speedX = this.speed;
             var speedY = 0;
         } else if (deltaY < 0) {
