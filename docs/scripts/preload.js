@@ -3,7 +3,9 @@
         // put image assets here
         // left one for example:  './images/airplane-left.png',
 	//TODO:  Add image assets to this array as they are added in the game
-        './images/player-car.png', 
+        './images/player-up.png', 
+        './images/player-right.png', 
+        './images/player-down.png', 
         './images/o1.png',
         './images/o2.png',
         './images/o3.png',
