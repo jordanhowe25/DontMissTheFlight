@@ -21,25 +21,25 @@ bindToTouch('#btn-quit-game', () => {
 //Difficulty selection buttons
 bindToTouch('#btn-early-learner', () => {
   game._difficulty = "Early Learner";
-  game.setStartingGameTime();
+  game.setStartingGameSettings();
   hideDifficulty();
 });
 
 bindToTouch('#btn-beginner', () => {
   game._difficulty = "Beginner";
-  game.setStartingGameTime();
+  game.setStartingGameSettings();
   hideDifficulty();
 });
 
 bindToTouch('#btn-intermediate', () => {
   game._difficulty = "Intermediate";
-  game.setStartingGameTime();
+  game.setStartingGameSettings();
   hideDifficulty();
 });
 
 bindToTouch('#btn-advanced', () => {
   game._difficulty = "Advanced";
-  game.setStartingGameTime();
+  game.setStartingGameSettings();
   hideDifficulty();
 });
 

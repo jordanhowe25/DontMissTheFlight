@@ -1,8 +1,7 @@
 (() => {
     [
         // put image assets here
-        // left one for example:  './images/airplane-left.png',
-	//TODO:  Add image assets to this array as they are added in the game
+	    //TODO:  Add image assets to this array as they are added in the game
         './images/player-up.png', 
         './images/player-right.png', 
         './images/player-down.png', 
@@ -16,7 +15,8 @@
         './images/o8.png',
         './images/o9.png',
         './images/o10.png',
-        './images/o_done.png',  
+        './images/o_done.png', 
+        './images/hint.png' 
     ].forEach(src => {
         const img = new Image();
         img.src = src;

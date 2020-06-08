@@ -9,7 +9,7 @@ class Game {
         this._obstacle = [];   
         this.createCanvas(canvasElementId);
         this._triviaCard = [];
-        
+        this._hints = 0;    
     }
   
         get canvas(){ return this._canvas; }
@@ -36,6 +36,9 @@ class Game {
 
         get triviaCard() {return this._triviaCard; }
 
+        get hints() { return this._hints; }
+        set hints(value) { this._hints = value; }
+
   
     createCanvas(elementId){ 
         const canvas = document.getElementById(elementId);
@@ -50,19 +53,27 @@ class Game {
         this.canvas.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
   
-    setStartingGameTime(){
+    setStartingGameSettings(){
         switch (this._difficulty) {
             case "Early Learner":
                 this._time = 300;
+                this._hints = 1000;
+                this.populateHints();
                 break;
             case "Beginner":
                 this._time = 300;
+                this._hints = 5;
+                this.populateHints();
                 break;
             case "Intermediate":
                 this._time = 240;
+                this._hints = 3;
+                this.populateHints();
                 break;
             case "Advanced":
                 this._time = 180;
+                this._hints = 1;
+                this.populateHints();
                 break;
             default:
                 //Used for testing purposes only, should always be 1 of the 4 options.
@@ -105,6 +116,29 @@ class Game {
   
     stopCountdown() {
       clearInterval(this.timer);
+    }
+
+    populateHints() {
+        var div = document.getElementById("number-of-hints");
+
+        if (this._hints == 1000) {
+            document.getElementById('number-of-hints').innerHTML = '<img width="102" height="178" src="./images/hint.png">';
+        } else {
+            for (var i = 0; i < this._hints; i++) {
+                var hintImg = document.createElement("img");
+                hintImg.src = "./images/hint.png";
+                hintImg.width = "51";
+                hintImg.height = "89";
+                div.appendChild(hintImg);
+
+            }
+        }
+    }
+
+    removeHint() {
+        var div = document.getElementById("number-of-hints");
+        var image = div.querySelectorAll('[src="./images/hint.png"]');
+        div.removeChild(image[0]);
     }
 
     spawnPlayer() {
