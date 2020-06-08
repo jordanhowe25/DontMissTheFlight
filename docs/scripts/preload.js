@@ -15,7 +15,8 @@
         './images/o8.png',
         './images/o9.png',
         './images/o10.png',
-        './images/o_done.png',  
+        './images/o_done.png', 
+        './images/hint.png' 
     ].forEach(src => {
         const img = new Image();
         img.src = src;

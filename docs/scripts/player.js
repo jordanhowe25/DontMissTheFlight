@@ -61,7 +61,8 @@ class Player {
     get image() { return this._image; }
     set image(src) { this._image = src; }
     get animationInterval() { return this._animationInterval; }
-    set animationInterval(interval) { this._animationInterval = interval }
+    set animationInterval(interval) { this._animationInterval = interval; }
+    
 
     loadImages(images, height, width) {
         return images.map(src => {
