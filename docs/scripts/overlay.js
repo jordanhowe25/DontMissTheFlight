@@ -29,8 +29,14 @@ function displayWorld(){
     $('#container-canvas').fadeToggle(1000);
     $('#world-view').fadeToggle(1000);
     $('#button-group-world-view').fadeToggle(1000);
-    $('#number-of-hints').fadeToggle(1000);
-    $('#timer').fadeToggle(1000);
+    if (currentObstacle == 0) {
+        $('#btn-continue-trip').hide();
+        $('#btn-start-trip').show();
+    } else {
+        $('#btn-continue-trip').show();
+        $('#btn-start-trip').hide();
+    }
+    
     
 }
 
@@ -61,9 +67,6 @@ function hideTriviaCard(){
     $('#button-group-trivia-card').fadeToggle(1000);
 }
 
-function toggleHint(){
-    $('#hint').fadeToggle(1000);
-}
 
 function displayEndGameWin(){
     $('#end-game-win').fadeToggle(1000);

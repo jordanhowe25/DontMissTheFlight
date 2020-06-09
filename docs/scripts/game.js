@@ -122,13 +122,21 @@ class Game {
         var div = document.getElementById("number-of-hints");
 
         if (this._hints == 1000) {
-            document.getElementById('number-of-hints').innerHTML = '<img width="102" height="178" src="./images/hint.png">';
+            var hintImg = document.createElement("img");
+            var hintText = document.createElement("P");
+            hintText.innerText = "UNLIMITED";
+            hintImg.src = "./images/hint.png";
+            hintImg.width = "40";
+            hintImg.height = "78";
+            div.appendChild(hintImg);
+            div.appendChild(hintText);
+            
         } else {
             for (var i = 0; i < this._hints; i++) {
                 var hintImg = document.createElement("img");
                 hintImg.src = "./images/hint.png";
-                hintImg.width = "51";
-                hintImg.height = "89";
+                hintImg.width = "65";
+                hintImg.height = "103";
                 div.appendChild(hintImg);
 
             }
@@ -148,10 +156,10 @@ class Game {
     }
 
     spawnObstacles() {
-        var coordsX = [285, 285, 450, 600, 600, 750, 915, 915, 915, 1168];
-        var coordsY = [115, 355, 355, 355, 115, 115, 115, 235, 355, 355,];
+        var coordsX = [285, 285, 450, 600, 600, 750, 915, 915, 915, 1168, 1168];
+        var coordsY = [115, 355, 355, 355, 115, 115, 115, 235, 355, 355, 225];
         var counter = 0
-        for (let n = 0; n < 10; n++ ){
+        for (let n = 0; n < 11; n++ ){
             this.obstacle.push(
                 new Obstacle({
                     id: counter,
