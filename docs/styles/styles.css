@@ -1,0 +1,179 @@
+﻿body {
+    background-color: chartreuse;
+    width: 1920px;
+}
+
+#container-game-area {
+    margin: 5% auto;
+    background-color: blueviolet;
+    width: 1520px;
+    height: 780px;   
+}
+
+.scenes {
+    width: 1480px;
+    height: 540px;
+    margin: 0 auto;
+    display: none;
+}
+
+#container-canvas {
+    width: 1480px;
+    height: 540px;
+    margin: 0 auto;
+    display: none;
+}
+
+#title-screen {
+    display: block;
+    position: relative;
+    background-image: url('../images/title-screen.png');
+    display: block;
+    background-size: contain;
+}
+
+#difficulty-select {
+    display: none;
+    position: relative;
+    background-color: red;
+    display: none;
+}
+
+#instructions {
+    display: none;
+    position: relative;
+    background-color: darkmagenta;
+    display: none;
+}
+
+#world-view {
+    display: none;
+    position: relative;
+    background-image: url("../images/world-view-background.png");
+    display: none;
+    width: 1480px;
+    height: 540px;
+}
+
+#cut-scene {
+    display: none;
+    position: relative;
+    background-color: hotpink;
+    display: none;
+    width: 1480px;
+    height: 540px;
+}
+
+#trivia-card {
+    display: none;
+    position: relative;
+    background-color: mediumspringgreen;
+    display: none;
+}
+
+#end-game-win {
+    display: none;
+    position: relative;
+    background-color: orangered;
+    display: none;
+}
+
+#end-game-lose {
+    display: none;
+    position: relative;
+    background-color: silver;
+    display: none;
+}
+
+#container-hints {
+    width: 340px;
+    height: 180px;
+    float: left;
+    background-color: darkmagenta;
+    margin: 20px 20px;
+    display: block;
+}
+
+#container-buttons {
+    width: 760px;
+    height: 180px;
+    float: left;
+    background-color: red;
+    margin: 20px 0;
+}
+
+#container-timer {
+    width: 340px;
+    height: 180px;
+    float: left;
+    background-color: black;
+    margin: 20px 20px;
+    display: block;
+}
+
+#prompt-validate-selection{
+    display: none;
+}
+
+#button-group-main-menu {
+    display: block;
+}
+
+#button-group-difficulty-select {
+    display: none;
+}
+#button-group-instructions{
+    display: none;
+}
+#button-group-world-view {
+    display: none;
+}
+
+#button-group-trivia-card {
+    display: none;
+}
+
+#button-group-cut-scene {
+    display: none;
+}
+
+#number-of-hints {
+    display: none;
+}
+
+#timer {
+    color: red;
+    display: none;
+}
+
+#btn-back {
+    position: absolute;
+    top: 5%;
+    left: 4%;
+    width: 125px;
+}
+
+.button3 {
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: #4eb5f1;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+#moveupBTN{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+}
