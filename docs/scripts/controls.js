@@ -46,7 +46,7 @@ bindToTouch('#btn-advanced', () => {
 //Instructions buttons
 bindToTouch('#btn-instruction-confirm', () => {
   hideInstructions();
-  if (!game._difficulty == "Early Learner"){
+  if (game._difficulty != "Early Learner"){
     game.startCountdown();
   } else {
     var unlimited = document.getElementById('timer');

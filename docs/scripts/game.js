@@ -198,7 +198,18 @@ class Game {
       
     }
 
-   
+   loadCutScene() {
+    var cutScene = document.getElementById("cut-scene");
+    var triviaCard = document.getElementById("trivia-card");
+
+    var cutScenes = [
+        "url('./images/cutscenes/cutScene0.png')",
+        "url('./images/cutscenes/cutScene1.png')",
+
+    ]
+    cutScene.style.backgroundImage = cutScenes[currentObstacle];
+    triviaCard.style.backgroundImage = cutScenes[currentObstacle];
+   }
 
   
     // return true if two bounding boxes collided
