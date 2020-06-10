@@ -59,11 +59,13 @@ function hideCutScene(){
 
 function displayTriviaCard(){
     $('#trivia-card').fadeToggle(1000);
+    $('#tivia-card-content').fadeToggle(1000);
     $('#button-group-trivia-card').fadeToggle(1000);
 }
 
 function hideTriviaCard(){
     $('#trivia-card').fadeToggle(1000, displayWorld);
+    $('#tivia-card-content').fadeToggle(1000);
     $('#button-group-trivia-card').fadeToggle(1000);
 }
 

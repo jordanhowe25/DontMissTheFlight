@@ -71,15 +71,25 @@ body {
 #trivia-card {
     display: none;
     position: relative;
-    background-color: mediumspringgreen;
-    display: none;
+   
+}
+#trivia-card-content {
+    display: block;
+    position: absolute;
+    width: 1110px;
+    height: 405px;
+    left: 12.5%;
+    top: 12.5%;
+    background-color: white;
+    z-index: 10;
+    opacity: .9;
+    box-shadow: 5px 10px #888888;
 }
 
 #end-game-win {
     display: none;
     position: relative;
     background-color: orangered;
-    display: none;
 }
 
 #end-game-lose {

@@ -173,6 +173,7 @@ class Player {
             this.update(speedX, speedY);
         } else {
             this.stopAnimation();
+            game.loadCutScene();
             hideWorld(displayCutScene);
             
         }
