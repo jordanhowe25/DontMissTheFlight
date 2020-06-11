@@ -15,42 +15,44 @@
         <div id="title-screen" class="scenes">
         </div>
         <div id="difficulty-select" class="scenes">
+           
             <br>
             <h1 style="text-align: center;">Difficulty Levels</h1>
             <br>
             <br>
-            <h1><pre class="tab">Early Learner ages 4 - 7      <img src="images\earlyLearner.png"></pre> </h1>
-            <h1><pre class="tab">Beginner      ages 8 - 10     <img src="images\beginner.png"></pre></h1>
-            <h1><pre class="tab">Intermediate  ages 11 - 12    <img src="images\intermediate.png"></pre></h1>
-            <h1><pre class="tab">Advance       ages 12 - above <img src="images\advance.png"></pre></h1>
-            
+            <div class="difficultyPage">    
+                <h1><pre class="tab">Learner       ages 4 - 6      <img src="images\earlyLearner.png"></pre></h1>
+                <h1><pre class="tab">Beginner      ages 7 - 9      <img src="images\beginner.png"></pre></h1>
+                <h1><pre class="tab">Intermediate  ages 10 - 14    <img src="images\intermediate.png"></pre></h1>
+                <h1><pre class="tab">Advance       ages 15 - above <img src="images\advance.png"></pre></h1>
+            </div>
         </div>
         <div id="instructions" class="scenes">
-            <p id="instructions-text">THESE ARE THE INSTRUCTIONS PER DIFFICULTY LEVEL</p> 
+            <div class="rules">
+                <h1>Game Rules</h1>
+                <img style="border: 10px solid black;"src="images\rulesPic.png" alt="rules boarder";style="width:300px;">    
+            </div>
+                
+                        
+            </div>
         </div>
         <div id="container-canvas" class="scenes">
             <canvas id="world-view"></canvas>
             <div id="cut-scene"></div>
         </div>
         <div id="trivia-card" class="scenes">
-            <p id="question">Question goes here.</p>
-            <p id="hint">Add a icon for the hint that will always be displayed, if clicked then display the hint here.  Logic will need to be added to make this unclickable if they have no hints left.</p>
+            <div id="trivia-card-content">
+                <p id="question">Question goes here.</p>
+                <p id="hint">Add a icon for the hint that will always be displayed, if clicked then display the hint here.  Logic will need to be added to make this unclickable if they have no hints left.</p>
+            </div>    
         </div>
         <div  id="end-game-win" class="scenes">
 
         </div>
         <div id="end-game-lose" class="scenes">
-
-        </div>
-        <div id="prompt-validate-selection" class="pop-up">
-            <p>ARE YOU SURE?</p>
-        <ul>
-            <li>YES</li>
-            <li>NO</li>
-        </ul>
         </div>
     <div id="container-hints">
-        <h2>Number of Hints Left</h2>
+        <h2>HINTS LEFT</h2>
         <div id="number-of-hints"></div>
     </div>
     <div id="container-buttons">
@@ -101,7 +103,10 @@
         </div>
     </div>
     <div id="container-timer">
-        <div id="timer"><p>TIME GOES HERE</p></div>
+        <h2>TIME REMAINING</h2>
+        <div id="timer-background">
+            <div id="timer"></div>
+        </div>
     </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
