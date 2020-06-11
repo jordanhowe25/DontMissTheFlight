@@ -1,3 +1,4 @@
+var currentObstacle = 0;
 class Game {
     constructor({
       canvasElementId,
@@ -8,6 +9,7 @@ class Game {
         this._obstacle = [];   
         this.createCanvas(canvasElementId);
         this._triviaCard = [];
+        this._hints = 0;    
     }
   
         get canvas(){ return this._canvas; }
@@ -33,6 +35,10 @@ class Game {
         get obstacle() {return this._obstacle; }
 
         get triviaCard() {return this._triviaCard; }
+
+        get hints() { return this._hints; }
+        set hints(value) { this._hints = value; }
+
   
     createCanvas(elementId){ 
         const canvas = document.getElementById(elementId);
@@ -47,25 +53,48 @@ class Game {
         this.canvas.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
   
-    setStartingGameTime(){
+    setStartingGameSettings(){
         switch (this._difficulty) {
             case "Early Learner":
                 this._time = 300;
+                this._hints = 1000;
+                this.populateHints();
                 break;
             case "Beginner":
                 this._time = 300;
+                this._hints = 5;
+                this.populateHints();
                 break;
             case "Intermediate":
                 this._time = 240;
+                this._hints = 3;
+                this.populateHints();
                 break;
             case "Advanced":
                 this._time = 180;
+                this._hints = 1;
+                this.populateHints();
                 break;
             default:
                 //Used for testing purposes only, should always be 1 of the 4 options.
                 this._time = 600;
                 break;
         }
+    }
+
+    getTriviaCards() {
+        var ajax = new XMLHttpRequest();
+        ajax.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var selection = JSON.parse(this.responseText);
+                for (var a = 0; a < selection.length; a++) {
+                    question = selection[a].question.toUpperCase();
+                }
+            }
+        }
+        // Send a request to PHP for a new question
+        ajax.open("GET", "../scripts/getTriviaCards.php", false);
+        ajax.send();
     }
         
     startCountdown()
@@ -89,6 +118,37 @@ class Game {
       clearInterval(this.timer);
     }
 
+    populateHints() {
+        var div = document.getElementById("number-of-hints");
+
+        if (this._hints == 1000) {
+            var hintImg = document.createElement("img");
+            var hintText = document.createElement("P");
+            hintText.innerText = "UNLIMITED";
+            hintImg.src = "./images/hint.png";
+            hintImg.width = "40";
+            hintImg.height = "78";
+            div.appendChild(hintImg);
+            div.appendChild(hintText);
+            
+        } else {
+            for (var i = 0; i < this._hints; i++) {
+                var hintImg = document.createElement("img");
+                hintImg.src = "./images/hint.png";
+                hintImg.width = "65";
+                hintImg.height = "103";
+                div.appendChild(hintImg);
+
+            }
+        }
+    }
+
+    removeHint() {
+        var div = document.getElementById("number-of-hints");
+        var image = div.querySelectorAll('[src="./images/hint.png"]');
+        div.removeChild(image[0]);
+    }
+
     spawnPlayer() {
             this.player = new Player({
             game: this
@@ -96,10 +156,10 @@ class Game {
     }
 
     spawnObstacles() {
-        var coordsX = [285, 285, 450, 600, 600, 750, 915, 915, 915, 1168];
-        var coordsY = [115, 355, 355, 355, 115, 115, 115, 235, 355, 355,];
+        var coordsX = [285, 285, 450, 600, 600, 750, 915, 915, 915, 1168, 1168];
+        var coordsY = [115, 355, 355, 355, 115, 115, 115, 235, 355, 355, 225];
         var counter = 0
-        for (let n = 0; n < 10; n++ ){
+        for (let n = 0; n < 11; n++ ){
             this.obstacle.push(
                 new Obstacle({
                     id: counter,
@@ -111,6 +171,7 @@ class Game {
             counter ++;
         }
     }
+
   
     start() {
         console.log("start has begun");
@@ -136,6 +197,20 @@ class Game {
     stop() {
       
     }
+
+   loadCutScene() {
+    var cutScene = document.getElementById("cut-scene");
+    var triviaCard = document.getElementById("trivia-card");
+
+    var cutScenes = [
+        "url('./images/cutscenes/cutScene0.png')",
+        "url('./images/cutscenes/cutScene1.png')",
+
+    ]
+    cutScene.style.backgroundImage = cutScenes[currentObstacle];
+    triviaCard.style.backgroundImage = cutScenes[currentObstacle];
+   }
+
   
     // return true if two bounding boxes collided
     static didCollide(obj1, obj2){

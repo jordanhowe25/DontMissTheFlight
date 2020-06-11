@@ -21,49 +21,59 @@ bindToTouch('#btn-quit-game', () => {
 //Difficulty selection buttons
 bindToTouch('#btn-early-learner', () => {
   game._difficulty = "Early Learner";
-  game.setStartingGameTime();
+  game.setStartingGameSettings();
   hideDifficulty();
 });
 
 bindToTouch('#btn-beginner', () => {
   game._difficulty = "Beginner";
-  game.setStartingGameTime();
+  game.setStartingGameSettings();
   hideDifficulty();
 });
 
 bindToTouch('#btn-intermediate', () => {
   game._difficulty = "Intermediate";
-  game.setStartingGameTime();
+  game.setStartingGameSettings();
   hideDifficulty();
 });
 
 bindToTouch('#btn-advanced', () => {
   game._difficulty = "Advanced";
-  game.setStartingGameTime();
+  game.setStartingGameSettings();
   hideDifficulty();
 });
 
 //Instructions buttons
 bindToTouch('#btn-instruction-confirm', () => {
   hideInstructions();
+  if (game._difficulty != "Early Learner"){
+    game.startCountdown();
+  } else {
+    var unlimited = document.getElementById('timer');
+    unlimited.innerHTML = "UNLIMITED";
+    unlimited.style.fontSize = "2em";
+    
+  }
+  
 });
 
 //World-view buttons
 bindToTouch('#btn-start-trip', () => {
-  //TODO:  This button will be displayed if the player is just starting, otherwise continue-trip button will be displayed.
-  hideWorld(displayCutScene);
+  game.player.startAnimation();
 });
 
 bindToTouch('#btn-continue-trip', () => {
-  hideWorld(displayCutScene);
+  game.player.startAnimation();
 });
 
 //Cut scene button
 bindToTouch('#btn-cutscene', () => {
+  game.player.setOrientation();
   hideCutScene();
 });
 
 //Trivia Card
 bindToTouch('#btn-submit-answer', () => {
   hideTriviaCard();
+  currentObstacle ++;
 });

@@ -15,7 +15,15 @@
         <div id="title-screen" class="scenes">
         </div>
         <div id="difficulty-select" class="scenes">
-            <p>DIFFICULTY SELECT</p>
+            <br>
+            <h1 style="text-align: center;">Difficulty Levels</h1>
+            <br>
+            <br>
+            <h1><pre class="tab">Early Learner ages 4 - 7      <img src="images\earlyLearner.png"></pre> </h1>
+            <h1><pre class="tab">Beginner      ages 8 - 10     <img src="images\beginner.png"></pre></h1>
+            <h1><pre class="tab">Intermediate  ages 11 - 12    <img src="images\intermediate.png"></pre></h1>
+            <h1><pre class="tab">Advance       ages 12 - above <img src="images\advance.png"></pre></h1>
+            
         </div>
         <div id="instructions" class="scenes">
             <p id="instructions-text">THESE ARE THE INSTRUCTIONS PER DIFFICULTY LEVEL</p> 
@@ -25,26 +33,19 @@
             <div id="cut-scene"></div>
         </div>
         <div id="trivia-card" class="scenes">
-            <p id="question">Question goes here.</p>
-            <p id="hint">Add a icon for the hint that will always be displayed, if clicked then display the hint here.  Logic will need to be added to make this unclickable if they have no hints left.</p>
+            <div id="trivia-card-content">
+                <p id="question">Question goes here.</p>
+                <p id="hint">Add a icon for the hint that will always be displayed, if clicked then display the hint here.  Logic will need to be added to make this unclickable if they have no hints left.</p>
+            </div>    
         </div>
         <div  id="end-game-win" class="scenes">
 
         </div>
         <div id="end-game-lose" class="scenes">
-
-        </div>
-        <div id="prompt-validate-selection" class="pop-up">
-            <p>ARE YOU SURE?</p>
-        <ul>
-            <li>YES</li>
-            <li>NO</li>
-        </ul>
         </div>
     <div id="container-hints">
-        <div id="number-of-hints">
-            <p>Number of hints goes here</p>
-        </div>
+        <h2>HINTS LEFT</h2>
+        <div id="number-of-hints"></div>
     </div>
     <div id="container-buttons">
         <div id="button-group-main-menu">
@@ -87,14 +88,17 @@
         </div>
         <div id="button-group-world-view">
             <button class="button3" id="btn-start-trip">START TRIP</button>
-            <button class="button3" id="btn-continue-trip">CONTINUE TRIP</button>
+            <button class="button3" id="btn-continue-trip">CONTINUE TRIP</button><br><br>
         </div>
             <div id="button-group-cut-scene">
             <button class="button3" id="btn-cutscene">(Cutscene)CONTINUE</button>
         </div>
     </div>
     <div id="container-timer">
-        <div id="timer"><p>TIME GOES HERE</p></div>
+        <h2>TIME REMAINING</h2>
+        <div id="timer-background">
+            <div id="timer"></div>
+        </div>
     </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
