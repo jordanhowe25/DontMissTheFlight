@@ -9,7 +9,7 @@
   <script src="./scripts/preload.js"></script> 
 </head>
 <body ondragstart="return false;" ondrop="return false;">
-<img id="btn-back" src="./images/back_btn.png" alt="Back Button"><img>
+<img id="btn-back" src="./images/controls/back_btn.png" alt="Back Button"><img>
 <div id="container-game-area">
     <div id = container-scenes>
         <div id="title-screen" class="scenes">
@@ -19,10 +19,10 @@
             <h1 style="text-align: center;">Difficulty Levels</h1>
             <br>
             <br>
-            <h1><pre class="tab">Early Learner ages 4 - 7      <img src="images\earlyLearner.png"></pre> </h1>
-            <h1><pre class="tab">Beginner      ages 8 - 10     <img src="images\beginner.png"></pre></h1>
-            <h1><pre class="tab">Intermediate  ages 11 - 12    <img src="images\intermediate.png"></pre></h1>
-            <h1><pre class="tab">Advance       ages 12 - above <img src="images\advance.png"></pre></h1>
+            <h1><pre class="tab">Early Learner ages 4 - 7      <img src="images\ui\earlyLearner.png"></pre> </h1>
+            <h1><pre class="tab">Beginner      ages 8 - 10     <img src="images\ui\beginner.png"></pre></h1>
+            <h1><pre class="tab">Intermediate  ages 11 - 12    <img src="images\ui\intermediate.png"></pre></h1>
+            <h1><pre class="tab">Advance       ages 12 - above <img src="images\ui\advance.png"></pre></h1>
             
         </div>
         <div id="instructions" class="scenes">
@@ -50,20 +50,20 @@
     <div id="container-buttons">
         <div id="button-group-main-menu">
         <ul>
-            <li><button class="button3" id="btn-start-game">START GAME</button></li>
-            <li><button class="button3" id="btn-quit-game">QUIT GAME</button></li>
+            <li><button class="button2" id="btn-start-game"><img src="images\controls\button_start.png"></button></li>
+            <li><button class="button2" id="btn-quit-game"><img src="images\controls\button_exit.png"></button></li>
         </ul>
         </div>
         <div id="button-group-difficulty-select">
         <ul>
             <li><button class="button3" id='btn-early-learner'>EARLY LEARNER</button></li>
-            <li><button class="button3" id='btn-beginner'>BEGINNER</button>BEGINNER</li>
-            <li><button class="button3" id='btn-intermediate'>INTERMEDIATE</button></li>
-            <li><button class="button3" id='btn-advanced'>ADVANCED</button></li>
+            <li><button class="button2" id='btn-beginner'><img src="images\controls\button_beginner.png"></button></li>
+            <li><button class="button2" id='btn-intermediate'><img src="images\controls\button_intermediate.png"></button></li>
+            <li><button class="button2" id='btn-advanced'><img src="images\controls\button_advanced.png"></button></li>
         </ul>
         </div>
         <div id="button-group-instructions">
-        <button id="btn-instruction-confirm">OK</button>
+        <button class="button3" id="btn-instruction-confirm">OK</button>
         </div>
         <div id="button-group-trivia-card">
         <ul>
