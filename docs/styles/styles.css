@@ -4,13 +4,15 @@
 }
 
 body {
-    background-color: chartreuse;
     width: 1920px;
+}
+
+li {
+    list-style: none;
 }
 
 #container-game-area {
     margin: 5% auto;
-    background-color: blueviolet;
     width: 1520px;
     height: 780px;   
 }
@@ -40,14 +42,12 @@ body {
 #difficulty-select {
     display: none;
     position: relative;
-    background-color: red;
     display: none;
 }
 
 #instructions {
     display: none;
     position: relative;
-    background-color: darkmagenta;
     display: none;
 }
 
@@ -63,7 +63,6 @@ body {
 #cut-scene {
     display: none;
     position: relative;
-    background-color: hotpink;
     width: 1480px;
     height: 540px;
 }
@@ -127,7 +126,6 @@ body {
     width: 760px;
     height: 180px;
     float: left;
-    background-color: red;
     margin: 20px 0;
 }
 
