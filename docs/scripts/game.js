@@ -125,7 +125,7 @@ class Game {
             var hintImg = document.createElement("img");
             var hintText = document.createElement("P");
             hintText.innerText = "UNLIMITED";
-            hintImg.src = "./images/hint.png";
+            hintImg.src = "./images/ui/hint.png";
             hintImg.width = "40";
             hintImg.height = "78";
             div.appendChild(hintImg);
@@ -134,7 +134,7 @@ class Game {
         } else {
             for (var i = 0; i < this._hints; i++) {
                 var hintImg = document.createElement("img");
-                hintImg.src = "./images/hint.png";
+                hintImg.src = "./images/ui/hint.png";
                 hintImg.width = "65";
                 hintImg.height = "103";
                 div.appendChild(hintImg);
@@ -145,7 +145,7 @@ class Game {
 
     removeHint() {
         var div = document.getElementById("number-of-hints");
-        var image = div.querySelectorAll('[src="./images/hint.png"]');
+        var image = div.querySelectorAll('[src="./images/ui/hint.png"]');
         div.removeChild(image[0]);
     }
 
@@ -205,6 +205,9 @@ class Game {
     var cutScenes = [
         "url('./images/cutscenes/cutScene0.png')",
         "url('./images/cutscenes/cutScene1.png')",
+        "url('./images/cutscenes/cutScene3.png')",
+        "url('./images/cutscenes/cutScene5.png')",
+        "url('./images/cutscenes/cutScene8.png')",
 
     ]
     cutScene.style.backgroundImage = cutScenes[currentObstacle];

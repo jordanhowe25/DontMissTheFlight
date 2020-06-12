@@ -149,7 +149,7 @@ body {
     position: relative;
     float: left;
     display: block;
-    background-image: url("../images/timer.png");
+    background-image: url("../images/ui/timer.png");
     background-size: fill;
     width: 207px;
     height: 100px;
@@ -223,6 +223,14 @@ body {
     background-color: #4eb5f1;
     text-align: center;
     transition: all 0.2s;
+}
+
+.button2 {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    outline: none;
 }
 
 #moveupBTN{
