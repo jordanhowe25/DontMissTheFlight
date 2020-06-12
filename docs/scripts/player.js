@@ -8,12 +8,12 @@ class Player {
         vWidth = 48,
         images = [
             //images of the players car in horizontal orientation.
-            './images/player-right.png'
+            './images/car/player-right.png'
         ],
         vImages = [
             //images of the players car in vertical orientation.
-            './images/player-up.png',
-            './images/player-down.png'
+            './images/car/player-up.png',
+            './images/car/player-down.png'
         ],
         speed = 1,
         game,
