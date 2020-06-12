@@ -46,24 +46,34 @@ bindToTouch('#btn-advanced', () => {
 //Instructions buttons
 bindToTouch('#btn-instruction-confirm', () => {
   hideInstructions();
+  if (game._difficulty != "Early Learner"){
+    game.startCountdown();
+  } else {
+    var unlimited = document.getElementById('timer');
+    unlimited.innerHTML = "UNLIMITED";
+    unlimited.style.fontSize = "2em";
+    
+  }
+  
 });
 
 //World-view buttons
 bindToTouch('#btn-start-trip', () => {
-  //TODO:  This button will be displayed if the player is just starting, otherwise continue-trip button will be displayed.
-  hideWorld(displayCutScene);
+  game.player.startAnimation();
 });
 
 bindToTouch('#btn-continue-trip', () => {
-  hideWorld(displayCutScene);
+  game.player.startAnimation();
 });
 
 //Cut scene button
 bindToTouch('#btn-cutscene', () => {
+  game.player.setOrientation();
   hideCutScene();
 });
 
 //Trivia Card
 bindToTouch('#btn-submit-answer', () => {
   hideTriviaCard();
+  currentObstacle ++;
 });

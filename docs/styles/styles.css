@@ -1,4 +1,9 @@
-﻿body {
+﻿@font-face{
+    font-family: digitalClock;
+    src: url('../fonts/digital-7.ttf');
+}
+
+body {
     background-color: chartreuse;
     width: 1920px;
 }
@@ -59,7 +64,6 @@
     display: none;
     position: relative;
     background-color: hotpink;
-    display: none;
     width: 1480px;
     height: 540px;
 }
@@ -67,15 +71,25 @@
 #trivia-card {
     display: none;
     position: relative;
-    background-color: mediumspringgreen;
-    display: none;
+   
+}
+#trivia-card-content {
+    display: block;
+    position: absolute;
+    width: 1110px;
+    height: 405px;
+    left: 12.5%;
+    top: 12.5%;
+    background-color: white;
+    z-index: 10;
+    opacity: .9;
+    box-shadow: 5px 10px #888888;
 }
 
 #end-game-win {
     display: none;
     position: relative;
     background-color: orangered;
-    display: none;
 }
 
 #end-game-lose {
@@ -89,9 +103,24 @@
     width: 340px;
     height: 180px;
     float: left;
-    background-color: darkmagenta;
-    margin: 20px 20px;
     display: block;
+    margin: 20px 20px;
+    text-align: center;
+    position: relative;
+    background-color: white;
+    border: 4px solid black;
+    box-sizing: border-box;
+   
+}
+#number-of-hints{
+    position: absolute;
+    display: block;
+    margin-top: 20px;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
 }
 
 #container-buttons {
@@ -106,9 +135,28 @@
     width: 340px;
     height: 180px;
     float: left;
-    background-color: black;
-    margin: 20px 20px;
     display: block;
+    margin: 20px 12px;
+    text-align: center;
+    background-color: white;
+    border: 4px solid black;
+    box-sizing: border-box;
+    
+    
+}
+
+#timer-background {
+    position: relative;
+    float: left;
+    display: block;
+    background-image: url("../images/ui/timer.png");
+    background-size: fill;
+    width: 207px;
+    height: 100px;
+    top: 25%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
 
 #prompt-validate-selection{
@@ -138,12 +186,21 @@
 }
 
 #number-of-hints {
-    display: none;
+    display: block;
 }
 
 #timer {
-    color: red;
-    display: none;
+    color: black;
+    display: block;
+    font-family: digitalClock;
+    font-size: 4.5em;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+
 }
 
 #btn-back {
@@ -166,6 +223,14 @@
     background-color: #4eb5f1;
     text-align: center;
     transition: all 0.2s;
+}
+
+.button2 {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    outline: none;
 }
 
 #moveupBTN{

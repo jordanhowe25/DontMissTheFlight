@@ -8,12 +8,12 @@ class Player {
         vWidth = 48,
         images = [
             //images of the players car in horizontal orientation.
-            './images/player-right.png'
+            './images/car/player-right.png'
         ],
         vImages = [
             //images of the players car in vertical orientation.
-            './images/player-up.png',
-            './images/player-down.png'
+            './images/car/player-up.png',
+            './images/car/player-down.png'
         ],
         speed = 1,
         game,
@@ -113,7 +113,7 @@ class Player {
         this.x = game.obstacle[currentObstacle].x;
         this.y = game.obstacle[currentObstacle].y;
         this.draw();
-        currentObstacle ++;
+        
     }
 
     horizontalOrientation(image = this.images[0]){
@@ -124,7 +124,29 @@ class Player {
         this.x = game.obstacle[currentObstacle].x;
         this.y = game.obstacle[currentObstacle].y;
         this.draw();
-        currentObstacle ++;
+        
+    }
+
+    setOrientation(){
+       switch(currentObstacle) {
+            case 0:
+            case 6:
+            case 7:
+               this.verticalOrientation(this.vImages[1]);
+               break;
+            case 1:
+            case 2:
+            case 4:
+            case 5:
+            case 8:
+                this.horizontalOrientation();
+                break;
+            case 3:
+            case 9:
+                this.verticalOrientation(this.vImages[0]);
+            default:
+                console.log("case not found");
+       }
     }
 
     startAnimation() {
@@ -151,6 +173,9 @@ class Player {
             this.update(speedX, speedY);
         } else {
             this.stopAnimation();
+            game.loadCutScene();
+            hideWorld(displayCutScene);
+            
         }
     }
 

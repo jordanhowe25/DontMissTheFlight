@@ -2,21 +2,26 @@
     [
         // put image assets here
 	    //TODO:  Add image assets to this array as they are added in the game
-        './images/player-up.png', 
-        './images/player-right.png', 
-        './images/player-down.png', 
-        './images/o1.png',
-        './images/o2.png',
-        './images/o3.png',
-        './images/o4.png',
-        './images/o5.png',
-        './images/o6.png',
-        './images/o7.png',
-        './images/o8.png',
-        './images/o9.png',
-        './images/o10.png',
-        './images/o_done.png', 
-        './images/hint.png' 
+        './images/car/player-up.png', 
+        './images/car/player-right.png', 
+        './images/car/player-down.png', 
+        './images/O/o1.png',
+        './images/O/o2.png',
+        './images/O/o3.png',
+        './images/O/o4.png',
+        './images/O/o5.png',
+        './images/O/o6.png',
+        './images/O/o7.png',
+        './images/O/o8.png',
+        './images/O/o9.png',
+        './images/O/o10.png',
+        './images/O/o_done.png',
+        './images/ui/hint.png',
+        "url('./images/cutscenes/cutScene0.png')",
+        "url('./images/cutscenes/cutScene1.png')",
+        "url('./images/cutscenes/cutScene3.png')",
+        "url('./images/cutscenes/cutScene5.png')",
+        "url('./images/cutscenes/cutScene8.png')",
     ].forEach(src => {
         const img = new Image();
         img.src = src;
