@@ -87,13 +87,13 @@ class Game {
         ajax.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 var selection = JSON.parse(this.responseText);
-                for (var a = 0; a < selection.length; a++) {
-                    question = selection[a].question.toUpperCase();
-                }
+                console.log(selection[0].question);
+				console.log(selection[0].correctAnswer);
+				
             }
         }
         // Send a request to PHP for a new question
-        ajax.open("GET", "../scripts/getTriviaCards.php", false);
+        ajax.open("GET", "scripts/getTriviaCards.php", false);
         ajax.send();
     }
         
@@ -174,7 +174,6 @@ class Game {
 
   
     start() {
-        console.log("start has begun");
         this.spawnPlayer();
         this.spawnObstacles();
         this.triviaCard.push(
