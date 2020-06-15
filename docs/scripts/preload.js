@@ -17,11 +17,11 @@
         './images/O/o10.png',
         './images/O/o_done.png',
         './images/ui/hint.png',
-        "url('./images/cutscenes/cutScene0.png')",
-        "url('./images/cutscenes/cutScene1.png')",
-        "url('./images/cutscenes/cutScene3.png')",
-        "url('./images/cutscenes/cutScene5.png')",
-        "url('./images/cutscenes/cutScene8.png')",
+        './images/cutscenes/cutscene0.png',
+        './images/cutscenes/cutscene1.png',
+        './images/cutscenes/cutscene3.png',
+        './images/cutscenes/cutscene5.png',
+        './images/cutscenes/cutscene8.png',
     ].forEach(src => {
         const img = new Image();
         img.src = src;

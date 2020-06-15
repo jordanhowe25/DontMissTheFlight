@@ -1,34 +1,34 @@
 
 //To test flow, in the console run through the "hide" commands in order.  for example:  hideTitle(), hideDifficulty(), hideInstructions(), ect...
 function hideTitle() {
-    $('#title-screen').fadeToggle(1000, displayDifficulty);
-    $('#button-group-main-menu').fadeToggle(1000)
+    $('#title-screen').fadeToggle(500, displayDifficulty);
+    $('#button-group-main-menu').fadeToggle(500)
 }
 
 function displayDifficulty() {
-    $('#difficulty-select').fadeToggle(1000);
-    $('#button-group-difficulty-select').fadeToggle(1000);
+    $('#difficulty-select').fadeToggle(500);
+    $('#button-group-difficulty-select').fadeToggle(500);
 }
 
 function hideDifficulty() {
-    $('#difficulty-select').fadeToggle(1000, displayInstructions);
-    $('#button-group-difficulty-select').fadeToggle(1000);
+    $('#difficulty-select').fadeToggle(500, displayInstructions);
+    $('#button-group-difficulty-select').fadeToggle(500);
 }
 
 function displayInstructions(){
-    $('#instructions').fadeToggle(1000);
-    $('#button-group-instructions').fadeToggle(1000);
+    $('#instructions').fadeToggle(500);
+    $('#button-group-instructions').fadeToggle(500);
 }
 
 function hideInstructions(){
-    $('#instructions').fadeToggle(1000, displayWorld);
-    $('#button-group-instructions').fadeToggle(1000);
+    $('#instructions').fadeToggle(500, displayWorld);
+    $('#button-group-instructions').fadeToggle(500);
 }
 
 function displayWorld(){
-    $('#container-canvas').fadeToggle(1000);
-    $('#world-view').fadeToggle(1000);
-    $('#button-group-world-view').fadeToggle(1000);
+    $('#container-canvas').fadeToggle(500);
+    $('#world-view').fadeToggle(500);
+    $('#button-group-world-view').fadeToggle(500);
     if (currentObstacle == 0) {
         $('#btn-continue-trip').hide();
         $('#btn-start-trip').show();
@@ -42,39 +42,39 @@ function displayWorld(){
 
 function hideWorld(displayFunction) {
     //displayFunction possibe choices:  displayCutScene, displayEndGameWin, displayEndGameLose
-    $('#world-view').fadeToggle(1000, displayFunction);
-    $('#button-group-world-view').fadeToggle(1000);
+    $('#world-view').fadeToggle(500, displayFunction);
+    $('#button-group-world-view').fadeToggle(500);
 }
 
 function displayCutScene(){
-    $('#cut-scene').fadeToggle(1000);
-    $('#button-group-cut-scene').fadeToggle(1000);
+    $('#cut-scene').fadeToggle(500);
+    $('#button-group-cut-scene').fadeToggle(500);
 }
 
 function hideCutScene(){
-    $('#cut-scene').fadeToggle(1000, displayTriviaCard);
-    $('#container-canvas').fadeToggle(1000);
-    $('#button-group-cut-scene').fadeToggle(1000);
+    $('#cut-scene').fadeToggle(500, displayTriviaCard);
+    $('#container-canvas').fadeToggle(500);
+    $('#button-group-cut-scene').fadeToggle(500);
 }
 
 function displayTriviaCard(){
-    $('#trivia-card').fadeToggle(1000);
-    $('#tivia-card-content').fadeToggle(1000);
-    $('#button-group-trivia-card').fadeToggle(1000);
+    $('#trivia-card').fadeToggle(500);
+    $('#tivia-card-content').fadeToggle(500);
+    $('#button-group-trivia-card').fadeToggle(500);
 }
 
 function hideTriviaCard(){
-    $('#trivia-card').fadeToggle(1000, displayWorld);
-    $('#tivia-card-content').fadeToggle(1000);
-    $('#button-group-trivia-card').fadeToggle(1000);
+    $('#trivia-card').fadeToggle(500, displayWorld);
+    $('#tivia-card-content').fadeToggle(500);
+    $('#button-group-trivia-card').fadeToggle(500);
 }
 
 
 function displayEndGameWin(){
-    $('#end-game-win').fadeToggle(1000);
+    $('#end-game-win').fadeToggle(500);
 }
 
 function displayEndGameLose(){
-    $('#end-game-lose').fadeToggle(1000);
+    $('#end-game-lose').fadeToggle(500);
 }
     
