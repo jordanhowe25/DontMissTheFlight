@@ -1,4 +1,6 @@
 var currentObstacle = 0;
+var selection;
+var currentTrivia = 0;
 class Game {
     constructor({
       canvasElementId,
@@ -83,17 +85,30 @@ class Game {
     }
 
     getTriviaCards() {
-        var ajax = new XMLHttpRequest();
+		let diff;
+        switch (this._difficulty){
+			case "Early Learner":
+                diff = 1;
+                break;
+            case "Beginner":
+                diff = 2;
+                break;
+            case "Intermediate":
+                diff = 3;
+                break;
+            case "Advanced":
+                diff = 4;
+                break;
+		}
+		var ajax = new XMLHttpRequest();
+
         ajax.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                var selection = JSON.parse(this.responseText);
-                console.log(selection[0].question);
-				console.log(selection[0].correctAnswer);
-				
+					selection = JSON.parse(this.responseText);
             }
         }
         // Send a request to PHP for a new question
-        ajax.open("GET", "scripts/getTriviaCards.php", false);
+        ajax.open("GET", "scripts/getTriviaCards.php?difficulty=" + diff, true);
         ajax.send();
     }
         
@@ -117,6 +132,8 @@ class Game {
     stopCountdown() {
       clearInterval(this.timer);
     }
+   
+    
 
     populateHints() {
         var div = document.getElementById("number-of-hints");
@@ -179,7 +196,7 @@ class Game {
         this.triviaCard.push(
             new TriviaCard({
                 id: 0,
-                question,
+                question: "Blank question testing....",
                 answerA: "answer A",
                 answerB: "answer B",
                 answerC: "answer C",
