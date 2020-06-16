@@ -20,8 +20,8 @@ function displayInstructions(){
     $('#button-group-instructions').fadeToggle(500);
 }
 
-function hideInstructions(){
-    $('#instructions').fadeToggle(500, displayWorld);
+function hideInstructions(displayFunction){
+    $('#instructions').fadeToggle(500, displayFunction);
     $('#button-group-instructions').fadeToggle(500);
 }
 

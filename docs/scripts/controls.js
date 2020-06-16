@@ -59,16 +59,36 @@ bindToTouch('#btn-advanced', () => {
 //Instructions buttons
 bindToTouch('#btn-instruction-confirm', () => {
   delayPress();
-  hideInstructions();
+  hideInstructions(displayWorld);
   if (game._difficulty != "Early Learner"){
     game.startCountdown();
   } else {
     var unlimited = document.getElementById('timer');
     unlimited.innerHTML = "UNLIMITED";
     unlimited.style.fontSize = "2em";
-    
   }
+  game.getTriviaData();
+  /*game.createTriviaCards();
+  this.triviaCard.push(
+    new TriviaCard({
+        id: 0,
+        question: "Blank question testing....",
+        answerA: "answer A",
+        answerB: "answer B",
+        answerC: "answer C",
+        answerD: "answer D",
+        correctAnswer: "answer A",
+        hint: "This is a hint",
+        image: "",
+        game: this,
+    })
+) */
   
+});
+
+bindToTouch('#btn-instruction-back', () => {
+  delayPress();
+  hideInstructions(displayDifficulty);
 });
 
 //World-view buttons

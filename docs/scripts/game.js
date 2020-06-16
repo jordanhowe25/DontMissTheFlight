@@ -84,7 +84,7 @@ class Game {
         }
     }
 
-    getTriviaCards() {
+    getTriviaData() {
 		let diff;
         switch (this._difficulty){
 			case "Early Learner":
@@ -110,6 +110,34 @@ class Game {
         // Send a request to PHP for a new question
         ajax.open("GET", "scripts/getTriviaCards.php?difficulty=" + diff, true);
         ajax.send();
+    }
+
+    createTriviaCards(){
+        var qty = selection.length;
+        this.shuffleArray(selection);
+        for (var i = 0; i < qty; i++) {
+            this.triviaCard.push(
+                new TriviaCard({
+                    id: i,
+                    question: selection[i].question,
+                    answerA: selection[i].answer1,
+                    answerB: selection[i].answer2,
+                    answerC: selection[i].answer3,
+                    answerD: selection[i].answer4,
+                    correctAnswer: selection[i].correctAnswer,
+                    hint: selection[i].hint,
+                    game: this,
+                })
+            )
+        } 
+    }
+
+    //Fisher-Yates-shuffle method
+    shuffleArray(array){
+        for (let i = array.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
     }
         
     startCountdown()
@@ -193,20 +221,7 @@ class Game {
     start() {
         this.spawnPlayer();
         this.spawnObstacles();
-        this.triviaCard.push(
-            new TriviaCard({
-                id: 0,
-                question: "Blank question testing....",
-                answerA: "answer A",
-                answerB: "answer B",
-                answerC: "answer C",
-                answerD: "answer D",
-                correctAnswer: "answer A",
-                hint: "This is a hint",
-                image: "",
-                game: this,
-            })
-        ) 
+        
         
     }
   
