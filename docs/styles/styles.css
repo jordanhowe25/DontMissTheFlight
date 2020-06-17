@@ -4,15 +4,18 @@
 }
 
 body {
-    background-color: chartreuse;
     width: 1920px;
+}
+
+li {
+    list-style: none;
 }
 
 #container-game-area {
     margin: 5% auto;
-    background-color: blueviolet;
     width: 1520px;
     height: 780px;   
+    
 }
 
 .scenes {
@@ -40,15 +43,15 @@ body {
 #difficulty-select {
     display: none;
     position: relative;
-    background-color: red;
     display: none;
+    background-image: repeating-radial-gradient(blue 10%,white 10%,blue 20%);
 }
 
 #instructions {
     display: none;
     position: relative;
-    background-color: darkmagenta;
     display: none;
+    background-image: repeating-radial-gradient(blue 10%,white 10%,blue 20%);
 }
 
 #world-view {
@@ -63,7 +66,6 @@ body {
 #cut-scene {
     display: none;
     position: relative;
-    background-color: hotpink;
     width: 1480px;
     height: 540px;
 }
@@ -127,7 +129,6 @@ body {
     width: 760px;
     height: 180px;
     float: left;
-    background-color: red;
     margin: 20px 0;
 }
 
@@ -242,3 +243,13 @@ body {
     transform: translate(-50%, -50%);
     
 }
+
+.difficultyPage{
+    text-align: center;
+}
+
+.rules{
+    text-align: center;
+   
+}
+

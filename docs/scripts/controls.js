@@ -1,15 +1,24 @@
 /* globals game */
 
 const bindToTouch = (selector, handler) => {
-    $(selector).on('click touch', handler);
-  };
+  $(selector).on('click touch', handler);
+  
+}
+
+//temporarily disables button press
+function delayPress() {
+  $(':button').prop('disabled', true);
+    setTimeout(function(){
+      $(':button').prop('disabled', false);
+    }, 1000);
+}
 
 //static back button displayed on all screens
 bindToTouch('#btn-back', () => {
   window.location.href = 'http://www.flywithbutchohare.com';
 });
 
-  //Main menu buttons
+//Main menu buttons
 bindToTouch('#btn-start-game', () => {
   hideTitle();
 });
@@ -20,60 +29,76 @@ bindToTouch('#btn-quit-game', () => {
 
 //Difficulty selection buttons
 bindToTouch('#btn-early-learner', () => {
+  delayPress();
   game._difficulty = "Early Learner";
-  game.setStartingGameSettings();
   hideDifficulty();
+  
 });
 
 bindToTouch('#btn-beginner', () => {
+  delayPress();
   game._difficulty = "Beginner";
-  game.setStartingGameSettings();
   hideDifficulty();
+
 });
 
 bindToTouch('#btn-intermediate', () => {
+  delayPress();
   game._difficulty = "Intermediate";
-  game.setStartingGameSettings();
   hideDifficulty();
+
 });
 
 bindToTouch('#btn-advanced', () => {
+  delayPress();
   game._difficulty = "Advanced";
-  game.setStartingGameSettings();
   hideDifficulty();
+ 
 });
 
 //Instructions buttons
 bindToTouch('#btn-instruction-confirm', () => {
-  hideInstructions();
+	game.getTriviaData();
+  delayPress();
+  hideInstructions(displayWorld);
   if (game._difficulty != "Early Learner"){
     game.startCountdown();
   } else {
     var unlimited = document.getElementById('timer');
     unlimited.innerHTML = "UNLIMITED";
     unlimited.style.fontSize = "2em";
-    
   }
-  
+  game.setStartingGameSettings();
+});
+
+bindToTouch('#btn-instruction-back', () => {
+  delayPress();
+  hideInstructions(displayDifficulty);
 });
 
 //World-view buttons
 bindToTouch('#btn-start-trip', () => {
+  delayPress();
+   game.createTriviaCards();
   game.player.startAnimation();
 });
 
 bindToTouch('#btn-continue-trip', () => {
+  delayPress();
   game.player.startAnimation();
 });
 
 //Cut scene button
 bindToTouch('#btn-cutscene', () => {
+  game.populateTriviaCard();
+  delayPress();
   game.player.setOrientation();
   hideCutScene();
 });
 
 //Trivia Card
 bindToTouch('#btn-submit-answer', () => {
+  delayPress();
   hideTriviaCard();
   currentObstacle ++;
 });

@@ -1,4 +1,6 @@
 var currentObstacle = 0;
+var selection;
+var currentTrivia = 0;
 class Game {
     constructor({
       canvasElementId,
@@ -81,20 +83,63 @@ class Game {
                 break;
         }
     }
+	
+	
 
-    getTriviaCards() {
-        var ajax = new XMLHttpRequest();
+    getTriviaData() {
+		let diff;
+        switch (this._difficulty){
+			case "Early Learner":
+                diff = 1;
+                break;
+            case "Beginner":
+                diff = 2;
+                break;
+            case "Intermediate":
+                diff = 3;
+                break;
+            case "Advanced":
+                diff = 4;
+                break;
+		}
+		var ajax = new XMLHttpRequest();
+
         ajax.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                var selection = JSON.parse(this.responseText);
-                for (var a = 0; a < selection.length; a++) {
-                    question = selection[a].question.toUpperCase();
-                }
+					selection = JSON.parse(this.responseText);
             }
         }
         // Send a request to PHP for a new question
-        ajax.open("GET", "../scripts/getTriviaCards.php", false);
+        ajax.open("GET", "scripts/getTriviaCards.php?difficulty=" + diff, true);
         ajax.send();
+    }
+
+    createTriviaCards(){
+        var qty = selection.length;
+        this.shuffleArray(selection);
+        for (var i = 0; i < qty; i++) {
+            this.triviaCard.push(
+                new TriviaCard({
+                    id: i,
+                    question: selection[i].question,
+                    answerA: selection[i].answer1,
+                    answerB: selection[i].answer2,
+                    answerC: selection[i].answer3,
+                    answerD: selection[i].answer4,
+                    correctAnswer: selection[i].correctAnswer,
+                    hint: selection[i].hint,
+                    game: this,
+                })
+            )
+        } 
+    }
+
+    //Fisher-Yates-shuffle method
+    shuffleArray(array){
+        for (let i = array.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
     }
         
     startCountdown()
@@ -116,6 +161,16 @@ class Game {
   
     stopCountdown() {
       clearInterval(this.timer);
+    }
+   
+    populateTriviaCard() {
+        $('#question').html(this.triviaCard[currentTrivia].question);
+		$('#hint').html(this.triviaCard[currentTrivia].hint);
+        $('#a-answer').html(this.triviaCard[currentTrivia].answerA);
+		$('#b-answer').html(this.triviaCard[currentTrivia].answerB);
+		$('#c-answer').html(this.triviaCard[currentTrivia].answerC);
+		$('#d-answer').html(this.triviaCard[currentTrivia].answerD);
+		
     }
 
     populateHints() {
@@ -174,29 +229,13 @@ class Game {
 
   
     start() {
-        console.log("start has begun");
         this.spawnPlayer();
         this.spawnObstacles();
-        this.triviaCard.push(
-            new TriviaCard({
-                id: 0,
-                question,
-                answerA: "answer A",
-                answerB: "answer B",
-                answerC: "answer C",
-                answerD: "answer D",
-                correctAnswer: "answer A",
-                hint: "This is a hint",
-                image: "",
-                game: this,
-            })
-        ) 
+        
         
     }
   
-    stop() {
-      
-    }
+    
 
    loadCutScene() {
     var cutScene = document.getElementById("cut-scene");
