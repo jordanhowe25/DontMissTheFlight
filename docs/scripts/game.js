@@ -86,7 +86,7 @@ class Game {
 	
 	
 
-        getTriviaData() {
+    getTriviaData() {
 		let diff;
         switch (this._difficulty){
 			case "Early Learner":
@@ -112,13 +112,9 @@ class Game {
         // Send a request to PHP for a new question
         ajax.open("GET", "scripts/getTriviaCards.php?difficulty=" + diff, true);
         ajax.send();
-		
-		return;
-        
     }
 
     createTriviaCards(){
-		await getTriviaData();
         var qty = selection.length;
         this.shuffleArray(selection);
         for (var i = 0; i < qty; i++) {
@@ -167,7 +163,9 @@ class Game {
       clearInterval(this.timer);
     }
    
-    
+    populateTriviaCard() {
+        $('#question').html(this.triviaCard[currentTrivia].question);
+    }
 
     populateHints() {
         var div = document.getElementById("number-of-hints");
