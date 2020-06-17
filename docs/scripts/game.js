@@ -165,6 +165,12 @@ class Game {
    
     populateTriviaCard() {
         $('#question').html(this.triviaCard[currentTrivia].question);
+		$('#hint').html(this.triviaCard[currentTrivia].hint);
+        $('#a-answer').html(this.triviaCard[currentTrivia].answerA);
+		$('#b-answer').html(this.triviaCard[currentTrivia].answerB);
+		$('#c-answer').html(this.triviaCard[currentTrivia].answerC);
+		$('#d-answer').html(this.triviaCard[currentTrivia].answerD);
+		
     }
 
     populateHints() {
