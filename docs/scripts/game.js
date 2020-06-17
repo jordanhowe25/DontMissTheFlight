@@ -86,7 +86,7 @@ class Game {
 	
 	
 
-    async function getTriviaData() {
+        getTriviaData() {
 		let diff;
         switch (this._difficulty){
 			case "Early Learner":
@@ -117,7 +117,7 @@ class Game {
         
     }
 
-    async function createTriviaCards(){
+    createTriviaCards(){
 		await getTriviaData();
         var qty = selection.length;
         this.shuffleArray(selection);
@@ -231,9 +231,7 @@ class Game {
         
     }
   
-    stop() {
-      
-    }
+    
 
    loadCutScene() {
     var cutScene = document.getElementById("cut-scene");
