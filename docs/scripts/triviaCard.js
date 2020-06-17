@@ -8,7 +8,6 @@ class TriviaCard {
         answerD,
         correctAnswer,
         hint,
-        image,
         game,
     }) {
         this._id = id;
@@ -20,7 +19,6 @@ class TriviaCard {
         this._answerD = answerD;
         this._correctAnswer = correctAnswer;
         this._hint = hint;
-        this._image = image;  
     }
     // Getters and Setters
     get game() { return this._game; }
@@ -41,8 +39,6 @@ class TriviaCard {
     set correctAnswer(value) {this._correctAnswer = value; }
     get hint() {return this._hint; }
     set hint(value) {this._hint = value; }
-    get image() { return this._image; }
-    set image(value) { this._image = value; }
 
 
 
