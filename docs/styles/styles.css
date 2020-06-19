@@ -5,6 +5,7 @@
 
 body {
     width: 1920px;
+    text-align: center;
 }
 
 li {
@@ -15,7 +16,6 @@ li {
     margin: 5% auto;
     width: 1520px;
     height: 780px;   
-    
 }
 
 .scenes {
@@ -44,14 +44,12 @@ li {
     display: none;
     position: relative;
     display: none;
-    background-image: repeating-radial-gradient(blue 10%,white 10%,blue 20%);
 }
 
 #instructions {
     display: none;
     position: relative;
     display: none;
-    background-image: repeating-radial-gradient(blue 10%,white 10%,blue 20%);
 }
 
 #world-view {
@@ -252,4 +250,3 @@ li {
     text-align: center;
    
 }
-
