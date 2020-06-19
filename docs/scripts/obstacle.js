@@ -3,8 +3,8 @@ class Obstacle {
         id,
         x,
         y,
-        height = 50,
-        width = 44,
+        height = 30,
+        width = 30,
         images = [
             './images/O/o1.png',
             './images/O/o2.png',
@@ -92,8 +92,5 @@ class Obstacle {
           bottomRight: {x: this.x + this.width, y: this.y + this.height},
         }
     }
-
-    //TODO:  Function to handle the obstacle image change when an obstacle is completed.
-    //Once the obstacle is completed, the obstacle image will change to a checkmark.
 
 }
