@@ -1,11 +1,11 @@
 class Player {
     constructor({
-        x = 50,
-        y = 115,
-        height = 48,
-        width = 100,
-        vHeight = 100,
-        vWidth = 48,
+        x = 5,
+        y = 175,
+        height = 30,
+        width = 70,
+        vHeight = 70,
+        vWidth = 30,
         images = [
             //images of the players car in horizontal orientation.
             './images/car/player-right.png'
@@ -111,15 +111,15 @@ class Player {
         this.height = this.vHeight;
         this.loadImage(vImage);
         this.x = game.obstacle[currentObstacle].x;
-        this.y = game.obstacle[currentObstacle].y;
+        this.y = (game.obstacle[currentObstacle].y - game.obstacle[currentObstacle].height);
         this.draw();
         
     }
 
     horizontalOrientation(image = this.images[0]){
         this.clear();
-        this.width = 100;
-        this.height = 48;
+        this.width = 70;
+        this.height = 30;
         this.loadImage(image);
         this.x = game.obstacle[currentObstacle].x;
         this.y = game.obstacle[currentObstacle].y;
@@ -129,20 +129,23 @@ class Player {
 
     setOrientation(){
        switch(currentObstacle) {
-            case 0:
-            case 6:
-            case 7:
+            case 1:
+            case 8:
+            
+			
                this.verticalOrientation(this.vImages[1]);
                break;
-            case 1:
+            case 0:
             case 2:
+            case 6:
             case 4:
             case 5:
-            case 8:
+			
+			case 7:
                 this.horizontalOrientation();
                 break;
             case 3:
-            case 9:
+            
                 this.verticalOrientation(this.vImages[0]);
             default:
                 console.log("case not found");
