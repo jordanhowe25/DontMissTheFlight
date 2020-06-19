@@ -45,8 +45,15 @@
         </div>
         <div id="trivia-card" class="scenes">
             <div id="trivia-card-content">
-                <p id="question">Question goes here.</p>
-                <p id="hint">Add a icon for the hint that will always be displayed, if clicked then display the hint here.  Logic will need to be added to make this unclickable if they have no hints left.</p>
+                <div id="trivia-card-question"> 
+                    <h2>Question:</h2>
+                    <p id="question">Question goes here.</p>
+                </div>
+                <div id="trivia-card-hint">
+                    <div id="trivia-card-hint-image"><img src="./images/ui/hint.png" alt="hint icon"></div>
+                    <div id="trivia-card-hint-header">Hint:</div>
+                    <div id="hint">Hint goes here.</div>
+                </div>
             </div>    
         </div>
         <div  id="end-game-win" class="scenes">
@@ -67,7 +74,7 @@
         </div>
         <div id="button-group-difficulty-select">
         <ul>
-            <li><button class="button3" id='btn-early-learner'>EARLY LEARNER</button></li>
+            <li><button class="button3" id='btn-early-learner'></button></li>
             <li><button class="button2" id='btn-beginner'><img src="images\controls\button_beginner.png"></button></li>
             <li><button class="button2" id='btn-intermediate'><img src="images\controls\button_intermediate.png"></button></li>
             <li><button class="button2" id='btn-advanced'><img src="images\controls\button_advanced.png"></button></li>
