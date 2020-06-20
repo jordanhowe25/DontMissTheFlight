@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE html>
+﻿﻿﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -43,14 +43,23 @@
         <div id="trivia-card" class="scenes">
             <div id="trivia-card-content">
                 <div id="trivia-card-question"> 
-                    <h2>Question:</h2>
-                    <p id="question">Question goes here.</p>
+                    <div id="trivia-card-question-header" class="trivia-card-header">Question </div>
+                    <div id="question">Question goes here.</div>
                 </div>
                 <div id="trivia-card-hint">
-                    <div id="trivia-card-hint-image"><img src="./images/ui/hint.png" alt="hint icon"></div>
-                    <div id="trivia-card-hint-header">Hint:</div>
-                    <div id="hint">Hint goes here.</div>
+                    <div id="trivia-card-hint-image"><img src="./images/ui/btn-hint.png" alt="hint icon"></div>
+					<div id="hint-content">
+						
+						<div id="hint">Hint goes here.</div>
+					</div>
                 </div>
+				<div id="hint-prompt">
+					Are you sure you want to use a hint?
+					<ul>
+						<li><button class="button3" id="hint-confirm-yes">YES</button></li>
+						<li><button class="button3" id="hint-confirm-no">NO</button></li>
+					</ul>
+				</div>
             </div>    
         </div>
         <div  id="end-game-win" class="scenes">
@@ -82,24 +91,26 @@
         <button class="button3" id="btn-instruction-back">Reselect Difficulty</button>
         </div>
         <div id="button-group-trivia-card">
-        <ul>
-            <li id="answer_a">
-                <input type="radio" id="radio-answer_a" name="trivia-answers" value="a">
-                <label for="a">A) <span id="a-answer">answer text added here</span></label>
-            </li>
-            <li id="answer_b">
-                <input type="radio" id="radio-answer_b" name="trivia-answers" value="b">
-                <label for="b">B) <span id="b-answer">answer text added here</span></label>
-            </li>
-            <li id="answer_c">
-                <input type="radio" id="radio-answer_c" name="trivia-answers" value="c">
-                <label for="c">C) <span id="c-answer">answer text added here</span></label>
-            </li>
-            <li id="answer_d">
-                <input type="radio" id="radio-answer_d" name="trivia-answers" value="d">
-                <label for="d">D) <span id="d-answer">answer text added here</span></label>
-            </li>
-        </ul>
+			<div id="answer-container">
+				<ul id="answer-container>
+					<li id="answer_a">
+						<input type="radio" id="radio-answer_a" name="trivia-answers" value="a">
+						<label for="a"> <span id="a-answer">answer text added here</span></label>
+					</li>
+					<li id="answer_b">
+						<input type="radio" id="radio-answer_b" name="trivia-answers" value="b">
+						<label for="b"> <span id="b-answer">answer text added here</span></label>
+					</li>
+					<li id="answer_c">
+						<input type="radio" id="radio-answer_c" name="trivia-answers" value="c">
+						<label for="c"> <span id="c-answer">answer text added here</span></label>
+					</li>
+					<li id="answer_d">
+						<input type="radio" id="radio-answer_d" name="trivia-answers" value="d">
+						<label for="d"> <span id="d-answer">answer text added here</span></label>
+					</li>
+				</ul>
+			</div>
             <button class="button3" id="btn-submit-answer">SUBMIT ANSWER</button>
         </div>
         <div id="button-group-world-view">
