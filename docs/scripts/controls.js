@@ -1,8 +1,8 @@
 /* globals game */
 
 const bindToTouch = (selector, handler) => {
-    $(selector).on('click touch', handler);
-    
+  $(selector).on('click touch', handler);
+  
 }
 
 //temporarily disables button press
@@ -18,7 +18,7 @@ bindToTouch('#btn-back', () => {
   window.location.href = 'http://www.flywithbutchohare.com';
 });
 
-  //Main menu buttons
+//Main menu buttons
 bindToTouch('#btn-start-game', () => {
   hideTitle();
 });
@@ -31,49 +31,55 @@ bindToTouch('#btn-quit-game', () => {
 bindToTouch('#btn-early-learner', () => {
   delayPress();
   game._difficulty = "Early Learner";
-  game.setStartingGameSettings(); 
-  hideDifficulty();  
+  hideDifficulty();
+  
 });
 
 bindToTouch('#btn-beginner', () => {
   delayPress();
   game._difficulty = "Beginner";
-  game.setStartingGameSettings();
   hideDifficulty();
+
 });
 
 bindToTouch('#btn-intermediate', () => {
   delayPress();
   game._difficulty = "Intermediate";
-  game.setStartingGameSettings();
   hideDifficulty();
+
 });
 
 bindToTouch('#btn-advanced', () => {
   delayPress();
   game._difficulty = "Advanced";
-  game.setStartingGameSettings();
   hideDifficulty();
+ 
 });
 
 //Instructions buttons
 bindToTouch('#btn-instruction-confirm', () => {
+	game.getTriviaData();
   delayPress();
-  hideInstructions();
+  hideInstructions(displayWorld);
   if (game._difficulty != "Early Learner"){
     game.startCountdown();
   } else {
     var unlimited = document.getElementById('timer');
     unlimited.innerHTML = "UNLIMITED";
     unlimited.style.fontSize = "2em";
-    
   }
-  
+  game.setStartingGameSettings();
+});
+
+bindToTouch('#btn-instruction-back', () => {
+  delayPress();
+  hideInstructions(displayDifficulty);
 });
 
 //World-view buttons
 bindToTouch('#btn-start-trip', () => {
   delayPress();
+   game.createTriviaCards();
   game.player.startAnimation();
 });
 
@@ -84,6 +90,7 @@ bindToTouch('#btn-continue-trip', () => {
 
 //Cut scene button
 bindToTouch('#btn-cutscene', () => {
+  game.populateTriviaCard();
   delayPress();
   game.player.setOrientation();
   hideCutScene();
