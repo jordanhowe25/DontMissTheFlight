@@ -102,3 +102,19 @@ bindToTouch('#btn-submit-answer', () => {
   hideTriviaCard();
   currentObstacle ++;
 });
+
+bindToTouch('#trivia-card-hint-image', () => {
+  delayPress();
+  displayHintPrompt();
+});
+
+bindToTouch('#hint-confirm-yes', () => {
+  delayPress();
+  displayHint();
+  hideHintPrompt();
+});
+
+bindToTouch('#hint-confirm-no', () => {
+  delayPress();
+  hideHintPrompt();
+});

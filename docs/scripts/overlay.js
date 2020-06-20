@@ -77,4 +77,18 @@ function displayEndGameWin(){
 function displayEndGameLose(){
     $('#end-game-lose').fadeToggle(500);
 }
+
+function displayHint() {
+	$('#hint-content').show();
+}
+
+function hideHint() {
+	$('#hint-content').hide();
+}
+function displayHintPrompt() {
+	$('#hint-prompt').show();
+}
+function hideHintPrompt() {
+	$('#hint-prompt').hide();
+}
     
