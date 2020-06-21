@@ -91,4 +91,25 @@ function displayHintPrompt() {
 function hideHintPrompt() {
 	$('#hint-prompt').hide();
 }
+
+function displayNoHintPrompt() {
+    $('#no-hint-prompt').show();
+}
+function hideNoHintPrompt() {
+    $('#no-hint-prompt').hide();
+}
+
+function displayCorrectAnswerPrompt() {
+    $('#correct-answer-prompt').show();
+}
+function hideCorrectAnswerPrompt() {
+    $('#correct-answer-prompt').hide();
+}
+function displayIncorrectAnswerPrompt() {
+    $('#incorrect-answer-prompt').show();
+}
+function hideIncorrectAnswerPrompt() {
+    $('#incorrect-answer-prompt').hide();
+}
+
     
