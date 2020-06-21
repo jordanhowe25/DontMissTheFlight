@@ -15,6 +15,7 @@ body {
 
 li {
     list-style: none;
+	margin: 10px 0;
 }
 
 #container-game-area {
@@ -251,14 +252,8 @@ li {
 #answer-container {
 	background-color: white;
 	text-align: left;
-	border: 4px solid black;
-	font-weight: bold;
-	
-	
-}
-
-li {
-	margin: 10px 0;
+    font-weight: bold;
+    border: 4px solid black;
 }
 
 #btn-submit-answer {
@@ -270,22 +265,9 @@ li {
 	left: 1%;
 	
 }
-#hint-prompt {
-	display: none;
-	position: absolute;
-	top: 45%;
-	left: 35%;
-	background-color: red;
-	font-size: 1.25em;
-	font-weight: bold;
-	padding: 7px;
-	border: 4px solid black;
-	
-}
 
-ul#hint-prompt li {
-	display: inline;
-}
+
+
 
 #hint {
 	margin-left: 25px;
@@ -316,4 +298,37 @@ ul#hint-prompt li {
 	background-color: #fbfc92;
 	width: 80%;
 	text-align: left;
+}
+
+.prompt-box{
+    display: none;
+	position: absolute;
+	top: 45%;
+	left: 35%;
+	background-color: red;
+	font-size: 1.25em;
+	font-weight: bold;
+	padding: 7px;
+    border: 4px solid black;
+    width: 33%;
+    height: 25%;
+    box-shadow: 5px 10px #888888;
+    color: white;
+}
+
+.hint-prompt-btn {
+    padding: 10px;
+    display: inline-block;
+	width: 70px;
+	margin: 15px 15px;
+	text-align: center;
+}
+
+#hint-prompt{
+    background-color: yellow;
+    color: black;
+}
+
+#correct-answer-prompt{
+    background-color: forestgreen;
 }

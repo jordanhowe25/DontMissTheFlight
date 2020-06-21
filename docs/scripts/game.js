@@ -172,6 +172,28 @@ class Game {
 		$('#d-answer').html(this.triviaCard[currentTrivia].answerD);
 		
     }
+    
+    applyTimePenalty() {
+        this.stopCountdown();
+        const currentTime = this.time;
+        var penalty;
+        switch (this._difficulty){
+			case "Early Learner":
+                penalty = 0;
+                break;
+            case "Beginner":
+                penalty = 10;
+                break;
+            case "Intermediate":
+                penalty = 10;
+                break;
+            case "Advanced":
+                penalty = 15;
+                break;
+        }
+        this.time = (currentTime - penalty);
+        this.startCountdown();
+    }
 
     populateHints() {
         var div = document.getElementById("number-of-hints");
@@ -199,6 +221,7 @@ class Game {
     }
 
     removeHint() {
+        this.hints --;
         var div = document.getElementById("number-of-hints");
         var image = div.querySelectorAll('[src="./images/ui/hint.png"]');
         div.removeChild(image[0]);
@@ -243,11 +266,15 @@ class Game {
 
     var cutScenes = [
         "url('./images/cutscenes/cutScene0.png')",
-        "url('./images/cutscenes/cutScene1.png')",
         "url('./images/cutscenes/cutScene3.png')",
+        "url('./images/cutscenes/cutScene2.png')",
         "url('./images/cutscenes/cutScene5.png')",
+        "url('./images/cutscenes/cutScene1.png')",
+        "url('./images/cutscenes/cutScene9.png')",
+        "url('./images/cutscenes/cutScene6.png')",
+        "url('./images/cutscenes/cutScene4.png')",
+        "url('./images/cutscenes/cutScene7.png')",
         "url('./images/cutscenes/cutScene8.png')",
-
     ]
     cutScene.style.backgroundImage = cutScenes[currentObstacle];
     triviaCard.style.backgroundImage = cutScenes[currentObstacle];

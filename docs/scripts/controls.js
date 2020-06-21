@@ -1,6 +1,7 @@
 /* globals game */
 
 const bindToTouch = (selector, handler) => {
+  delayPress();
   $(selector).on('click touch', handler);
   
 }
@@ -10,7 +11,7 @@ function delayPress() {
   $(':button').prop('disabled', true);
     setTimeout(function(){
       $(':button').prop('disabled', false);
-    }, 1000);
+    }, 1500);
 }
 
 //static back button displayed on all screens
@@ -29,28 +30,24 @@ bindToTouch('#btn-quit-game', () => {
 
 //Difficulty selection buttons
 bindToTouch('#btn-early-learner', () => {
-  delayPress();
   game._difficulty = "Early Learner";
   hideDifficulty();
   
 });
 
 bindToTouch('#btn-beginner', () => {
-  delayPress();
   game._difficulty = "Beginner";
   hideDifficulty();
 
 });
 
 bindToTouch('#btn-intermediate', () => {
-  delayPress();
   game._difficulty = "Intermediate";
   hideDifficulty();
 
 });
 
 bindToTouch('#btn-advanced', () => {
-  delayPress();
   game._difficulty = "Advanced";
   hideDifficulty();
  
@@ -59,7 +56,6 @@ bindToTouch('#btn-advanced', () => {
 //Instructions buttons
 bindToTouch('#btn-instruction-confirm', () => {
 	game.getTriviaData();
-  delayPress();
   hideInstructions(displayWorld);
   if (game._difficulty != "Early Learner"){
     game.startCountdown();
@@ -72,49 +68,90 @@ bindToTouch('#btn-instruction-confirm', () => {
 });
 
 bindToTouch('#btn-instruction-back', () => {
-  delayPress();
   hideInstructions(displayDifficulty);
 });
 
 //World-view buttons
 bindToTouch('#btn-start-trip', () => {
-  delayPress();
-   game.createTriviaCards();
+  game.createTriviaCards();
   game.player.startAnimation();
 });
 
 bindToTouch('#btn-continue-trip', () => {
-  delayPress();
   game.player.startAnimation();
 });
 
 //Cut scene button
 bindToTouch('#btn-cutscene', () => {
   game.populateTriviaCard();
-  delayPress();
   game.player.setOrientation();
   hideCutScene();
 });
 
 //Trivia Card
 bindToTouch('#btn-submit-answer', () => {
-  delayPress();
-  hideTriviaCard();
-  currentObstacle ++;
+  var selectedAnswer = $('input[name="trivia-answers"]:checked').val();
+  var answerValue;
+  switch (selectedAnswer) {
+    case "a":
+      answerValue = game.triviaCard[currentTrivia].answerA;
+      break;
+    case "b":
+      answerValue = game.triviaCard[currentTrivia].answerB;
+      break;
+    case "c":
+      answerValue = game.triviaCard[currentTrivia].answerC;
+      break;
+    case "d":
+      answerValue = game.triviaCard[currentTrivia].answerD;
+      break;
+  }
+  if (game.triviaCard[currentTrivia].correctAnswer.trimStart() == answerValue.trimStart()) {
+    displayCorrectAnswerPrompt();
+    
+  } else {
+    $('#corrected-answer').html(game.triviaCard[currentTrivia].correctAnswer);
+    displayIncorrectAnswerPrompt();
+  }
+
 });
 
 bindToTouch('#trivia-card-hint-image', () => {
-  delayPress();
-  displayHintPrompt();
+  if (game._hints != 0) {
+    displayHintPrompt();
+  } else {
+    displayNoHintPrompt();
+  }  
+});
+
+bindToTouch('#no-hint-confirm', () => {
+  hideNoHintPrompt();
 });
 
 bindToTouch('#hint-confirm-yes', () => {
-  delayPress();
   displayHint();
+  if(game._difficulty != "Early Learner") {
+    game.removeHint();
+  }
   hideHintPrompt();
 });
 
 bindToTouch('#hint-confirm-no', () => {
-  delayPress();
   hideHintPrompt();
+});
+
+bindToTouch('#correct-confirm', () => {
+  currentObstacle ++;
+  currentTrivia ++;
+  hideTriviaCard();
+  $("input:radio").prop("checked", false);
+  hideCorrectAnswerPrompt();
+});
+
+bindToTouch('#incorrect-confirm', () => {
+  game.applyTimePenalty();
+  currentTrivia ++;
+  $("input:radio").prop("checked", false);
+  game.populateTriviaCard();
+  hideIncorrectAnswerPrompt();
 });

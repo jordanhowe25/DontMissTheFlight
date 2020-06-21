@@ -159,6 +159,8 @@ class Player {
         var deltaX = (this.x - targetPosX);
         var deltaY = (this.y - targetPosY);
 
+        $(':button').prop('disabled', true);
+
         if (deltaX < 0) {
             var speedX = this.speed;
             var speedY = 0;
