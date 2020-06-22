@@ -15,30 +15,45 @@
         <div id="title-screen" class="scenes">
         </div>
         <div id="difficulty-select" class="scenes">
-           
-            <br>
-            <h1 style="text-align: center;">Difficulty Levels</h1>
-            <br>
-            <br>
-
-            <h1><pre class="tab">Early Learner ages 4 - 7      <img src="images\ui\earlyLearner.png"></pre> </h1>
-            <h1><pre class="tab">Beginner      ages 8 - 10     <img src="images\ui\beginner.png"></pre></h1>
-            <h1><pre class="tab">Intermediate  ages 11 - 12    <img src="images\ui\intermediate.png"></pre></h1>
-            <h1><pre class="tab">Advance       ages 12 - above <img src="images\ui\advance.png"></pre></h1>
-            
+            <div id="difficulty-select-wrapper">
+                <div id="difficulty-select-header">
+                    <h1 style="text-align: center;">Difficulty Levels</h1>
+                </div>
+                <div id="difficulty-select-content">
+                    <h1><pre class="tab">Early Learner ages 4 - 7      <img src="images\ui\earlyLearner.png"></pre> </h1>
+                    <h1><pre class="tab">Beginner      ages 8 - 10     <img src="images\ui\beginner.png"></pre></h1>
+                    <h1><pre class="tab">Intermediate  ages 11 - 12    <img src="images\ui\intermediate.png"></pre></h1>
+                    <h1><pre class="tab">Advance       ages 12 - above <img src="images\ui\advance.png"></pre></h1>
+                </div>  
+            </div>  
         </div>
         <div id="instructions" class="scenes">
-            <div class="rules">
-                <h1>Game Rules</h1>
-                <img style="border: 10px solid black;"src="images\rulesPic.png" alt="rules boarder";style="width:300px;">    
-            </div>
-                
-                        
+            <div id="instructions-wrapper">
+                <div id="instructions-header">
+                   <h2>GAME RULES AND OBJECTIVE</h2>
+                </div>
+                <div id="instructions-content">
+                    <ul>
+                        <li>Objective:  Reach the airport to make your flight before time runs out.  Remember that safety always comes first and nothing is worth risking the health and safety of yourself and others.</li>
+                        <li>Game Summary:  On your journey to the airport there are various obstacles that you will encounter.  In order to clear these obstacles you must solve a trivia question.  
+                            If you answer incorrectly, a time penalty will be applied (unless on "Early Learner" difficulty) and a new question will be presented.
+                        </li>
+                        <li>Hints:  You will start the game with a preset amount of hints that you can use throughout the game.  The number of hints you start with is dependent on the difficulty level you have chosen.</li>
+                        <li>Early Learner:  Unlimited time limit/ Unlimited hints /No time penalty applied for incorrect answer</li>
+                        <li>Beginner:  5 minute time limit/ 5 hints available/ 10 second time penalty applied for incorrect answer</li>
+                        <li>Intermediate:  4 minute time limit/ 3 hints available/ 10 second time penalty applied for incorrect answer</li>
+                        <li>Advanced:  3 minute time limit/ 1 hint available / 15 second time penalty applied for incorrect answer </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div id="container-canvas" class="scenes">
             <canvas id="world-view"></canvas>
             <div id="cut-scene"></div>
+            <div  id="end-game-win" class="scenes">
+            </div>
+            <div id="end-game-lose" class="scenes">
+            </div>
         </div>
         <div id="trivia-card" class="scenes">
             <div id="trivia-card-content">
@@ -72,11 +87,7 @@
                 </div>
             </div>    
         </div>
-        <div  id="end-game-win" class="scenes">
-
-        </div>
-        <div id="end-game-lose" class="scenes">
-        </div>
+        
     <div id="container-hints">
         <h2>HINTS LEFT</h2>
         <div id="number-of-hints"></div>
@@ -89,16 +100,22 @@
         </ul>
         </div>
         <div id="button-group-difficulty-select">
-        <ul>
-            <li><button class="button3" id='btn-early-learner'></button></li>
-            <li><button class="button2" id='btn-beginner'><img src="images\controls\button_beginner.png"></button></li>
-            <li><button class="button2" id='btn-intermediate'><img src="images\controls\button_intermediate.png"></button></li>
-            <li><button class="button2" id='btn-advanced'><img src="images\controls\button_advanced.png"></button></li>
-        </ul>
+            <div id="button-group-difficulty-select-layout">
+                <ul>
+                    <li><img id='btn-early-learner' src="images\controls\button_early-learners.png"></li>
+                    <li><img id='btn-intermediate' src="images\controls\button_intermediate.png"></li>
+                </ul>
+                <ul>    
+                    <li><img id='btn-beginner' src="images\controls\button_beginner.png"></li>
+                    <li><img id='btn-advanced' src="images\controls\button_advanced.png"></li>
+                </ul>
+            </div>
         </div>
         <div id="button-group-instructions">
-        <button class="button3" id="btn-instruction-confirm">Confirm Difficulty</button>
-        <button class="button3" id="btn-instruction-back">Reselect Difficulty</button>
+            <div id="button-group-instructions-layout">
+                <button class="button3" id="btn-instruction-confirm">CONFIRM DIFFICULTY</button>
+                <button class="button3" id="btn-instruction-back">RESELECT DIFFICULTY</button>
+            </div>
         </div>
         <div id="button-group-trivia-card">
 			<div id="answer-container">
@@ -119,16 +136,21 @@
 						<input type="radio" id="radio-answer_d" name="trivia-answers" value="d">
 						<label for="d"> <span id="d-answer">answer text added here</span></label>
 					</li>
-				</ul>
+                </ul>
+                <div id="btn-submit-answer-layout"><button class="button3" id="btn-submit-answer">SUBMIT ANSWER</button></div>
 			</div>
-            <button class="button3" id="btn-submit-answer">SUBMIT ANSWER</button>
         </div>
         <div id="button-group-world-view">
-            <button class="button3" id="btn-start-trip">START TRIP</button>
-            <button class="button3" id="btn-continue-trip">CONTINUE TRIP</button><br><br>
+            <div id="button-group-world-view-layout">
+                <button class="button3" id="btn-start-trip">START TRIP</button>
+                <button class="button3" id="btn-continue-trip">CONTINUE TRIP</button><br><br>
+            </div>
         </div>
             <div id="button-group-cut-scene">
-            <button class="button3" id="btn-cutscene">(Cutscene)CONTINUE</button>
+            <button class="button3" id="btn-cutscene">CONTINUE</button>
+        </div>
+        <div id="button-group-end-game">
+            <button class="button3">OK</button>
         </div>
     </div>
     <div id="container-timer">

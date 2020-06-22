@@ -21,6 +21,7 @@ bindToTouch('#btn-back', () => {
 
 //Main menu buttons
 bindToTouch('#btn-start-game', () => {
+  game.start();
   hideTitle();
 });
 
@@ -65,6 +66,7 @@ bindToTouch('#btn-instruction-confirm', () => {
     unlimited.style.fontSize = "2em";
   }
   game.setStartingGameSettings();
+  game.redrawObjects();
 });
 
 bindToTouch('#btn-instruction-back', () => {
@@ -74,6 +76,7 @@ bindToTouch('#btn-instruction-back', () => {
 //World-view buttons
 bindToTouch('#btn-start-trip', () => {
   game.createTriviaCards();
+  $("#btn-cutscene").attr("disabled", false);
   game.player.startAnimation();
 });
 
@@ -90,29 +93,34 @@ bindToTouch('#btn-cutscene', () => {
 
 //Trivia Card
 bindToTouch('#btn-submit-answer', () => {
-  var selectedAnswer = $('input[name="trivia-answers"]:checked').val();
-  var answerValue;
-  switch (selectedAnswer) {
-    case "a":
-      answerValue = game.triviaCard[currentTrivia].answerA;
-      break;
-    case "b":
-      answerValue = game.triviaCard[currentTrivia].answerB;
-      break;
-    case "c":
-      answerValue = game.triviaCard[currentTrivia].answerC;
-      break;
-    case "d":
-      answerValue = game.triviaCard[currentTrivia].answerD;
-      break;
-  }
-  if (game.triviaCard[currentTrivia].correctAnswer.trimStart() == answerValue.trimStart()) {
-    displayCorrectAnswerPrompt();
-    
+  if ($("input:radio[name='trivia-answers']").is(":checked")) {
+    var selectedAnswer = $('input[name="trivia-answers"]:checked').val();
+    var answerValue;
+    switch (selectedAnswer) {
+      case "a":
+        answerValue = game.triviaCard[currentTrivia].answerA;
+        break;
+      case "b":
+        answerValue = game.triviaCard[currentTrivia].answerB;
+        break;
+      case "c":
+        answerValue = game.triviaCard[currentTrivia].answerC;
+        break;
+      case "d":
+        answerValue = game.triviaCard[currentTrivia].answerD;
+        break;
+    }
+    if (game.triviaCard[currentTrivia].correctAnswer.trimStart() == answerValue.trimStart()) {
+      displayCorrectAnswerPrompt();
+      
+    } else {
+      $('#corrected-answer').html(game.triviaCard[currentTrivia].correctAnswer);
+      displayIncorrectAnswerPrompt();
+    }
   } else {
-    $('#corrected-answer').html(game.triviaCard[currentTrivia].correctAnswer);
-    displayIncorrectAnswerPrompt();
+    console.log("nothing was checked");
   }
+  
 
 });
 

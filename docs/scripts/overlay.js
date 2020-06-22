@@ -56,6 +56,11 @@ function hideCutScene(){
     $('#container-canvas').fadeToggle(500);
     $('#button-group-cut-scene').fadeToggle(500);
 }
+function hideCutSceneLose(){
+    $('#cut-scene').fadeToggle(500, displayEndGameLose);
+    $('#container-canvas').fadeToggle(500);
+    $('#button-group-cut-scene').fadeToggle(500);
+}
 
 function displayTriviaCard(){
     $('#trivia-card').fadeToggle(500);
@@ -68,6 +73,11 @@ function hideTriviaCard(){
     $('#tivia-card-content').fadeToggle(500);
     $('#button-group-trivia-card').fadeToggle(500);
 }
+function hideTriviaCardLose(){
+    $('#trivia-card').fadeToggle(500, displayEndGameLose);
+    $('#tivia-card-content').fadeToggle(500);
+    $('#button-group-trivia-card').fadeToggle(500);
+}
 
 
 function displayEndGameWin(){
@@ -76,6 +86,7 @@ function displayEndGameWin(){
 
 function displayEndGameLose(){
     $('#end-game-lose').fadeToggle(500);
+    $('#button-group-end-game').fadeToggle(500);
 }
 
 function displayHint() {
