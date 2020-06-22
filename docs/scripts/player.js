@@ -186,6 +186,7 @@ class Player {
 
     stopAnimation() {
         cancelAnimationFrame(this.animationInterval);
+        $(':button').prop('disabled', false);
     }
 
     getBoundingBox() {

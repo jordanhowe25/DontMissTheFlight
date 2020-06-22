@@ -154,7 +154,7 @@ class Game {
         this.time --;
         if (this.time < 0) {
             this.stopCountdown();
-            this.stop();
+            this.checkLoseCondition();
             }
         }, 1000);
     }
@@ -249,13 +249,27 @@ class Game {
             counter ++;
         }
     }
-
-  
+    checkLoseCondition(){
+        if ($("#world-view").is(":visible")){
+            hideWorld(displayEndGameLose);
+        } else if ($("#cut-scene").is(":visible")){
+            hideCutSceneLose();
+        } else if ($("#trivia-card").is(":visible")) {
+            hideTriviaCardLose();
+        }
+    }
     start() {
         this.spawnPlayer();
         this.spawnObstacles();
         
         
+    }
+
+    redrawObjects() {
+        this.player.draw();
+        for (var i = 0; i < 10; i++) {
+            this.obstacle[i].draw();
+        }
     }
   
     
@@ -302,5 +316,5 @@ class Game {
     canvasElementId: 'world-view',
   });
 
-  game.start();
+  
   
