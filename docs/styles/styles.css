@@ -6,17 +6,22 @@
 body {
     width: 1920px;
     text-align: center;
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+    background-image: linear-gradient(45deg, #293c6b 30%, #2d4175 30%, #2d4175 50%, #293c6b 50%, #293c6b 80%, #2d4175 80%, #2d4175 100%);
+    background-size: 70.71px 70.71px;
 }
+
 
 li {
     list-style: none;
+	margin: 10px 0;
 }
 
 #container-game-area {
     margin: 5% auto;
     width: 1520px;
     height: 780px;   
-    
 }
 
 .scenes {
@@ -36,7 +41,7 @@ li {
 #title-screen {
     display: block;
     position: relative;
-    background-image: url('../images/title-screen.png');
+    background-image: url('../images/main_title_background.png');
     display: block;
     background-size: contain;
 }
@@ -44,15 +49,53 @@ li {
 #difficulty-select {
     display: none;
     position: relative;
-    display: none;
-    background-image: repeating-radial-gradient(blue 10%,white 10%,blue 20%);
+    background-image: url("../images/instruction_page.png");
+    
+}
+#difficulty-select-wrapper {
+    position: relative;
+    width: 65%;
+    height: 75%;
+    top: 15%;
+    left: 18%;
+    background-color: #2d4175;
+    opacity: .9;
+    box-shadow: 5px 10px #888888;
+    font-family: 'Roboto',sans-serif;
+    padding: 10px;
+    color: white;
+    
+}
+#difficulty-select-header{
+    background-color: #293c6b;
 }
 
 #instructions {
     display: none;
     position: relative;
-    display: none;
-    background-image: repeating-radial-gradient(blue 10%,white 10%,blue 20%);
+    background-image: url("../images/instruction_page.png");
+}
+#instructions-wrapper {
+    width: 65%;
+    height: 75%;
+    top: 15%;
+    left: 18%;
+    background-color: #2d4175;
+    opacity: .9;
+    box-shadow: 5px 10px #888888;
+    font-family: 'Roboto',sans-serif;
+    color: white;
+    position: relative;
+}
+#instructions-header {
+    background-color: #293c6b ;
+}
+#instructions-content {
+    text-align: left;
+}
+
+#instructions-content li {
+    margin: 0 0 20px 0;
 }
 
 #world-view {
@@ -92,14 +135,13 @@ li {
 #end-game-win {
     display: none;
     position: relative;
-    background-color: orangered;
+    background-image: url("../images/cutscenes/cutsceneWin.png");
 }
 
 #end-game-lose {
     display: none;
     position: relative;
-    background-color: silver;
-    display: none;
+    background-image: url("../images/cutscenes/cutsceneLose.png");
 }
 
 #container-hints {
@@ -167,16 +209,43 @@ li {
 
 #button-group-main-menu {
     display: block;
+    background-color: white;
+    border: 4px solid black;
 }
+
 
 #button-group-difficulty-select {
     display: none;
+    background-color: white;
+    border: 4px solid black;
+    height: 172px;
+
 }
+
+#button-group-difficulty-select ul{
+    display: inline-block;
+}
+
 #button-group-instructions{
     display: none;
+    background-color: white;
+    border: 4px solid black;
+    height: 172px;
+}
+
+#button-group-instructions-layout {
+    position: relative;
+    top: 35%;
 }
 #button-group-world-view {
     display: none;
+    background-color: white;
+    border: 4px solid black;
+    height: 172px;
+}
+#button-group-world-view-layout {
+    position: relative;
+    top: 35%;
 }
 
 #button-group-trivia-card {
@@ -185,6 +254,19 @@ li {
 
 #button-group-cut-scene {
     display: none;
+    background-color: white;
+    border: 4px solid black;
+    height: 172px;
+}
+#button-group-end-game {
+    display: none;
+    background-color: white;
+    border: 4px solid black;
+    height: 172px;
+}
+#btn-cutscene{
+    position: relative;
+    top: 35%;
 }
 
 #number-of-hints {
@@ -223,7 +305,7 @@ li {
     font-weight: 300;
     font-size: 24px;
     color: #FFFFFF;
-    background-color: #4eb5f1;
+    background-color: #2d4175;
     text-align: center;
     transition: all 0.2s;
 }
@@ -236,15 +318,6 @@ li {
     outline: none;
 }
 
-#moveupBTN{
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    
-}
 
 .difficultyPage{
     text-align: center;
@@ -255,3 +328,88 @@ li {
    
 }
 
+#answer-container {
+	background-color: white;
+	text-align: left;
+    font-weight: bold;
+    border: 4px solid black;
+}
+
+#btn-submit-answer-layout {
+    position: relative;
+    left: 65%;
+}
+
+#trivia-card-hint-image {
+	position: absolute;
+	bottom: 1%;
+	left: 1%;
+	
+}
+
+
+
+
+#hint {
+	margin-left: 25px;
+}
+.trivia-card-header {
+	background-color: #293c6b;
+	color: white;
+	font-size: 2em;
+	font-weight: bold;
+	text-align: left;
+	padding: 10px;
+}
+#question {
+	height: 65%;
+	padding-top: 20px;
+	padding-left: 10px;
+	text-align: left;
+	font-size: 1.75em;
+	font-weight: bold;
+}
+#hint-content {
+	display: none;
+	position: absolute;
+	bottom: 5%;
+	left: 10%;
+	font-size: 1.5em;
+	font-weight: bold;
+	background-color: #fbfc92;
+	width: 80%;
+	text-align: left;
+}
+
+.prompt-box{
+    display: none;
+	position: absolute;
+	top: 45%;
+	left: 35%;
+	background-color: red;
+	font-size: 1.25em;
+	font-weight: bold;
+	padding: 7px;
+    border: 4px solid black;
+    width: 33%;
+    height: 25%;
+    box-shadow: 5px 10px #888888;
+    color: white;
+}
+
+.hint-prompt-btn {
+    padding: 10px;
+    display: inline-block;
+	width: 70px;
+	margin: 15px 15px;
+	text-align: center;
+}
+
+#hint-prompt{
+    background-color: yellow;
+    color: black;
+}
+
+#correct-answer-prompt{
+    background-color: forestgreen;
+}

@@ -56,6 +56,11 @@ function hideCutScene(){
     $('#container-canvas').fadeToggle(500);
     $('#button-group-cut-scene').fadeToggle(500);
 }
+function hideCutSceneLose(){
+    $('#cut-scene').fadeToggle(500, displayEndGameLose);
+    $('#container-canvas').fadeToggle(500);
+    $('#button-group-cut-scene').fadeToggle(500);
+}
 
 function displayTriviaCard(){
     $('#trivia-card').fadeToggle(500);
@@ -68,6 +73,11 @@ function hideTriviaCard(){
     $('#tivia-card-content').fadeToggle(500);
     $('#button-group-trivia-card').fadeToggle(500);
 }
+function hideTriviaCardLose(){
+    $('#trivia-card').fadeToggle(500, displayEndGameLose);
+    $('#tivia-card-content').fadeToggle(500);
+    $('#button-group-trivia-card').fadeToggle(500);
+}
 
 
 function displayEndGameWin(){
@@ -76,5 +86,41 @@ function displayEndGameWin(){
 
 function displayEndGameLose(){
     $('#end-game-lose').fadeToggle(500);
+    $('#button-group-end-game').fadeToggle(500);
 }
+
+function displayHint() {
+	$('#hint-content').show();
+}
+
+function hideHint() {
+	$('#hint-content').hide();
+}
+function displayHintPrompt() {
+	$('#hint-prompt').show();
+}
+function hideHintPrompt() {
+	$('#hint-prompt').hide();
+}
+
+function displayNoHintPrompt() {
+    $('#no-hint-prompt').show();
+}
+function hideNoHintPrompt() {
+    $('#no-hint-prompt').hide();
+}
+
+function displayCorrectAnswerPrompt() {
+    $('#correct-answer-prompt').show();
+}
+function hideCorrectAnswerPrompt() {
+    $('#correct-answer-prompt').hide();
+}
+function displayIncorrectAnswerPrompt() {
+    $('#incorrect-answer-prompt').show();
+}
+function hideIncorrectAnswerPrompt() {
+    $('#incorrect-answer-prompt').hide();
+}
+
     

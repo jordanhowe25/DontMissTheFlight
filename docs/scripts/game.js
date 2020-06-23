@@ -154,7 +154,7 @@ class Game {
         this.time --;
         if (this.time < 0) {
             this.stopCountdown();
-            this.stop();
+            this.checkLoseCondition();
             }
         }, 1000);
     }
@@ -171,6 +171,28 @@ class Game {
 		$('#c-answer').html(this.triviaCard[currentTrivia].answerC);
 		$('#d-answer').html(this.triviaCard[currentTrivia].answerD);
 		
+    }
+    
+    applyTimePenalty() {
+        this.stopCountdown();
+        const currentTime = this.time;
+        var penalty;
+        switch (this._difficulty){
+			case "Early Learner":
+                penalty = 0;
+                break;
+            case "Beginner":
+                penalty = 10;
+                break;
+            case "Intermediate":
+                penalty = 10;
+                break;
+            case "Advanced":
+                penalty = 15;
+                break;
+        }
+        this.time = (currentTime - penalty);
+        this.startCountdown();
     }
 
     populateHints() {
@@ -199,6 +221,7 @@ class Game {
     }
 
     removeHint() {
+        this.hints --;
         var div = document.getElementById("number-of-hints");
         var image = div.querySelectorAll('[src="./images/ui/hint.png"]');
         div.removeChild(image[0]);
@@ -211,8 +234,8 @@ class Game {
     }
 
     spawnObstacles() {
-        var coordsX = [95, 260, 260, 410, 560, 565, 780, 950, 1062, 1062, 1180];
-        var coordsY = [160, 150, 355, 355, 355, 150, 150, 150, 150, 355, 250];
+        var coordsX = [100, 260, 260, 430, 430, 580, 780, 950, 1062, 1062, 1180];
+        var coordsY = [170, 170, 375, 375, 170, 170, 170, 170, 170, 355, 250];
         var counter = 0
         for (let n = 0; n < 11; n++ ){
             this.obstacle.push(
@@ -226,13 +249,27 @@ class Game {
             counter ++;
         }
     }
-
-  
+    checkLoseCondition(){
+        if ($("#world-view").is(":visible")){
+            hideWorld(displayEndGameLose);
+        } else if ($("#cut-scene").is(":visible")){
+            hideCutSceneLose();
+        } else if ($("#trivia-card").is(":visible")) {
+            hideTriviaCardLose();
+        }
+    }
     start() {
         this.spawnPlayer();
         this.spawnObstacles();
         
         
+    }
+
+    redrawObjects() {
+        this.player.draw();
+        for (var i = 0; i < 10; i++) {
+            this.obstacle[i].draw();
+        }
     }
   
     
@@ -243,11 +280,15 @@ class Game {
 
     var cutScenes = [
         "url('./images/cutscenes/cutScene0.png')",
-        "url('./images/cutscenes/cutScene1.png')",
         "url('./images/cutscenes/cutScene3.png')",
+        "url('./images/cutscenes/cutScene2.png')",
         "url('./images/cutscenes/cutScene5.png')",
+        "url('./images/cutscenes/cutScene1.png')",
+        "url('./images/cutscenes/cutScene9.png')",
+        "url('./images/cutscenes/cutScene6.png')",
+        "url('./images/cutscenes/cutScene4.png')",
+        "url('./images/cutscenes/cutScene7.png')",
         "url('./images/cutscenes/cutScene8.png')",
-
     ]
     cutScene.style.backgroundImage = cutScenes[currentObstacle];
     triviaCard.style.backgroundImage = cutScenes[currentObstacle];
@@ -275,5 +316,5 @@ class Game {
     canvasElementId: 'world-view',
   });
 
-  game.start();
+  
   
