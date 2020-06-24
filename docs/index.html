@@ -51,9 +51,30 @@
             <canvas id="world-view"></canvas>
             <div id="cut-scene"></div>
             <div  id="end-game-win" class="scenes">
+                <div id="end-game-win-prompt" class="end-game-prompt">
+                    <div id="end-game-win-prompt-header" class="end-game-header">
+                        <h2>CONGRATULATIONS!!!</h2>
+                    </div>
+                    <div id="end-game-win-prompt-content" class="end-game-content">
+                        <p>We hope you enjoyed the game and congratulations for making it to the airport on time!</p>
+                        <p>Please, always mindful of everyone's safety when traveling and to always allow yourself enough time to make it comfortably to the airport without having to rush.</p>
+                        <p>We would like to personally thank Roselle Leano from the DeVry University May 2020 session, for creating all of the wonderful artwork in the game.</p>
+                    </div>
+                </div>
             </div>
             <div id="end-game-lose" class="scenes">
+                <div id="end-game-lose-prompt" class="end-game-prompt">
+                    <div id="end-game-lose-prompt-header" class="end-game-header">
+                        <h2>SORRY, YOU DIDN'T MAKE IT IN TIME!</h2>
+                    </div>
+                    <div id="end-game-lose-prompt-content" class="end-game-content">
+                        <p>We hope you enjoyed the game even though you didn't make it to the airport in time.</p>
+                        <p>Please, always mindful of everyone's safety when traveling and to always allow yourself enough time to make it comfortably to the airport without having to rush.</p>
+                        <p>We would like to personally thank Roselle Leano from the DeVry University May 2020 session for creating all of the wonderful artwork in the game.</p>
+                    </div>
+                </div>
             </div>
+              
         </div>
         <div id="trivia-card" class="scenes">
             <div id="trivia-card-content">
@@ -63,15 +84,15 @@
                 </div>
                 <div id="trivia-card-hint">
                     <div id="trivia-card-hint-image"><img src="./images/ui/btn-hint.png" alt="hint icon"></div>
-					<div id="hint-content">
-						
-						<div id="hint">Hint goes here.</div>
-					</div>
+                    <div id="hint-content">
+                        
+                        <div id="hint">Hint goes here.</div>
+                    </div>
                 </div>
-				<div id="hint-prompt" class="prompt-box">
-					<div>Are you sure you want to use a hint?</div>
-					<button class="hint-prompt-btn" id="hint-confirm-yes">YES</button>
-					<button class="hint-prompt-btn" id="hint-confirm-no">NO</button>
+                <div id="hint-prompt" class="prompt-box">
+                    <div>Are you sure you want to use a hint?</div>
+                    <button class="hint-prompt-btn" id="hint-confirm-yes">YES</button>
+                    <button class="hint-prompt-btn" id="hint-confirm-no">NO</button>
                 </div>
                 <div id="no-hint-prompt" class="prompt-box">
                     <div>Sorry, you do not have enough hints left</div>
@@ -87,6 +108,7 @@
                 </div>
             </div>    
         </div>
+        
         
     <div id="container-hints">
         <h2>HINTS LEFT</h2>
@@ -150,7 +172,11 @@
             <button class="button3" id="btn-cutscene">CONTINUE</button>
         </div>
         <div id="button-group-end-game">
-            <button class="button3">OK</button>
+            <button class="button3" id="btn-endGame">CONTINUE</button>
+        </div>
+        <div id="button-group-end-game-continued">
+            <button class="button3" id="btn-endGame-playAgain">PLAY AGAIN</button>
+            <button class="button3" id="btn-endGame-Quit">QUIT</button>
         </div>
     </div>
     <div id="container-timer">

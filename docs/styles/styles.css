@@ -263,10 +263,21 @@ li {
     background-color: white;
     border: 4px solid black;
     height: 172px;
+    position: relative;
+}
+#button-group-end-game-continued {
+    display: none;
+    background-color: white;
+    border: 4px solid black;
+    height: 172px;
 }
 #btn-cutscene{
     position: relative;
     top: 35%;
+}
+#btn-endGame{
+   position: relative;
+   top: 35%; 
 }
 
 #number-of-hints {
@@ -292,6 +303,15 @@ li {
     top: 5%;
     left: 4%;
     width: 125px;
+}
+
+#btn-endGame-playAgain {
+    position: relative;
+    top: 35%; 
+}
+#btn-endGame-Quit {
+    position: relative;
+    top: 35%; 
 }
 
 .button3 {
@@ -412,4 +432,33 @@ li {
 
 #correct-answer-prompt{
     background-color: forestgreen;
+}
+
+.end-game-prompt {
+    display: none;
+    width: 65%;
+    height: 75%;
+    top: 15%;
+    left: 18%;
+    background-color: #2d4175;
+    opacity: .9;
+    box-shadow: 5px 10px #888888;
+    font-family: 'Roboto',sans-serif;
+    color: white;
+    position: relative;
+}
+
+.end-game-prompt h2 {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bolder;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.end-game-prompt p {
+    text-align: left;
+    font-size: 1.75em;
+    margin-bottom: 20px;
+    margin-left: 20px;
 }

@@ -152,8 +152,9 @@ class Game {
         seconds = seconds <10? '0' + seconds:seconds;
         timer.innerHTML = minutes + ':' + seconds;
         this.time --;
-        if (this.time < 0) {
+        if (this.time <= 0) {
             this.stopCountdown();
+            timer.innerHTML = '0:00';
             this.checkLoseCondition();
             }
         }, 1000);
