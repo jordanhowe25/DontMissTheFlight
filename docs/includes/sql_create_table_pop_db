@@ -1,0 +1,288 @@
+USE [FlyWithButchOhareDB_Copy]
+GO
+/****** Object:  Table [dbo].[DontMissTheFlight]    Script Date: 6/23/2020 10:37:08 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[DontMissTheFlight](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[question] [varchar](255) NOT NULL,
+	[answer1] [varchar](255) NOT NULL,
+	[answer2] [varchar](255) NOT NULL,
+	[answer3] [varchar](255) NOT NULL,
+	[answer4] [varchar](255) NOT NULL,
+	[correctAnswer] [varchar](255) NOT NULL,
+	[hint] [varchar](255) NOT NULL,
+	[difficulty] [int] NOT NULL
+) ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[DontMissTheFlight] ON 
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (57, N'What is the capital city of France?', N'Quebec', N'Paris', N'Washington D.C.', N'London', N'Paris', N'It is a five letter word', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (58, N'What gas do we need to breathe to stay alive?', N'Oxygen', N'Water', N'Carbon', N'Hydrogen', N'Oxygen', N'Plants convert carbon dioxide to this gas.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (59, N'Which is the largest living land animal?', N'The Gorilla', N'The Blue Whale', N'T- Rex', N'The African Elephant', N'The African Elephant', N'It has four legs', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (60, N'Who was the first President of the United States?', N'George Bush', N'Abraham Lincoln', N'George Washington', N'Thomas Edison', N'George Washington', N'His face could be found on the one dollar bill.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (61, N'A scientist who studies rocks is called a what?', N'Neuroscientist', N'Geologist', N'Astronomer', N'Hydrologists', N'Geologist', N'This word ends with the following letters "gist".', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (62, N'Which would be most attracted to a magnet?', N'Copper', N'Iron', N'Gold', N'Aluminum', N'Iron', N'It is part of one of the Avenger?s super hero?s name.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (63, N'Which is the smallest country in the world?', N'Thailand', N'Congo', N'Japan', N'The Vatican, located in Rome.', N'The Vatican, located in Rome.', N'Where the Pope lives.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (64, N'A caterpillar grows and develops into a?', N'Butterfly', N'Bird', N'Ant', N'Unicorn', N'Butterfly', N'It can have colorful wings.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (65, N'Which is the tallest animal in the world?', N'Cheetah', N'Horse', N'Giraffe', N'Whale', N'Giraffe', N'It has a long neck', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (66, N'What is the national sport of Canada?', N'Soccer', N'Hockey', N'Cricket', N'Baseball', N'Hockey', N'It is played on ice.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (67, N'In which sport is the word "love" used?', N'Tennis', N'Football', N'Baseball', N'Boxing', N'Tennis', N'You play it with a racket.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (68, N'How many days are in a leap year?', N'24', N'365', N'12', N'366', N'366', N'It has one more day than a standard year.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (69, N'How many sides does a pentagon have?', N'Ten', N'Five', N'Eight', N'Four', N'Five', N'The word in Spanish is "Cinco".', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (70, N'What is the chemical symbol of Oxygen?', N'K', N'OXY', N'O', N'H', N'O', N'It comes after the letter "N" in the alphabet.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (71, N'Who Invented the light bulb?', N'Thomas Jefferson', N'Nokola Tesla', N'James Woods', N'Thomas Edison', N'Thomas Edison', N'He was born on February 11, 1847.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (72, N'Botany is the study of?', N'Plants', N'Botox', N'Buttons', N'Birds', N'Plants', N'It gets its energy from the sun.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (73, N'How many keys are there on a piano?', N'2', N'56', N'88', N'102', N'88', N'Twenty two times four.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (18, N'How many legs does a spider have?', N'Two', N'Six', N'Four', N'Eight', N'Eight', N'The number that comes after seven and before nine.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (19, N'What?s the name of a place you go to see lots of animals?', N'Bus Stop', N'Zoo', N'School', N'Beach', N'Zoo', N'It Starts with the letter ?Z?.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (20, N'If you freeze water, what do you get?', N'Steam', N'Apples', N'Ice', N'Rain', N'Ice', N'It''s solid and clear.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (21, N'What is the name of the toy cowboy in the movie Toy Story?', N'Buzz', N'Woody', N'James', N'Billy', N'Woody', N'It Starts with the letter "W".', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (22, N'What colors are the stars on the American flag?', N'White', N'Brown', N'Blue', N'Red', N'White', N'It''s usually the same color as paper', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (23, N'What is the color of a school bus?', N'Purple', N'Green', N'Yellow', N'Blue', N'Yellow', N'It ends with the letter "W".', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (24, N'What do bees make?', N'Castles', N'Honey', N'Dresses', N'Cars', N'Honey', N'It is sticky and sweet.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (25, N'How many sides does a triangle have?', N'Six', N'Four', N'Two', N'Three', N'Three', N'Tri = 3', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (26, N'A yellow fruit?', N'Banana', N'Strawberry', N'Limes', N'Tomato', N'Banana', N'Monkeys love to eat this fruit.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (27, N'Birds lay these?', N'Coins', N'Pebbles', N'Eggs', N'Carpet', N'Eggs', N'It is oval in shape.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (28, N'The opposite of dark?', N'Egg', N'Evening', N'Paper', N'Light', N'Light', N'In order to see, you turn on the ______.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (29, N'The color of grass?', N'Green', N'White', N'Purple', N'Red', N'Green', N'This color also means "Go".', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (30, N'What number comes after 6?', N'Zero', N'Three', N'Five', N'Seven', N'Seven', N'It looks like an upside down letter "L".', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (31, N'A place that you may go to play?', N'Office', N'Classroom', N'Park', N'Library', N'Park', N'This place has grass and swings to play on.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (32, N'In the movie Finding Nemo, what type of fish is Nemo?', N'Goldfish', N'A Clownfish', N'Tilapia', N'Dolphin', N'Clownfish', N'Some people think it is a funny fish.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (33, N'In which country are the ancient pyramids located?', N'Texas', N'Egypt', N'Russia', N'France', N'Egypt', N'This country is located In the continent of Africa.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (34, N'What shape is the letter "O"?', N'A Circle', N'Triangle', N'Square', N'Cylinder', N'Circle', N'It is round.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (35, N'The colors of the American flag are Red, White and _________?', N'Red', N'Blue', N'Yellow', N'Gray', N'Blue', N'It is one of the primary colors.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (36, N'Japan''s Flag consist of a white rectangle and a red solid _________ in the middle.', N'Circle', N'Triangle', N'Star', N'Diamond', N'Circle', N'It is round in shape.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (37, N'The Kangaroo can be found in what continent?', N'Europe', N'Australia', N'Italy', N'Antarctica', N'Australia', N'Its nickname is "The Land Down Under".', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (38, N'What is the Largest ocean?', N'The Atlantic Ocean', N'Indian Ocean', N'Arctic Ocean', N'The Pacific Ocean', N'The Pacific Ocean', N'Its name means "Peaceful".', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (39, N'If it''s 2PM in Chicago, What time would it be in New York?', N'6PM', N'3PM', N'1AM', N'2AM', N'3PM', N'New York is one hour (Eastern Time Zone) ahead of Chicago (Central Time Zone).', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (40, N'Penguins are birds that cannot?', N'Lay Eggs', N'Walk', N'Fly', N'Peck', N'Fly', N'They use their wings for swimming and diving.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (41, N'The tallest land animal is found in ?', N'Africa', N'China', N'South America', N'Antarctica', N'Africa', N'The animal has a very long neck.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (42, N'It is often called the "City of Love".', N'New York', N'Paris', N'London', N'Hong Kong', N'Paris', N'It is in France.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (43, N'The Chicago O''Hare International Airport is named after?', N'Edward "Butch" O''Hare', N'James Woods', N'Lisa O''Hare', N'President Reagan', N'Edward "Butch" O''Hare', N'Named for World War II hero; the U.S . Navy''s First Medal of Honor recipient.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (44, N'This symbol of freedom is located on Liberty Island.', N'The White Dove Monument', N'The Freedom Ship', N'The Statue of Liberty', N'The Stars Theater', N'The Statue of Liberty', N'This symbol of freedom was given in 1886 by France to the United States.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (45, N'The largest continent on earth is?', N'Antarctica', N'Europe', N'North America', N'Asia', N'Asia', N'It is the home of the majority of the human population.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (46, N'This city is also known as the "Big Apple".', N'Philadelphia', N'London', N'New York', N'Cancun', N'New York', N'It is also the largest city in the U.S.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (47, N'Where does Santa Claus live?', N'South Pole', N'North Pole', N'Cuba', N'Alaska', N'North Pole', N'Is the northern most point on earth.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (48, N'Where did the Olympic Games originate?', N'Italy', N'Greece', N'Mexico', N'Korea', N'Greece', N'Originally the games were held in celebration of the mythological god Zeus.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (49, N'Panda Bears are native to which country?', N'Uruguay', N'Thailand', N'Kenya', N'China', N'China', N'It is a country in East Asia.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (50, N'What is the capital city of the United States?', N'New York', N'Washington D.C.', N'Los Angeles', N'Chicago', N'Washington D.C.', N'It is where the White House is located.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (51, N'The Great Wall of China is Located in?', N'China', N'India', N'Thailand', N'Vietnam', N'China', N'Panda Bears are natives.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (52, N'The Panama Canal is located in?', N'Uruguay', N'Venezuela', N'Panama', N'Mexico', N'Panama', N'It borders the countries of Colombia and Costa Rica.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (53, N'In what state is Disney World located?', N'California', N'Texas', N'Florida', N'New Jersey', N'Florida', N'This state is also known as the 
+"Sunshine State".', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (54, N'Which state is known as "America''s Dairyland"?', N'Iowa', N'Pennsylvania', N'Utah', N'Wisconsin', N'Wisconsin', N'Their NFL team is the Green Bay Packers.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (55, N'The Amazon is the largest ________ in the world.', N'River', N'Cloud', N'People', N'Building', N'River', N'It is a body of water.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (56, N'Where is Mount Rushmore located?', N'Pennsylvania', N'Ohio', N'South Dakota', N'Virginia', N'South Dakota', N'It is not North Dakota.', 1)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (74, N'How many stripes does the American Flag have?', N'12', N'13', N'15', N'10', N'13', N'The Stripes represent the original British colonies that became the founding states.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (75, N'What is the second largest city in the United States?', N'Los Angeles', N'Chicago', N'Houston', N'Hong Kong', N'Los Angeles', N'It is located in the state of California.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (76, N'What country shares Costa Rica?s border to the north?', N'Panama', N'Nicaragua', N'Brazil', N'Peru', N'Nicaragua', N'This Central American country starts with the letter "N".', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (77, N'Besides English, what other is considered an ?official language? spoken in Canada?', N'English', N'Mandarin', N'Spanish', N'French', N'French', N'This language is also spoken in France.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (78, N'Which state is also known as the "Sunshine State"?', N'California', N'Florida', N'Hawaii', N'Montana', N'Florida', N'It is the southern most state in the United States.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (79, N'What is Canada''s national winter sport?', N'Ice Hockey', N'Ice Skating', N'Basketball', N'Skiing', N'Hockey', N'It is played with a rubber puck.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (80, N'What is the tallest building in Chicago?', N'John Hancock Center', N'Empire State Building', N'The Willis Tower', N'Aon Center', N'The Willis Tower', N'This building is formerly known as the "Sears Tower".', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (81, N'What state is also known as the "Garden State"?', N'New Jersey', N'New York', N'North Carolina', N'Colorado', N'New Jersey', N'This state borders Pennsylvania.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (82, N'In what country is "Elizabeth Tower" located?', N'Italy', N'England', N'France', N'Germany', N'England', N'Some people also refer to this clock tower as "Big Ben" because of its large bell.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (83, N'Where is the ?Leaning Tower of Pisa? located?', N'Pisa, Italy', N'Rome, Italy', N'Paris, France', N'Quebec, Canada', N'Pisa, Italy', N'This city is located in central Italy.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (84, N'The Platypus is native to what country?', N'South Africa', N'Tanzania', N'Japan', N'Australia', N'Australia', N'This country is also a continent.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (85, N'Mount Everest is located between China and _____?', N'Russia', N'Nepal', N'Laos', N'Thailand', N'Nepal', N'This country borders India.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (86, N'Where is the Taj Mahal Located?', N'Pakistan', N'Tajkistan', N'India', N'Bangladesh', N'India', N'It is located in the southern bank of the river Yamuna.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (87, N'What is the largest country in South America?', N'Brazil', N'Argentina', N'Peru', N'Costa Rica', N'Brazil', N'People speak Portuguese here.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (88, N'What country borders Dominican Republic?', N'Puerto Rico', N'Cuba', N'Belize', N'Haiti', N'Haiti', N'People in this country also speak French.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (89, N'In what American city is the Golden Gate Bridge located in?', N'San Diego', N'San Francisco', N'Santa Monica', N'Sacramento', N'San Francisco', N'This city is also known for its cable cars.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (90, N'Where is the pentagon located?', N'Arlington, Virginia', N'Washington D.C.', N'Alamo, Texas', N'Philadelphia', N'Arlington, Virginia', N'It is located in the Southwestern bank of the Potomac River.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (91, N'What is the capital of Russia?', N'Kazan', N'Ukraine', N'Saint Petersburg', N'Moscow', N'Moscow', N'Is the home of St. Basil Cathedral', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (92, N'What country borders north of the U.S.?', N'Canada', N'Mexico', N'Alaska', N'Germany', N'Canada', N'This country''s capital city is Ottawa.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (93, N'What is the largest state in the U.S.?', N'Texas', N'Alaska', N'California', N'New Mexico', N'Alaska', N'It is also the most northern state.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (94, N'In which country is the city of Busan located?', N'Japan', N'Germany', N'South Korea', N'North Korea', N'South Korea', N'The capital city of this country is Seoul.', 2)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (95, N'The "scale" on a map tells you what?', N'Physical size, length, distance of area', N'Symbols used on the map', N'How many people live in the area', N'Weight of objects located in the area', N'Physical size, length, distance of area', N'The scale gives you an idea of how many miles or kilometers a specific measurement represents.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (96, N'What is another name for the map "key"?', N'Symbolism', N'Scale', N'Decoder', N'Legend', N'Legend', N'The key can also be called a legend and shows what the different map symbols mean.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (97, N'Which map feature helps you see an area with bends or hills?', N'Steps', N'Contour lines', N'Zig-zag line', N'Staircase', N'Contour lines', N'Contour lines show different elevations.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (98, N'Cartographers use this process when making maps?', N'Mapography', N'Topography', N'Guesstimating', N'Projection', N'Projection', N'It''s called projection because it involves projecting a 3D shape onto a 2D page.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (99, N'The average number of people living in one place is called?', N'Capacity', N'Populous', N'Population density', N'Census', N'Population density', N'You can find the population density by dividing the population by the area.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (100, N'The world''s population is in excess of how many billion people', N'7 billion', N'2 billion', N'20 billion', N'15 billion', N'7 billion', N'There are about 7.4 billion people living in the world as of 2018.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (101, N'How long do scientists think modern humans have lived on Earth?', N'1 million years', N'200,000 years', N'10,000 years', N'1 billion years', N'200,000 years', N'In the earliest days of human history there were only about 15,000 people on Earth.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (102, N'A "nomad" is a person who does what?', N'Herds reindeer', N'Moves from place to place', N'Lives in the north', N'Stays in one place their entire life', N'Moves from place to place', N'Early man was nomadic and today there are still groups of nomads.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (103, N'Which is NOT an example of a natural resource?', N'Light', N'Plants', N'Stone', N'Plastic', N'Plastic', N'Natural resources are found in nature', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (104, N'Which is an example of a flow resource?', N'Wind', N'Water', N'Trees', N'Plants', N'Wind', N'Flow resources don''t need to regenerate or reproduce. Running Water is a flow resource.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (105, N'What is it called when forests are destroyed?', N'Global warming', N'Wildfire', N'Arboration', N'Deforestation', N'Deforestation', N'People cause deforestation by cutting down trees and not replanting any.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (106, N'When a natural resource is used to make something else it is called a what?', N'Ingredient', N'Raw material', N'Supply', N'Renewable material', N'Raw material', N'Raw materials like trees can make wood products such as furniture or paper products', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (107, N'Which fruit is the most popular and most consumed in the world?', N'Tomatoes', N'Bananas', N'Kiwi fruit', N'Apple', N'Tomatoes', N'Tomatoes are the most eaten fruit in the world. More than 170 tons of tomatoes are consumed annually.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (108, N'Which is the smallest country in the world?', N'Monaco', N'Wales', N'The Vatican City', N'Prague', N'The Vatican City', N'The Vatican City, located in Rome/Italy, is the smallest country in the world.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (109, N'Which city is situated on two continents?', N'Paris', N'Quito', N'Istanbul', N'London', N'Istanbul', N'Istanbul in Turkey is located both on the Asian and European continent as the city spreads over two sides of the Bosporus. The strait is the boundary between Asia and Europe.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (110, N'Which is the longest continental mountain range in the world?', N'The Andes', N'Atlas Mountains', N'Rocky Mountains', N'Mount Fuji', N'The Andes', N'The Andes in South America are the longest mountain range stretching over 7,600km/4,700 miles from north to south.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (111, N'Which is the world''s largest country by size?', N'Russia', N'Spain', N'Brazil', N'China', N'Russia', N'Russia is the largest country by size, followed by Canada, China and the USA.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (112, N'Which continent is the most populous?', N'Europe', N'North America', N'Asia', N'South America', N'Asia', N'60% of the world''s population lives on the Asian continent. More than 4.4 billion people live in Asia.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (113, N'Which country in the European Union has the biggest population?', N'Germany', N'Spain', N'Poland', N'Czech Republic', N'Germany', N'Germany has the biggest population in the EU. 82 million people live in this country in central Europe.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (114, N'Which is the longest river in Africa?', N'Zambezi', N'Limpopo', N'Nile', N'Blue Nile River', N'Nile', N'The Nile is the longest river in Africa. It is 6,650km/4,130miles long. The Nile?s drainage basin covers 11 countries.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (115, N'Which is the largest capital city in the world (by population)?', N'Tokyo', N'London', N'Cardiff', N'New York City', N'Toyko', N'Tokyo is the most populated city in the world. More than 38 million people live in the metropolitan area of Japan?s capital city.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (116, N'Which two countries share the longest border in the world?', N'Germany & France', N'USA & Canada', N'Poland & Ukraine', N'Norway & Finland', N'USA & Canada', N'The longest border is between the United States of America and Canada. It is over 8,893 km/5,525 miles long.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (117, N'Which ocean lies on the east coast of the United States?', N'Atlantic', N'Pacific', N'Indian', N'Eastern', N'Atlantic', N'The Atlantic Ocean is located between the east side of United States and west side of Europe.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (118, N'Which is the world''s highest mountain?', N'K2', N'Kilimanjaro', N'Mount Everest', N'Makalu', N'Mount Everest', N'Mount Everest is located at the border between China and Nepal.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (119, N'How many Great Lakes are there?', N'5', N'6', N'3', N'4', N'5', N'There are five Great Lakes: Lake Michigan, Lake Superior, Lake Huron, Lake Erie, and Lake Ontario.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (120, N'Which is the longest river in the U.S.?', N'Missouri River', N'Yukon River', N'Colorado River', N'Wabash River', N'Missouri River', N'Missouri River is located at Rocky Mountain near Brower''s Spring, Montana.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (121, N'The biggest desert in the world is...?', N'Sahara', N'Arabian', N'Great Australian', N'Namib', N'Sahara', N'The Sahara is located in Northern Africa.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (122, N'Which of these cities is not in Europe?', N'Barcelona', N'Prague', N'Moscow', N'Reykjavik', N'Moscow', N'Moscow is located in western Russia, in northern Asia.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (123, N'The United Kingdom is comprised of how many countries?', N'6', N'5', N'4', N'8', N'4', N'The four countries in United Kingdom are: England, Scotland, Wales & Northern Ireland.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (124, N'Which of the following countries do not border France?', N'Netherlands', N'Germany', N'Spain', N'Italy', N'Netherlands', N'The Netherlands is located at the border of Germany to the east, Belguim to the south, and North Sea to the northwest.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (125, N'What is the imaginary line called that connects the north and south pole?', N'Prime Axis', N'Lambert Line', N'Prime Meridian', N'Both A & C', N'Prime Meridian', N'Prime Meridian is horizontal point that connected between North and South Pole.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (126, N'Which lake is the arrow pointing to in Illinois?', N'Huron', N'Erie', N'Michigan', N'Superior', N'Michigan', N'Lake Michigan is located at northeast Illinois, east Wisconsin, north Indiana, and west Michigan.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (127, N'Between which two countries/states is the Bering Strait located?', N'Alaska & Russia', N'France & England', N'Finland & Sweden', N'England & Ireland', N'Alaska & Russia', N'Bering Strait is a realatively shallow and narrow marine gateway in the North Pacific, separating Russia and Alaska.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (128, N'Which U.S. state is the Grand Canyon located in?', N'Wyoming', N'New Mexico', N'Arizona', N'Neveda', N'Arizona', N'The Grand Canyon is located at northern Arizona.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (129, N'Which is the longest river in the world?', N'Amazon River', N'Yellow River', N'Nile River', N'Congo River', N'Nile River', N'The Nile River is the largest river in northeastern Africa, located from Alexandria, Egypt to Jinja, Uganda.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (130, N'Which is the largest body of water?', N'Indian Ocean', N'Pacific Ocean', N'Atlantic Ocean', N'Gulf of Mexico', N'Pacific Ocean', N'Pacific Ocean is the largest ocean in the world, located at western North America, and eastern Asia.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (131, N'What is the approximate size of Earth''s equator?', N'40,000 km', N'20,000 km', N'30,000 km', N'50,000 km', N'40,000 km', N'The size of Earth''s equator is approximately 24,000 miles.', 3)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (132, N'Which city has two airports, named LaGuardia & JFK?', N'Miami', N'Los Angeles', N'New York', N'Boston', N'New York', N'City and State has same name.', 4)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (133, N'Which city is home to Coca Cola?s headquarters?', N'Atlanta', N'Newark', N'Houston', N'Orlando', N'Atlanta', N'Home of the Braves.', 4)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (134, N'Which American city is 90 miles from Cuba?', N'Daytona', N'Dallas', N'Miami', N'Tampa', N'Miami', N'City known for ?South Beach?.', 4)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (135, N'Which state is The Rocky Mountains located?', N'Texas', N'Colorado', N'North Carolina', N'Pennsylvania', N'Colorado', N'The city ?Aspen? is located in this state.', 4)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (136, N'Which is know as the "Sunshine State"?', N'California', N'Louisiana', N'Arizona', N'Florida', N'Florida', N'Disney World is located in state.', 4)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (137, N'Which city is the Eiffel Tower Located?', N'London', N'Paris', N'Brazil', N'Berlin', N'Paris, France', N'Napoleon Bonaparte once lived here.', 4)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (138, N'Which state is home to Google?s headquarters?', N'North Dakota', N'New York', N'Texas', N'California', N'California', N'State is located on the west coast.', 4)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (139, N'This state is known as the peach state?', N'Georgia', N'Tennessee', N'Kentucky', N'Virginia', N'Georgia', N'This state borders Florida.', 4)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (140, N'Which state is the Grand Canyon located?', N'Nevada', N'Arizona', N'Washington', N'Illinois', N'Arizona', N'The Diamondbacks MLB baseball team.', 4)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (141, N'What city was the capital of the U.S. from 1790 to 1800?', N'New York', N'Boston', N'Philadelphia', N'Washington D.C.', N'Philadelphia', N'Located in Pennsylvania.', 4)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (142, N'In which state is the Hasbro headquarters located?', N'Rhode Island', N'California', N'Florida', N'Oklahoma', N'Rhode Island', N'This state is located on the east coast.', 4)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (143, N'What is the largest mountain in the U.S.?', N'Denali or Mount McKinley', N'Mount Everest', N'Mount Rainier', N'Mount Saint Elias', N'Denali or Mount McKinley', N'Located in Alaska.', 4)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (144, N'The Van Gogh Museum is located in which city?', N'Amsterdam', N'Paris', N'Rome', N'Prague', N'Amsterdam', N'The city is also well known for its nightlife and festival activity.', 4)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (145, N'What is the capital city of Taiwan?', N'Tainan', N'Taipei', N'Mumbai', N'Bangkok', N'Taipei', N'Rhymes with "My Pie".', 4)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (146, N'This major city of Denmark hosts popular attractions such as Tivoli Gardens, The Marble Church, as well as the Amalienborg and Christiansborg palaces?', N'Hamburg', N'Odense', N'Copenhagen', N'Nuuk', N'Copenhagen', N'The city is the capital and most populous city of Denmark. The etymology of the city''s name is derived from the phrase "merchants'' harbor".', 4)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (147, N'In which year was the first Las Vegas Casino licensed?', N'1955', N'1931', N'1922', N'1940', N'1931', N'The president at the time was Herbert C. Hoover. This was the same year that the empire state building was opened.', 4)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (148, N'The Grand Ole Opry House is located in which U.S. city?', N'Nashville', N'New York City', N'Las Vegas', N'Memphis', N'Nashville', N'This city is also home to the Country Music Hall of Fame.', 4)
+GO
+INSERT [dbo].[DontMissTheFlight] ([ID], [question], [answer1], [answer2], [answer3], [answer4], [correctAnswer], [hint], [difficulty]) VALUES (149, N'What is the possible origin(s) of Chicago''s "Windy City" nickname?', N'Strong "Hawkin" winds off the lake', N'Politics & World?s Fair', N'Rivalry with Cincinnati in Meatpacking & Sports', N'All of the above', N'All of the above', N'Not the windiest city in the states, but it has become an endearing nickname for Chicago.', 4)
+GO
+SET IDENTITY_INSERT [dbo].[DontMissTheFlight] OFF
+GO
