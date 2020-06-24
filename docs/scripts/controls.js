@@ -93,9 +93,11 @@ bindToTouch('#btn-cutscene', () => {
 
 //Trivia Card
 bindToTouch('#btn-submit-answer', () => {
+  //checks first if the user selected an answer.
   if ($("input:radio[name='trivia-answers']").is(":checked")) {
     var selectedAnswer = $('input[name="trivia-answers"]:checked').val();
     var answerValue;
+    hideHint();
     switch (selectedAnswer) {
       case "a":
         answerValue = game.triviaCard[currentTrivia].answerA;
@@ -151,9 +153,17 @@ bindToTouch('#hint-confirm-no', () => {
 bindToTouch('#correct-confirm', () => {
   currentObstacle ++;
   currentTrivia ++;
-  hideTriviaCard();
   $("input:radio").prop("checked", false);
-  hideCorrectAnswerPrompt();
+  //Checks for end game win scenario.  If currentObstacle = 10 then all obstacles have been passed and player wins.
+  if (currentObstacle < 10) {
+    hideTriviaCard();
+    hideCorrectAnswerPrompt();
+  } else {
+    game.stopCountdown();
+    displayEndGameWin();
+  }
+  
+  
 });
 
 bindToTouch('#incorrect-confirm', () => {
@@ -162,4 +172,21 @@ bindToTouch('#incorrect-confirm', () => {
   $("input:radio").prop("checked", false);
   game.populateTriviaCard();
   hideIncorrectAnswerPrompt();
+});
+
+bindToTouch('#btn-endGame', () => {
+  if ($("#end-game-win").is(":visible")) {
+    $('#end-game-win-prompt').show();
+  } else {
+    $('#end-game-lose-prompt').show();
+  }
+  $('#button-group-end-game').hide();
+  $('#button-group-end-game-continued').show();
+});
+
+bindToTouch("#btn-endGame-playAgain", () => {
+  window.location.reload(true);
+});
+bindToTouch("#btn-endGame-Quit", () => {
+  window.location.href = 'http://www.flywithbutchohare.com';
 });
