@@ -1,6 +1,7 @@
 var currentObstacle = 0;
 var selection;
 var currentTrivia = 0;
+var qty;
 class Game {
     constructor({
       canvasElementId,
@@ -115,7 +116,7 @@ class Game {
     }
 
     createTriviaCards(){
-        var qty = selection.length;
+        qty = selection.length;
         this.shuffleArray(selection);
         for (var i = 0; i < qty; i++) {
             this.triviaCard.push(
@@ -143,7 +144,8 @@ class Game {
     }
         
     startCountdown()
-    {
+    {   
+        var timeFlag = false;
         this.timer = setInterval(() => {
         var seconds = this.time;
         const minutes = Math.floor(seconds/60);
@@ -152,6 +154,10 @@ class Game {
         seconds = seconds <10? '0' + seconds:seconds;
         timer.innerHTML = minutes + ':' + seconds;
         this.time --;
+        if (this.time < 60 && !timeFlag) {
+            $("#timer").css('color', 'red');
+            timeFlag = true;
+        }
         if (this.time <= 0) {
             this.stopCountdown();
             timer.innerHTML = '0:00';
@@ -235,10 +241,10 @@ class Game {
     }
 
     spawnObstacles() {
-        var coordsX = [100, 260, 260, 430, 430, 580, 780, 950, 1062, 1062, 1180];
-        var coordsY = [170, 170, 375, 375, 170, 170, 170, 170, 170, 355, 250];
+        var coordsX = [100, 260, 260, 430, 430, 580, 780, 950, 1062, 1062];
+        var coordsY = [170, 170, 375, 375, 170, 170, 170, 170, 170, 355];
         var counter = 0
-        for (let n = 0; n < 11; n++ ){
+        for (let n = 0; n < 10; n++ ){
             this.obstacle.push(
                 new Obstacle({
                     id: counter,

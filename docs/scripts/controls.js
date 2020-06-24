@@ -1,7 +1,6 @@
 /* globals game */
 
 const bindToTouch = (selector, handler) => {
-  delayPress();
   $(selector).on('click touch', handler);
   
 }
@@ -153,6 +152,10 @@ bindToTouch('#hint-confirm-no', () => {
 bindToTouch('#correct-confirm', () => {
   currentObstacle ++;
   currentTrivia ++;
+  //Checks if the game has cycled through all trivia questions.  If so, resets back to the first trivia question.
+  if (currentTrivia > qty) {
+    currentTrivia = 0;
+  }
   $("input:radio").prop("checked", false);
   //Checks for end game win scenario.  If currentObstacle = 10 then all obstacles have been passed and player wins.
   if (currentObstacle < 10) {

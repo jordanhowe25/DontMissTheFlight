@@ -16,7 +16,6 @@ class Obstacle {
             './images/O/o8.png',
             './images/O/o9.png',
             './images/O/o10.png',
-            './images/O/o_done.png',
         ],
         game,
     }) {
