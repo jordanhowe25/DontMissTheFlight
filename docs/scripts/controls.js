@@ -170,7 +170,9 @@ bindToTouch('#correct-confirm', () => {
 });
 
 bindToTouch('#incorrect-confirm', () => {
-  game.applyTimePenalty();
+  if (game._difficulty != "Easy Learner") {
+    game.applyTimePenalty();
+  }
   currentTrivia ++;
   $("input:radio").prop("checked", false);
   game.populateTriviaCard();
