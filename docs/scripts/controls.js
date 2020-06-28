@@ -170,7 +170,7 @@ bindToTouch('#correct-confirm', () => {
 });
 
 bindToTouch('#incorrect-confirm', () => {
-  if (game._difficulty != "Easy Learner") {
+  if (game._difficulty != "Early Learner") {
     game.applyTimePenalty();
   }
   currentTrivia ++;
