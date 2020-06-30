@@ -111,7 +111,7 @@ bindToTouch('#btn-submit-answer', () => {
         answerValue = game.triviaCard[currentTrivia].answerD;
         break;
     }
-    if (game.triviaCard[currentTrivia].correctAnswer.trimStart() == answerValue.trimStart()) {
+    if (game.triviaCard[currentTrivia].correctAnswer.trim() == answerValue.trim()) {
       displayCorrectAnswerPrompt();
       
     } else {
