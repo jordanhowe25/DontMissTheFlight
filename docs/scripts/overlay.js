@@ -1,34 +1,24 @@
 
 //To test flow, in the console run through the "hide" commands in order.  for example:  hideTitle(), hideDifficulty(), hideInstructions(), ect...
 function hideTitle() {
-    $('#title-screen').fadeToggle(500, displayDifficulty);
+    $('#title-screen').fadeToggle(500, displayInstructions);
     $('#button-group-main-menu').fadeToggle(500)
-}
-
-function displayDifficulty() {
-    $('#difficulty-select').fadeToggle(500);
-    $('#button-group-difficulty-select').fadeToggle(500);
-}
-
-function hideDifficulty() {
-    $('#difficulty-select').fadeToggle(500, displayInstructions);
-    $('#button-group-difficulty-select').fadeToggle(500);
 }
 
 function displayInstructions(){
     $('#instructions').fadeToggle(500);
-    $('#button-group-instructions').fadeToggle(500);
 }
 
 function hideInstructions(displayFunction){
     $('#instructions').fadeToggle(500, displayFunction);
-    $('#button-group-instructions').fadeToggle(500);
 }
 
 function displayWorld(){
     $('#container-canvas').fadeToggle(500);
     $('#world-view').fadeToggle(500);
     $('#button-group-world-view').fadeToggle(500);
+    $('#container-hints').fadeToggle(500);
+    $('#container-timer').fadeToggle(500);
     if (currentObstacle == 0) {
         $('#btn-continue-trip').hide();
         $('#btn-start-trip').show();

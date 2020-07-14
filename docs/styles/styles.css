@@ -47,52 +47,30 @@ li {
     background-size: contain;
 }
 
-#difficulty-select {
-    display: none;
-    position: relative;
-    background-image: url("../images/instruction_page.png");
-    
-}
-#difficulty-select-wrapper {
-    position: relative;
-    width: 65%;
-    height: 75%;
-    top: 15%;
-    left: 18%;
-    background-color: #2d4175;
-    opacity: .9;
-    box-shadow: 5px 10px #888888;
-    font-family: 'Roboto',sans-serif;
-    padding: 10px;
-    color: white;
-    
-}
-#difficulty-select-header{
-    background-color: #293c6b;
-}
-
 #instructions {
     display: none;
     position: relative;
-    background-image: url("../images/instruction_page.png");
+    background-color: white;
+
 }
 #instructions-wrapper {
-    width: 65%;
-    height: 75%;
-    top: 15%;
-    left: 18%;
+    width: 60%;
+    height: 95%;
+    top: 2.5%;
+    left: 1%;
     background-color: #2d4175;
     opacity: .9;
-    box-shadow: 5px 10px #888888;
     font-family: 'Roboto',sans-serif;
     color: white;
     position: relative;
+    float: left;
 }
 #instructions-header {
     background-color: #293c6b ;
 }
 #instructions-content {
     text-align: left;
+    font-size: 18px;
 }
 
 #instructions-content li {
@@ -156,6 +134,7 @@ li {
     background-color: white;
     border: 4px solid black;
     box-sizing: border-box;
+    display: none;
    
 }
 #number-of-hints{
@@ -174,6 +153,7 @@ li {
     height: 180px;
     float: left;
     margin: 20px 0;
+    
 }
 
 #container-timer {
@@ -186,7 +166,7 @@ li {
     background-color: white;
     border: 4px solid black;
     box-sizing: border-box;
-    
+    display: none;
     
 }
 
@@ -209,29 +189,68 @@ li {
 }
 
 #button-group-main-menu {
+    position: absolute;
     display: block;
-    background-color: white;
-    border: 4px solid black;
+    bottom: 5%;
+    right: 5%;
+}
+#button-group-main-menu button {
+    width: 275px;
+    height: 75px;
+    font-size: 2em;
+    margin-top: 20px;
+    font-family: 'Roboto',sans-serif;
+    border-radius: 2em;
+    box-sizing: border-box;
+    padding: 0.2em 1.0em;
 }
 
+#btn-start-game {
+    background-color: #2d4175;
+    color: white;
+}
+
+#btn-quit-game {
+    background-color: white;
+    color: #2d4175;
+}
+#difficulty-select-wrapper {
+    width: 35%;
+    height: 94%;
+    top: 2.5%;
+    margin-left: 3%;
+    background-color: white;
+    opacity: .9;
+    font-family: 'Roboto',sans-serif;
+    color: white;
+    position: relative;
+    float: left;
+    border: 4px solid #2d4175;
+}
+#difficulty-select-header {
+    color: #2d4175;
+    font-weight: bolder;
+    font-size: 17px;
+}
 
 #button-group-difficulty-select {
-    display: none;
     background-color: white;
-    border: 4px solid black;
-    height: 172px;
-
+    position: relative;
+    margin-left: 20px;
 }
 
 #button-group-difficulty-select ul{
-    display: inline-block;
+    display: inline;
+}
+#button-group-difficulty-select li{
+    margin: 0 0 40px 0;
 }
 
 #button-group-instructions{
+    position: absolute;
     display: none;
     background-color: white;
     border: 4px solid black;
-    height: 172px;
 }
 
 #button-group-instructions-layout {

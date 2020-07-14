@@ -31,31 +31,7 @@ bindToTouch('#btn-quit-game', () => {
 //Difficulty selection buttons
 bindToTouch('#btn-early-learner', () => {
   game._difficulty = "Early Learner";
-  hideDifficulty();
-  
-});
-
-bindToTouch('#btn-beginner', () => {
-  game._difficulty = "Beginner";
-  hideDifficulty();
-
-});
-
-bindToTouch('#btn-intermediate', () => {
-  game._difficulty = "Intermediate";
-  hideDifficulty();
-
-});
-
-bindToTouch('#btn-advanced', () => {
-  game._difficulty = "Advanced";
-  hideDifficulty();
- 
-});
-
-//Instructions buttons
-bindToTouch('#btn-instruction-confirm', () => {
-	game.getTriviaData();
+  game.getTriviaData();
   hideInstructions(displayWorld);
   if (game._difficulty != "Early Learner"){
     game.startCountdown();
@@ -68,8 +44,52 @@ bindToTouch('#btn-instruction-confirm', () => {
   game.redrawObjects();
 });
 
-bindToTouch('#btn-instruction-back', () => {
-  hideInstructions(displayDifficulty);
+bindToTouch('#btn-beginner', () => {
+  game._difficulty = "Beginner";
+  game.getTriviaData();
+  hideInstructions(displayWorld);
+  if (game._difficulty != "Early Learner"){
+    game.startCountdown();
+  } else {
+    var unlimited = document.getElementById('timer');
+    unlimited.innerHTML = "UNLIMITED";
+    unlimited.style.fontSize = "2em";
+  }
+  game.setStartingGameSettings();
+  game.redrawObjects();
+
+});
+
+bindToTouch('#btn-intermediate', () => {
+  game._difficulty = "Intermediate";
+  game.getTriviaData();
+  hideInstructions(displayWorld);
+  if (game._difficulty != "Early Learner"){
+    game.startCountdown();
+  } else {
+    var unlimited = document.getElementById('timer');
+    unlimited.innerHTML = "UNLIMITED";
+    unlimited.style.fontSize = "2em";
+  }
+  game.setStartingGameSettings();
+  game.redrawObjects();
+
+});
+
+bindToTouch('#btn-advanced', () => {
+  game._difficulty = "Advanced";
+  game.getTriviaData();
+  hideInstructions(displayWorld);
+  if (game._difficulty != "Early Learner"){
+    game.startCountdown();
+  } else {
+    var unlimited = document.getElementById('timer');
+    unlimited.innerHTML = "UNLIMITED";
+    unlimited.style.fontSize = "2em";
+  }
+  game.setStartingGameSettings();
+  game.redrawObjects();
+ 
 });
 
 //World-view buttons

@@ -13,19 +13,12 @@
 <div id="container-game-area">
     <div id = container-scenes>
         <div id="title-screen" class="scenes">
-        </div>
-        <div id="difficulty-select" class="scenes">
-            <div id="difficulty-select-wrapper">
-                <div id="difficulty-select-header">
-                    <h1 style="text-align: center;">Difficulty Levels</h1>
-                </div>
-                <div id="difficulty-select-content">
-                    <h1><pre class="tab">Early Learner ages 4 - 7      <img src="images\ui\earlyLearner.png"></pre> </h1>
-                    <h1><pre class="tab">Beginner      ages 8 - 10     <img src="images\ui\beginner.png"></pre></h1>
-                    <h1><pre class="tab">Intermediate  ages 11 - 12    <img src="images\ui\intermediate.png"></pre></h1>
-                    <h1><pre class="tab">Advance       ages 12 - above <img src="images\ui\advance.png"></pre></h1>
-                </div>  
-            </div>  
+            <div id="button-group-main-menu">
+                <ul>
+                    <li><button id="btn-start-game">START GAME</button></li>
+                    <li><button id="btn-quit-game">QUIT GAME</button></li>
+                </ul>
+            </div>
         </div>
         <div id="instructions" class="scenes">
             <div id="instructions-wrapper">
@@ -34,16 +27,33 @@
                 </div>
                 <div id="instructions-content">
                     <ul>
-                        <li>Objective:  Reach the airport to make your flight before time runs out.  Remember that safety always comes first and nothing is worth risking the health and safety of yourself and others.</li>
-                        <li>Game Summary:  On your journey to the airport there are various obstacles that you will encounter.  In order to clear these obstacles you must solve a trivia question.  
-                            If you answer incorrectly, a time penalty will be applied (unless on "Early Learner" difficulty) and a new question will be presented.
-                        </li>
+                        <li>Objective:  Reach the airport to make your flight before time runs out.</li>
+                        <li>Game Summary: You will face obstacles on your way to the airport, get past them by solving various trivia questions.  
+                            If you get a question wrong, a time penalty is applied and a new question will be given.</li>
                         <li>Hints:  You will start the game with a preset amount of hints that you can use throughout the game.  The number of hints you start with is dependent on the difficulty level you have chosen.</li>
-                        <li>Early Learner:  Unlimited time limit/ Unlimited hints /No time penalty applied for incorrect answer</li>
+                        <li><br></li>
+                        <li><br></li>
+                        <li>Early Learners:  Unlimited time limit/ Unlimited hints /No time penalty applied for incorrect answer</li>
                         <li>Beginner:  5 minute time limit/ 5 hints available/ 10 second time penalty applied for incorrect answer</li>
                         <li>Intermediate:  4 minute time limit/ 3 hints available/ 10 second time penalty applied for incorrect answer</li>
                         <li>Advanced:  3 minute time limit/ 1 hint available / 15 second time penalty applied for incorrect answer </li>
                     </ul>
+                </div>
+                
+            </div>
+            <div id="difficulty-select-wrapper">
+                <div id="difficulty-select-header">
+                    <h2>DIFFICULTY SELECT</h2>
+                </div>
+                <div id="button-group-difficulty-select">
+                    <div id="button-group-difficulty-select-layout">
+                        <ul>
+                            <li><img id='btn-early-learner' src="images\controls\button_early-learners.png"></li>
+                            <li><img id='btn-beginner' src="images\controls\button_beginner.png"></li>
+                            <li><img id='btn-intermediate' src="images\controls\button_intermediate.png"></li>
+                            <li><img id='btn-advanced' src="images\controls\button_advanced.png"></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -57,8 +67,6 @@
                     </div>
                     <div id="end-game-win-prompt-content" class="end-game-content">
                         <p>We hope you enjoyed the game and congratulations for making it to the airport on time!</p>
-                        <p>Please, always mindful of everyone's safety when traveling and to always allow yourself enough time to make it comfortably to the airport without having to rush.</p>
-                        <p>We would like to personally thank Roselle Leano from the DeVry University May 2020 session, for creating all of the wonderful artwork in the game.</p>
                     </div>
                 </div>
             </div>
@@ -69,12 +77,9 @@
                     </div>
                     <div id="end-game-lose-prompt-content" class="end-game-content">
                         <p>We hope you enjoyed the game even though you didn't make it to the airport in time.</p>
-                        <p>Please, always mindful of everyone's safety when traveling and to always allow yourself enough time to make it comfortably to the airport without having to rush.</p>
-                        <p>We would like to personally thank Roselle Leano from the DeVry University May 2020 session for creating all of the wonderful artwork in the game.</p>
                     </div>
                 </div>
-            </div>
-              
+            </div>    
         </div>
         <div id="trivia-card" class="scenes">
             <div id="trivia-card-content">
@@ -115,24 +120,6 @@
         <div id="number-of-hints"></div>
     </div>
     <div id="container-buttons">
-        <div id="button-group-main-menu">
-        <ul>
-            <li><button class="button2" id="btn-start-game"><img src="images\controls\button_start.png"></button></li>
-            <li><button class="button2" id="btn-quit-game"><img src="images\controls\button_exit.png"></button></li>
-        </ul>
-        </div>
-        <div id="button-group-difficulty-select">
-            <div id="button-group-difficulty-select-layout">
-                <ul>
-                    <li><img id='btn-early-learner' src="images\controls\button_early-learners.png"></li>
-                    <li><img id='btn-intermediate' src="images\controls\button_intermediate.png"></li>
-                </ul>
-                <ul>    
-                    <li><img id='btn-beginner' src="images\controls\button_beginner.png"></li>
-                    <li><img id='btn-advanced' src="images\controls\button_advanced.png"></li>
-                </ul>
-            </div>
-        </div>
         <div id="button-group-instructions">
             <div id="button-group-instructions-layout">
                 <button class="button3" id="btn-instruction-confirm">CONFIRM DIFFICULTY</button>
