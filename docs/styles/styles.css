@@ -300,6 +300,19 @@ li {
    top: 35%; 
 }
 
+.btn-endGame {
+    background-color: white;
+    color: #2d4175;
+    width: 275px;
+    height: 75px;
+    font-size: 2em;
+    margin-top: 20px;
+    font-family: 'Roboto',sans-serif;
+    border-radius: 2em;
+    box-sizing: border-box;
+    padding: 0.2em 1.0em;
+}
+
 #number-of-hints {
     display: block;
 }

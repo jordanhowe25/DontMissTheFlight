@@ -99,16 +99,8 @@ bindToTouch('#btn-start-trip', () => {
   game.player.startAnimation();
 });
 
-bindToTouch('#btn-continue-trip', () => {
-  game.player.startAnimation();
-});
 
-//Cut scene button
-bindToTouch('#btn-cutscene', () => {
-  game.populateTriviaCard();
-  game.player.setOrientation();
-  hideCutScene();
-});
+
 
 //Trivia Card
 bindToTouch('#btn-submit-answer', () => {
@@ -169,26 +161,6 @@ bindToTouch('#hint-confirm-no', () => {
   hideHintPrompt();
 });
 
-bindToTouch('#correct-confirm', () => {
-  currentObstacle ++;
-  currentTrivia ++;
-  //Checks if the game has cycled through all trivia questions.  If so, resets back to the first trivia question.
-  if (currentTrivia > qty) {
-    currentTrivia = 0;
-  }
-  $("input:radio").prop("checked", false);
-  //Checks for end game win scenario.  If currentObstacle = 10 then all obstacles have been passed and player wins.
-  if (currentObstacle < 10) {
-    hideTriviaCard();
-    hideCorrectAnswerPrompt();
-  } else {
-    game.stopCountdown();
-    displayEndGameWin();
-  }
-  
-  
-});
-
 bindToTouch('#incorrect-confirm', () => {
   if (game._difficulty != "Early Learner") {
     game.applyTimePenalty();
@@ -209,9 +181,15 @@ bindToTouch('#btn-endGame', () => {
   $('#button-group-end-game-continued').show();
 });
 
-bindToTouch("#btn-endGame-playAgain", () => {
+bindToTouch("#btn-endGame-playAgain-w", () => {
   window.location.reload(true);
 });
-bindToTouch("#btn-endGame-Quit", () => {
+bindToTouch("#btn-endGame-Quit-w", () => {
+  window.location.href = 'http://www.flywithbutchohare.com';
+});
+bindToTouch("#btn-endGame-playAgain-l", () => {
+  window.location.reload(true);
+});
+bindToTouch("#btn-endGame-Quit-l", () => {
   window.location.href = 'http://www.flywithbutchohare.com';
 });

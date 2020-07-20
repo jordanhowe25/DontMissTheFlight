@@ -17,14 +17,13 @@ function displayWorld(){
     $('#container-canvas').fadeToggle(500);
     $('#world-view').fadeToggle(500);
     $('#button-group-world-view').fadeToggle(500);
-    $('#container-hints').fadeToggle(500);
-    $('#container-timer').fadeToggle(500);
+    $('#container-hints').show(500);
+    $('#container-timer').show(500);
     if (currentObstacle == 0) {
-        $('#btn-continue-trip').hide();
         $('#btn-start-trip').show();
     } else {
-        $('#btn-continue-trip').show();
         $('#btn-start-trip').hide();
+        game.player.startAnimation();
     }
     
     
@@ -39,6 +38,9 @@ function hideWorld(displayFunction) {
 function displayCutScene(){
     $('#cut-scene').fadeToggle(500);
     $('#button-group-cut-scene').fadeToggle(500);
+    game.populateTriviaCard();
+    game.player.setOrientation();
+    setTimeout(hideCutScene, 2000);
 }
 
 function hideCutScene(){
@@ -49,6 +51,8 @@ function hideCutScene(){
 function hideCutSceneLose(){
     $('#cut-scene').fadeToggle(500, displayEndGameLose);
     $('#button-group-cut-scene').fadeToggle(500);
+    $('#container-hints').hide(500);
+    $('#container-timer').hide(500);
 }
 
 function displayTriviaCard(){
@@ -66,21 +70,27 @@ function hideTriviaCardLose(){
     $('#trivia-card').fadeToggle(500, displayEndGameLose);
     $('#tivia-card-content').fadeToggle(500);
     $('#button-group-trivia-card').fadeToggle(500);
+    $('#container-hints').hide(500);
+    $('#container-timer').hide(500);
 }
 
 function displayEndGameWin(){
     $('#trivia-card').hide();
     $('#tivia-card-content').hide();
     $('#button-group-trivia-card').hide();
+    $('#container-hints').hide(500);
+    $('#container-timer').hide(500);
     $('#container-canvas').show();
     $('#end-game-win').show();
-    $('#button-group-end-game').show();
+    setTimeout(displayEndGamePrompt, 1000);
 }
 
 function displayEndGameLose(){
     $('#container-canvas').show();
     $('#end-game-lose').fadeToggle(500);
-    $('#button-group-end-game').fadeToggle(500);
+    $('#container-hints').hide(500);
+    $('#container-timer').hide(500);
+    setTimeout(displayEndGamePrompt, 1000);
 }
 
 function displayHint() {
@@ -103,9 +113,32 @@ function displayNoHintPrompt() {
 function hideNoHintPrompt() {
     $('#no-hint-prompt').hide();
 }
+function displayEndGamePrompt() {
+    if ($("#end-game-win").is(":visible")) {
+        $('#end-game-win-prompt').show();
+      } else {
+        $('#end-game-lose-prompt').show();
+      }
+}
 
 function displayCorrectAnswerPrompt() {
     $('#correct-answer-prompt').show();
+    currentObstacle ++;
+    currentTrivia ++;
+    //Checks if the game has cycled through all trivia questions.  If so, resets back to the first trivia question.
+    if (currentTrivia > qty) {
+        currentTrivia = 0;
+    }
+    $("input:radio").prop("checked", false);
+    //Checks for end game win scenario.  If currentObstacle = 10 then all obstacles have been passed and player wins.
+    if (currentObstacle < 10) {
+        setTimeout(function() {hideTriviaCard(); hideCorrectAnswerPrompt(); }, 1000); 
+        
+    } else {
+        game.stopCountdown();
+        setTimeout(displayEndGameWin, 1000);
+    }
+    
 }
 function hideCorrectAnswerPrompt() {
     $('#correct-answer-prompt').hide();
