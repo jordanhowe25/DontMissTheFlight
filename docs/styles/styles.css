@@ -7,7 +7,7 @@ body {
     width: 1920px;
     text-align: center;
     overflow: hidden;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto Condensed';
     background-image: linear-gradient(45deg, #293c6b 30%, #2d4175 30%, #2d4175 50%, #293c6b 50%, #293c6b 80%, #2d4175 80%, #2d4175 100%);
     background-size: 70.71px 70.71px;
     user-select: none;
@@ -60,7 +60,7 @@ li {
     left: 1%;
     background-color: #2d4175;
     opacity: .9;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto Condensed';
     color: white;
     position: relative;
     float: left;
@@ -108,7 +108,6 @@ li {
     background-color: white;
     z-index: 10;
     opacity: .9;
-    box-shadow: 5px 10px #888888;
 }
 
 #end-game-win {
@@ -132,8 +131,6 @@ li {
     text-align: center;
     position: relative;
     background-color: white;
-    border: 4px solid black;
-    box-sizing: border-box;
     display: none;
    
 }
@@ -164,8 +161,6 @@ li {
     margin: 20px 12px;
     text-align: center;
     background-color: white;
-    border: 4px solid black;
-    box-sizing: border-box;
     display: none;
     
 }
@@ -199,9 +194,7 @@ li {
     height: 75px;
     font-size: 2em;
     margin-top: 20px;
-    font-family: 'Roboto',sans-serif;
-    border-radius: 2em;
-    box-sizing: border-box;
+    font-family: 'Roboto Condensed';
     padding: 0.2em 1.0em;
 }
 
@@ -221,7 +214,7 @@ li {
     margin-left: 3%;
     background-color: white;
     opacity: .9;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto Condensed';
     color: white;
     position: relative;
     float: left;
@@ -260,7 +253,6 @@ li {
 #button-group-world-view {
     display: none;
     background-color: white;
-    border: 4px solid black;
     height: 172px;
 }
 #button-group-world-view-layout {
@@ -270,25 +262,23 @@ li {
 
 #button-group-trivia-card {
     display: none;
+    height: 172px;
 }
 
 #button-group-cut-scene {
     display: none;
     background-color: white;
-    border: 4px solid black;
     height: 172px;
 }
 #button-group-end-game {
     display: none;
     background-color: white;
-    border: 4px solid black;
     height: 172px;
     position: relative;
 }
 #button-group-end-game-continued {
     display: none;
     background-color: white;
-    border: 4px solid black;
     height: 172px;
 }
 #btn-cutscene{
@@ -307,7 +297,7 @@ li {
     height: 75px;
     font-size: 2em;
     margin-top: 20px;
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto Condensed';
     border-radius: 2em;
     box-sizing: border-box;
     padding: 0.2em 1.0em;
@@ -351,11 +341,9 @@ li {
     display: inline-block;
     padding: 0.2em 1.0em;
     margin: 0 0.3em 0.3em 0;
-    border-radius: 2em;
-    box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Roboto',sans-serif;
-    font-weight: 300;
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
     font-size: 24px;
     color: #FFFFFF;
     background-color: #2d4175;
@@ -385,7 +373,7 @@ li {
 	background-color: white;
 	text-align: left;
     font-weight: bold;
-    border: 4px solid black;
+    padding-top: 10px;
 }
 
 #btn-submit-answer-layout {
@@ -410,14 +398,15 @@ li {
 	background-color: #293c6b;
 	color: white;
 	font-size: 2em;
-	font-weight: bold;
+    font-weight: bold;
+    padding: 10px 10px 10px 25px;
 	text-align: left;
 	padding: 10px;
 }
 #question {
 	height: 65%;
 	padding-top: 20px;
-	padding-left: 10px;
+	padding-left: 25px;
 	text-align: left;
 	font-size: 1.75em;
 	font-weight: bold;
@@ -443,11 +432,12 @@ li {
 	font-size: 1.25em;
 	font-weight: bold;
 	padding: 7px;
-    border: 4px solid black;
     width: 33%;
     height: 25%;
     box-shadow: 5px 10px #888888;
     color: white;
+    opacity: 1;
+    vertical-align: middle;
 }
 
 .hint-prompt-btn {
