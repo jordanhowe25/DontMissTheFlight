@@ -43,7 +43,7 @@
         return img;  
     })
 })();
-/*
+
 //Self calling timeout function, starts when page is game is first loaded.  Listens for activity, adjust timer if needed.  
 (() => {
     var t;
@@ -62,4 +62,4 @@
         clearTimeout(t);
         t= setTimeout(reload, 120000);  // time is in milliseconds (1000 is 1 second)
     }   
-})();*/
+})();
